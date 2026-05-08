@@ -258,14 +258,9 @@ measurement. The central tradeoff is therefore between scale and targeting.
 
 There is one entrepreneur and a continuum of potential beneficiaries.
 Each beneficiary $i$ has ability $a(i)<\bar{a}$, where $\bar{a}$
-is the ability of a standard worker. Define beneficiary $i$'s need
-as
-
-\[
-x(i)\equiv\bar{a}-a(i).
-\]
-
-Abilities are drawn from a distribution with mean $\mathbb{E}(a)$
+is the ability of a standard worker. The amount of assistance needed
+to raise beneficiary $i$ to the standard-worker level is therefore
+$\bar{a}-a(i)$. Abilities are drawn from a distribution with mean $\mathbb{E}(a)$
 and variance $Var(a)$. The entrepreneur does not observe individual
 ability ex ante. I abstract from selection into the beneficiary pool:
 beneficiaries are ex ante identical to the entrepreneur, and the entrepreneur
@@ -308,9 +303,9 @@ such as employment, sourcing, or lending, creates information about
 beneficiaries' abilities and needs.
 
 Disbursals raise ability one-for-one up to $\bar{a}$. Thus, the
-tailored disbursal for beneficiary $i$ is $x(i)=\bar{a}-a(i)$.
-A lower disbursal leaves the beneficiary below $\bar{a}$; a higher
-disbursal is wasteful. If the firm employs only standard workers,
+tailored disbursal for beneficiary $i$ is $\bar{a}-a(i)$. A lower
+disbursal leaves the beneficiary below $\bar{a}$; a higher disbursal
+is wasteful. If the firm employs only standard workers,
 revenue is $rw\bar{a}$. If it transacts with $m$ disadvantaged beneficiaries,
 revenue is
 
@@ -342,8 +337,7 @@ quality.
 Quality means targeting accuracy, not product quality. Formally,
 
 \[
-q=-\int_{0}^{n}\left(d(i)-x(i)\right)^{2}di
-=-\int_{0}^{n}\left(d(i)-(\bar{a}-a(i))\right)^{2}di.
+q=-\int_{0}^{n}\left(d(i)-(\bar{a}-a(i))\right)^{2}di.
 \]
 
 Quality is maximized at $q=0$, which occurs when every beneficiary
@@ -1717,29 +1711,28 @@ too few subsidies, but also for wasting money by giving too much to
 the beneficiaries. While there is increasing concern about the wastefulness
 of donative funding, it could possibly be argued that altruistic entrepreneurs
 worry only about the risk that the beneficiaries receive too little
-help. Let $x(i)\equiv\bar{a}-a(i)\geq0$ denote beneficiary need and
-replace the quadratic loss by
+help. To capture this possibility, replace the quadratic loss by
 \[
-q=-\mathbb{E}\int_{0}^{m}\left(x(i)-d^{m}(i)\right)_{+}^{2}di-\mathbb{E}\int_{0}^{g}\left(x(i)-d^{g}(i)\right)_{+}^{2}di,
+q=-\mathbb{E}\int_{0}^{m}\left(\bar{a}-a(i)-d^{m}(i)\right)_{+}^{2}di-\mathbb{E}\int_{0}^{g}\left(\bar{a}-a(i)-d^{g}(i)\right)_{+}^{2}di,
 \]
 where $(z)_{+}\equiv\max\{z,0\}$. Measured transacting is unchanged:
-if the entrepreneur observes $x(i)$, then choosing $d^{m}(i)<x(i)$
-reduces both revenue and quality, while choosing $d^{m}(i)>x(i)$ only
-raises costs. Hence $d^{m*}(i)=x(i)$ still holds.
+if the entrepreneur observes $a(i)$, then choosing $d^{m}(i)<\bar{a}-a(i)$
+reduces both revenue and quality, while choosing $d^{m}(i)>\bar{a}-a(i)$
+only raises costs. Hence $d^{m*}(i)=\bar{a}-a(i)$ still holds.
 
 Giving is different. For any beneficiary served through giving, the
 entrepreneur chooses a common disbursal $d$ to solve
 \[
-\max_{d\geq0}\;-vd-\gamma\mathbb{E}\left[(x-d)_{+}^{2}\right].
+\max_{d\geq0}\;-vd-\gamma\mathbb{E}\left[((\bar{a}-a)-d)_{+}^{2}\right].
 \]
 This objective is concave, with first-order condition
 \[
-2\gamma\mathbb{E}\left[(x-d^{g*})_{+}\right]=v
+2\gamma\mathbb{E}\left[((\bar{a}-a)-d^{g*})_{+}\right]=v
 \]
-for an interior solution, and boundary solution $d^{g*}=0$ if $2\gamma\mathbb{E}[x]\leq v$.
+for an interior solution, and boundary solution $d^{g*}=0$ if $2\gamma\mathbb{E}[\bar{a}-a]\leq v$.
 Relative to the baseline model, giving becomes more attractive because
 overprovision is no longer penalized. The informational loss from giving
-is now governed by the upper tail of unmet need, $\mathbb{E}\left[(x-d^{g*})_{+}^{2}\right]$,
+is now governed by the upper tail of unmet need, $\mathbb{E}\left[((\bar{a}-a)-d^{g*})_{+}^{2}\right]$,
 rather than by $Var(a)$ alone.
 
 The qualitative mechanism therefore survives, but the clean closed-form

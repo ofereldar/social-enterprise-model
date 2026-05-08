@@ -207,8 +207,8 @@ entrepreneur serves fewer beneficiaries rather than expanding philanthropy
 through low-quality giving. This implication is also consistent with
 anecdotal evidence that social enterprises often remain relatively small.
 
-The legal-form result is a consequence of this assistance-technology
-choice. When beneficiary heterogeneity is low, a nonprofit can improve
+The legal-form result is a consequence of this choice between giving
+and transacting. When beneficiary heterogeneity is low, a nonprofit can improve
 quality by weakening the entrepreneur's monetary incentive to underprovide
 assistance. When heterogeneity is high, however, transacting itself
 creates the information needed for tailored assistance and aligns profit
@@ -276,7 +276,7 @@ n=m+g.
 \]
 
 The entrepreneur also chooses disbursals $d(i)$ and legal form. The
-firm has fixed productive capacity $w$; $w$ is not a choice variable.
+firm employs a fixed number of workers $w$; $w$ is not a choice variable.
 If the firm transacts with $m$ disadvantaged beneficiaries, the remaining
 $w-m$ jobs are filled by standard workers. The analysis first solves
 the entrepreneur's allocation problem for a fixed legal-form parameter
@@ -284,7 +284,7 @@ $v$, and then compares legal forms. A for-profit has $v=1$. A nonprofit
 has $v<1$, reflecting the nondistribution constraint as a reduced-form
 limit on the monetary payoff the entrepreneur can appropriate.
 
-The two assistance technologies differ only in what the entrepreneur
+The two ways of helping beneficiaries differ only in what the entrepreneur
 learns. If the entrepreneur helps $g$ beneficiaries through giving,
 she does not observe their individual abilities and chooses disbursals
 $d^{g}(i)$ based on the distribution of needs.\footnote{The model could in principle allow partial learning through giving,
@@ -316,23 +316,22 @@ R(a)=r(w-m)\bar{a}+r\cdot\mathbb{E}\int_{0}^{m}\min\{a(i)+d^{m}(i),\bar{a}\}di.
 Giving beneficiaries are assisted outside the firm and do not affect
 productive revenue.
 
-The organization also receives support tied to promised scale $n$.
-I write this support as $D(n)$, where $D(n)$ is increasing, concave,
-twice differentiable, and satisfies $D(0)=0$. The notation is deliberately
-reduced form. What matters for the main tradeoff is that assisting
-more beneficiaries attracts additional resources, but at a declining
-marginal rate. This support may come from external donors, consumer
-premia, investors accepting below-market returns, workers accepting
-lower salaries, or the entrepreneur herself. The reduced-form schedule
-also captures the realistic case in which outside supporters can observe
-promised scale more easily than they can observe the quality of disbursals
-ex ante \citep{charlesKim2016,coupetSchehl2022}. It can be viewed
-as a tractable simplification of a fuller donor problem in which donor
-utility takes the form $U^{D}=Y-D(n)+F(n)$, where $F(n)$ is increasing
-and concave in the number of beneficiaries assisted. In the baseline
-model, the entrepreneur chooses $n$ and takes $D(n)$ as given. \secref{subsec:donor-decision}
-later relaxes this by allowing donors to care directly about expected
-quality.
+Donations depend on promised scale $n$. I write the donation schedule
+as $D(n)$, where $D(n)$ is increasing, concave, twice differentiable,
+and satisfies $D(0)=0$. The notation is deliberately reduced form.
+What matters for the main tradeoff is that assisting more beneficiaries
+attracts additional donations, but at a declining marginal rate. Donations
+may come from external donors, consumer premia, investors accepting
+below-market returns, workers accepting lower salaries, or the entrepreneur
+herself. The reduced-form schedule also captures the realistic case
+in which donors can observe promised scale more easily than they can
+observe the quality of disbursals ex ante \citep{charlesKim2016,coupetSchehl2022}.
+It can be viewed as a tractable simplification of a fuller donor problem
+in which donor utility takes the form $U^{D}=Y-D(n)+F(n)$, where
+$F(n)$ is increasing and concave in the number of beneficiaries assisted.
+In the baseline model, the entrepreneur chooses $n$ and takes $D(n)$
+as given. \secref{subsec:donor-decision} later relaxes this by allowing donors to care directly
+about expected quality.
 
 Quality means targeting accuracy, not product quality. Formally,
 
@@ -517,8 +516,7 @@ of the expected disbursal. If these conditions are not met, the entrepreneur wil
 increase $n$ by raising $g$. 
 
 At the optimum, there are two possible outcomes. The first, $m_{mec}^{*}$,
-satisfies what I call the ``measurement effectiveness constraint,''
-or quality-margin condition.
+satisfies what I call the ``measurement effectiveness constraint.''
 Beyond this point, the measurement costs of employing more beneficiaries
 exceed the gains in effectiveness, $\text{i.e., }\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}$,
 even if more donations are available. This is given by: 
@@ -527,7 +525,7 @@ even if more donations are available. This is given by:
 C'(m_{mec}^{*})=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}<D'(m_{mec}^{*})-\left(\bar{a}-\mathbb{E}(a)\right).\label{eq:4}
 \end{equation}
 The second, $m_{mcc}^{*}$, satisfies the ``measurement compensation
-constraint,'' or funding-margin condition. Here, the entrepreneur requires that part of the donations,
+constraint.'' Here, the entrepreneur requires that part of the donations,
 net of the disbursal to beneficiaries, covers the costs incurred
 in performing the measurement function. This is expressed as:
 

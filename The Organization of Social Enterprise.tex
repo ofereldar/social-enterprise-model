@@ -262,11 +262,11 @@ The Appendix contains proofs, and the Online Appendix contains extensions.
 
 The model formalizes a simple targeting problem. An entrepreneur wants
 to assist disadvantaged beneficiaries, but she does not initially know
-how much assistance each beneficiary needs. She can help beneficiaries
-through giving, which can reach many people but must be based on imperfect
-information. Or she can help beneficiaries through transactions with
-them, which reveal beneficiary-specific information but require costly
-measurement. The central tradeoff is therefore between scale and targeting.
+how much assistance each beneficiary needs. She can use the giving
+channel, which can reach many people but must rely on imperfect information.
+Or she can use the transaction channel, which reveals beneficiary-specific
+information but requires costly measurement. The central tradeoff is
+therefore between scale and targeting.
 
 There is one entrepreneur and a continuum of potential beneficiaries.
 Each beneficiary $i$ has ability $a(i)\in[0,\bar{a})$, where $\bar{a}$
@@ -282,10 +282,11 @@ by type.
 
 The entrepreneur chooses the total scale of philanthropy, denoted by
 $n$ and measured by the number of beneficiaries the firm assists.
-Of these $n$ beneficiaries, $m$ are served through transactions with
-the firm and $g$ are served through giving, so $n=m+g$. Because beneficiaries
-form a continuum, $n$, $m$, and $g$ are masses; I refer to them as
-numbers throughout.
+Of these $n$ beneficiaries, $m$ are served through the transaction
+channel, meaning that they transact with the firm, and $g$ are served
+through the giving channel, so $n=m+g$. Because beneficiaries form
+a continuum, $n$, $m$, and $g$ are masses; I refer to them as numbers
+throughout.
 
 The entrepreneur also chooses legal form. Let $v$ denote the share
 of the firm's monetary payoff that the entrepreneur may appropriate
@@ -297,39 +298,41 @@ compares legal forms.
 For concreteness, the formal model uses a work-integration firm. The
 firm has a fixed number $w$ of jobs. If it employs $m$ disadvantaged
 beneficiaries, the remaining $w-m$ jobs are filled by standard workers,
-so $0\leq m\leq w$.\footnote{The same structure maps to other beneficiary-facing firms. In a fair-trade application, $w$ is the firm's fixed number of supplier relationships, $m$ consists of low-income farmer-suppliers, and the remaining $w-m$ are standard suppliers; revenue depends on the farmers' productivity or input quality after assistance. In microfinance, $w$ is lending capacity and revenue depends on borrowers' ability to repay. For a low-cost service provider, $w$ is the fixed number of customers the firm serves, $m$ consists of low-income customer-beneficiaries, and the remaining $w-m$ are standard customers; revenue depends on customers' ability to pay. In each application, transacting both produces revenue and reveals information relevant to tailoring assistance.}
-Beneficiaries served through giving are assisted outside the firm and
-do not occupy these jobs.
+so $0\leq m\leq w$.\footnote{The same structure maps to other beneficiary-facing firms. In a fair-trade application, $w$ is the firm's fixed number of supplier relationships, $m$ consists of low-income farmer-suppliers, and the remaining $w-m$ are standard suppliers; revenue depends on the farmers' productivity or input quality after assistance. In microfinance, $w$ is lending capacity and revenue depends on borrowers' ability to repay. For a low-cost service provider, $w$ is the fixed number of customers the firm serves, $m$ consists of low-income customer-beneficiaries, and the remaining $w-m$ are standard customers; revenue depends on customers' ability to pay. In each application, the transaction channel both produces revenue and reveals information relevant to tailoring assistance.}
+Beneficiaries served through the giving channel are assisted outside
+the firm and do not occupy these jobs.
 
 The timing is:
 \begin{itemize}
 \item Before choices are made, nature draws beneficiary abilities. The
 entrepreneur observes their distribution but not the individual draws.
 \item At $t=0$, the entrepreneur chooses legal form, total scale $n$,
-and its division between transactions ($m$) and giving ($g=n-m$).
-\item At $t=1$, the entrepreneur may measure the abilities of transactional
-beneficiaries at a cost. She then chooses disbursals, and payoffs are
-realized.
+and its division between the transaction channel ($m$) and the giving
+channel ($g=n-m$).
+\item At $t=1$, the entrepreneur may incur a cost to measure the abilities
+of beneficiaries served through the transaction channel. She then
+chooses disbursals, and payoffs are realized.
 \end{itemize}
 
-For targeting purposes, the key difference between giving and transacting
-is what the entrepreneur learns. A disbursal $d(i)\geq0$ is assistance
-measured in units of ability. Each unit costs one and raises ability
-one-for-one up to $\bar{a}$. Thus, beneficiary $i$ needs the tailored
-disbursal $\bar{a}-a(i)$. A smaller disbursal leaves the beneficiary
-below $\bar{a}$, while a larger disbursal is wasteful.
+For targeting purposes, the key difference between the giving and transaction
+channels is what the entrepreneur learns. A disbursal $d(i)\geq0$
+is assistance measured in units of ability. Each unit costs one and
+raises ability one-for-one up to $\bar{a}$. Thus, beneficiary $i$
+needs the tailored disbursal $\bar{a}-a(i)$. A smaller disbursal leaves
+the beneficiary below $\bar{a}$, while a larger disbursal is wasteful.
 
-If the entrepreneur helps $g\geq0$ beneficiaries through giving, she
-does not observe their individual abilities and chooses disbursals
-$d^{g}(i)$ based on the distribution of needs.\footnote{The model could in principle allow partial learning through giving,
+If the entrepreneur helps $g\geq0$ beneficiaries through the giving
+channel, she does not observe their individual abilities and chooses
+disbursals $d^{g}(i)$ based on the distribution of needs.\footnote{The model could in principle allow partial learning through the giving channel,
 reflecting limited information acquired through diligence, research,
 or screening rather than repeated interaction. I abstract from that
 possibility because it would add complexity while providing limited
 additional insight into the paper's core mechanism.} If instead she
-serves $m$ beneficiaries through transactions, she may incur measurement
-cost $C(m)$ to observe their abilities before choosing $d^{m}(i)$.
+serves $m$ beneficiaries through the transaction channel, she may incur
+measurement cost $C(m)$ to observe their abilities before choosing
+$d^{m}(i)$.
 \lemref{lem:measure-if-transact} in \secref{subsec:transacting-giving}
-shows that an entrepreneur who transacts with beneficiaries always
+shows that an entrepreneur who uses the transaction channel always
 measures each beneficiary's ability, $a(i)$, and tailors the beneficiary's
 disbursal to that ability.
 The cost function $C(m)$ is increasing, convex, twice differentiable,
@@ -358,8 +361,8 @@ schedule $D(\cdot)$ as given.\footnote{This reduced-form schedule is a tractable
 later allows donors to care directly about expected quality.
 
 The firm's realized net monetary payoff, $P$, equals realized revenue
-plus donative funding, minus disbursals to transactional and giving
-beneficiaries and measurement costs:
+plus donative funding, less disbursals through the transaction and
+giving channels, and less measurement costs:
 
 \[
 P=R(a)+D(n)-\int_{0}^{m}d^{m}(i)di-\int_{0}^{g}d^{g}(i)di-C(m).
@@ -402,12 +405,13 @@ utility:
 d^{m}(i),d^{g}(i)\geq0.\label{eq:-1}
 \end{equation}
 
-The model's central alignment is now immediate. For a giving beneficiary,
-the entrepreneur must choose $d^{g}(i)$ without knowing $a(i)$. For
-a transactional beneficiary, measurement reveals $a(i)$, and the tailored
-disbursal $d^{m}(i)=\bar{a}-a(i)$ both raises productive revenue and
-maximizes targeting quality. Profit and mission therefore point in the
-same direction when the firm transacts with beneficiaries.
+The model's central alignment is now immediate. For a beneficiary served
+through the giving channel, the entrepreneur must choose $d^{g}(i)$
+without knowing $a(i)$. For a beneficiary served through the transaction
+channel, measurement reveals $a(i)$, and the tailored disbursal $d^{m}(i)=\bar{a}-a(i)$
+both raises productive revenue and maximizes targeting quality. Profit
+and mission therefore point in the same direction when the firm uses
+the transaction channel.
 
 
 \section{Analysis of the Entrepreneur's Choices}\label{sec:analysis}

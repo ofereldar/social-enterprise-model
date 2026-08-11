@@ -269,94 +269,113 @@ them, which reveal beneficiary-specific information but require costly
 measurement. The central tradeoff is therefore between scale and targeting.
 
 There is one entrepreneur and a continuum of potential beneficiaries.
-Each beneficiary $i$ has ability $a(i)<\bar{a}$, where $\bar{a}$
-is the ability of a standard worker. The amount of assistance needed
-to raise beneficiary $i$ to the standard-worker level is therefore
-$\bar{a}-a(i)$. Abilities are drawn from a distribution with mean $\mathbb{E}(a)$
-and variance $Var(a)$. The entrepreneur does not observe individual
-ability ex ante. I abstract from selection into the beneficiary pool:
-beneficiaries are ex ante identical to the entrepreneur, and the entrepreneur
-chooses how many beneficiaries to assist rather than which hidden
-types to select.
+Each beneficiary $i$ has ability $a(i)\in[0,\bar{a})$, where $\bar{a}$
+is the ability of a standard worker. A lower $a(i)$ means that the
+beneficiary needs more assistance. In particular, the assistance needed
+to reach the standard-worker level is $\bar{a}-a(i)$. Abilities are
+drawn from a distribution with mean $\mathbb{E}(a)$ and variance $Var(a)$.
+The entrepreneur knows this distribution but does not initially observe
+individual abilities. Beneficiaries come from a fixed pool. Before
+transacting, the entrepreneur cannot distinguish their abilities, so
+she chooses how many beneficiaries to assist but cannot select them
+by type.
 
 The entrepreneur chooses total scale $n$. Of these $n$ beneficiaries,
 $m$ are served through transactions with the firm and $g$ are served
-through giving, so
+through giving, so $n=m+g$. Because beneficiaries form a continuum,
+$n$, $m$, and $g$ are masses; I refer to them as numbers throughout.
 
-\[
-n=m+g.
-\]
+The entrepreneur also chooses legal form. Let $v$ be the share of
+the firm's monetary payoff that she values. A for-profit has $v=1$.
+A nonprofit has $v\in(0,1)$, reflecting the nondistribution constraint as
+a reduced-form limit on the monetary payoff the entrepreneur can appropriate.
+The analysis first solves the allocation problem for a fixed $v$ and
+then compares legal forms.
 
-The entrepreneur also chooses legal form and, after the relevant information
-is learned, disbursals $d(i)$. The firm employs a fixed number of
-workers $w$; $w$ is not a choice variable.
-If the firm transacts with $m$ disadvantaged beneficiaries, the remaining
-$w-m$ jobs are filled by standard workers. The analysis first solves
-the entrepreneur's allocation problem for a fixed legal-form parameter
-$v$, and then compares legal forms. A for-profit has $v=1$. A nonprofit
-has $v<1$, reflecting the nondistribution constraint as a reduced-form
-limit on the monetary payoff the entrepreneur can appropriate.
+For concreteness, the formal model uses a work-integration firm. The
+firm has a fixed number $w$ of jobs. If it employs $m$ disadvantaged
+beneficiaries, the remaining $w-m$ jobs are filled by standard workers,
+so $0\leq m\leq w$.
+\footnote{The same structure maps to other beneficiary-facing firms. In a fair-trade application, $w$ is the firm's fixed number of supplier relationships, $m$ consists of low-income farmer-suppliers, and the remaining $w-m$ are standard suppliers; revenue depends on the farmers' productivity or input quality after assistance. In microfinance, $w$ is lending capacity and revenue depends on borrowers' ability to repay. For a low-cost service provider, $w$ is service capacity and revenue depends on customers' ability to pay. In each application, transacting both produces revenue and reveals information relevant to tailoring assistance.}
+Beneficiaries served through giving are assisted outside the firm and
+do not occupy these jobs.
+
+The timing is:
+\begin{itemize}
+\item Before choices are made, nature draws beneficiary abilities. The
+entrepreneur observes their distribution but not the individual draws.
+\item At $t=0$, the entrepreneur chooses legal form, total scale $n$,
+and its division between transactions ($m$) and giving ($g=n-m$).
+\item At $t=1$, the entrepreneur may measure the abilities of transactional
+beneficiaries, chooses disbursals, and payoffs are realized.
+\end{itemize}
 
 For targeting purposes, the key difference between giving and transacting
-is what the entrepreneur learns. If the entrepreneur helps $g$ beneficiaries through giving,
-she does not observe their individual abilities and chooses disbursals
+is what the entrepreneur learns. A disbursal $d(i)\geq0$ is assistance
+measured in units of ability. Each unit costs one and raises ability
+one-for-one up to $\bar{a}$. Thus, beneficiary $i$ needs the tailored
+disbursal $\bar{a}-a(i)$. A smaller disbursal leaves the beneficiary
+below $\bar{a}$, while a larger disbursal is wasteful.
+
+If the entrepreneur helps $g\geq0$ beneficiaries through giving, she
+does not observe their individual abilities and chooses disbursals
 $d^{g}(i)$ based on the distribution of needs.\footnote{The model could in principle allow partial learning through giving,
 reflecting limited information acquired through diligence, research,
 or screening rather than repeated interaction. I abstract from that
 possibility because it would add complexity while providing limited
 additional insight into the paper's core mechanism.} If instead she
-serves $m$ beneficiaries through transactions, she can incur measurement
-cost $C(m)$ to observe their abilities and choose disbursals $d^{m}(i)$.
+serves $m$ beneficiaries through transactions, she may incur measurement
+cost $C(m)$ to observe their abilities before choosing $d^{m}(i)$.
 The cost function $C(m)$ is increasing, convex, twice differentiable,
 and satisfies $C(0)=0$.\footnote{As shown in \secref{oa:linear-cost} of the Online Appendix, the analysis is robust
-to a linear cost function.} The work-integration interpretation is
-that transactional beneficiaries are hired and trained inside the
-firm. The broader interpretation is that a repeated market relationship,
-such as employment, sourcing, or lending, creates information about
-beneficiaries' abilities and needs.
+to a linear cost function.} Although transacting without measurement
+is feasible, \lemref{lem:measure-if-transact} shows that treating such
+beneficiaries as giving never lowers utility. Thus, $m$ denotes measured
+transactional beneficiaries, and the reduced problem below includes
+$C(m)$.
 
-Disbursals raise ability one-for-one up to $\bar{a}$. Thus, the
-tailored disbursal for beneficiary $i$ is $\bar{a}-a(i)$. A lower
-disbursal leaves the beneficiary below $\bar{a}$; a higher disbursal
-is wasteful. Let $r>1$ denote the return per unit of worker ability.
-If the firm employs only standard workers,
-revenue is $rw\bar{a}$. If it transacts with $m$ disadvantaged beneficiaries,
-revenue is
+Let $r>1$ be the revenue produced by one unit of worker ability. Thus,
+a unit of well-targeted assistance costs one but can raise revenue by
+$r$. If the firm employs only standard workers, revenue is $rw\bar{a}$.
+If it instead employs $m$ disadvantaged beneficiaries, realized revenue
+is
 
 \[
-R(a)=r(w-m)\bar{a}+r\cdot\mathbb{E}\int_{0}^{m}\min\{a(i)+d^{m}(i),\bar{a}\}di.
+R(a)=r(w-m)\bar{a}+r\int_{0}^{m}\min\{a(i)+d^{m}(i),\bar{a}\}di.
 \]
 
-Giving beneficiaries are assisted outside the firm and do not affect
-productive revenue.
+Funding depends on the firm's planned scale. Let $D(n)$ be an increasing,
+concave, and twice-differentiable donation schedule, with $D(0)=0$.
+The concavity of $D(n)$ captures donors' limited willingness to fund
+ever-larger scale. Funding may come from external donors, consumer premia,
+concessionary capital or labor, or the entrepreneur herself. The schedule
+also captures the realistic case in which donors can observe scale more
+easily than they can assess the quality of disbursals ex ante
+\citep{charlesKim2016,coupetSchehl2022}. It is a tractable simplification
+of a fuller donor decision in which $U^{D}=Y-D(n)+F(n)$, where $Y$
+is donor wealth and $F(n)$ is an increasing, concave benefit from the
+number of beneficiaries assisted. The entrepreneur takes the schedule
+$D(\cdot)$ as given. \secref{subsec:donor-decision} later allows donors
+to care directly about expected quality.
 
-Donations depend on promised scale $n$. I write the donation schedule
-as $D(n)$, where $D(n)$ is increasing, concave, twice differentiable,
-and satisfies $D(0)=0$. The notation is deliberately reduced form.
-What matters for the main tradeoff is that assisting more beneficiaries
-attracts additional donations, but at a declining marginal rate. Donations
-may come from external donors, consumer premia, investors accepting
-below-market returns, workers accepting lower salaries, or the entrepreneur
-herself. The reduced-form schedule also captures the realistic case
-in which donors can observe promised scale more easily than they can
-observe the quality of disbursals ex ante \citep{charlesKim2016,coupetSchehl2022}.
-It can be viewed as a tractable simplification of a fuller donor problem
-in which donor utility takes the form $U^{D}=Y-D(n)+F(n)$, where
-$F(n)$ is increasing and concave in the number of beneficiaries assisted.
-In the baseline model, the entrepreneur chooses $n$ and takes $D(n)$
-as given. \secref{subsec:donor-decision} later relaxes this by allowing donors to care directly
-about expected quality.
+The firm's realized net monetary payoff is
+
+\[
+P=R(a)+D(n)-\int_{0}^{m}d^{m}(i)di-\int_{0}^{g}d^{g}(i)di-C(m).
+\]
 
 Quality means targeting accuracy, not product quality. Formally,
 
 \[
-q=-\int_{0}^{n}\left(d(i)-(\bar{a}-a(i))\right)^{2}di.
+q=-\int_{0}^{m}\left(d^{m}(i)-(\bar{a}-a(i))\right)^{2}di
+-\int_{0}^{g}\left(d^{g}(i)-(\bar{a}-a(i))\right)^{2}di.
 \]
 
-Quality is maximized at $q=0$, which occurs when every beneficiary
-receives exactly the disbursal needed to reach $\bar{a}$. The quadratic
-loss treats over-provision and under-provision symmetrically and should
-be read as a reduced-form measure of matching accuracy.\footnote{\secref{oa:no-penalty} of the Online Appendix discusses a quality measure with no penalty for waste. The conclusion discusses the case in which quality is defined by quantity.}
+Thus, $q\leq0$, and higher $q$ means better targeting. Quality is maximized
+at $q=0$, when every beneficiary receives exactly the assistance needed
+to reach $\bar{a}$. The quadratic loss treats over-provision and under-provision
+symmetrically and should be read as a reduced-form measure of matching
+accuracy.\footnote{\secref{oa:no-penalty} of the Online Appendix discusses a quality measure with no penalty for waste. The conclusion discusses the case in which quality is defined by quantity.}
 
 The entrepreneur's utility is
 
@@ -369,60 +388,25 @@ the entrepreneur's weight on effective assistance. The analysis below
 focuses on social-mission entrepreneurs with $\gamma>0$; the limiting
 case $\gamma=0$ corresponds to a purely commercial firm with no weight
 on effective assistance. Thus, $\gamma$ captures altruism, reputational
-pressure, or both. In contrast, \citet{glaeserShleifer2001}
-assume that the altruistic component of the entrepreneur's utility
-increases with the volume of disbursals, regardless of whether the
-beneficiaries actually benefit.\footnote{The entrepreneur in \citet{glaeserShleifer2001} chooses $q$, the quantity
-of disbursal, and her utility is given by $D-c(q)+\gamma\times q$,
-where $D$ is a constant independent of $q$ because donors cannot
-observe quantity when making their donations.}
+pressure, or both. Unlike \citet{glaeserShleifer2001}, where mission
+utility increases with the quantity disbursed, the entrepreneur here
+cares about whether assistance is matched to beneficiary need.
 
-The timing is:
-\begin{itemize}
-\item Before choices are made, nature draws beneficiary abilities from
-the distribution of $a$. The entrepreneur observes the distribution
-but not individual abilities.
-\item At $t=0$, the entrepreneur chooses legal form, total scale $n$,
-and the division of beneficiaries between transactions ($m$) and giving
-($g=n-m$).
-\item At $t=1$, the entrepreneur observes the abilities of transactional
-beneficiaries after incurring $C(m)$, chooses disbursals $d^{m}(i)$
-and $d^{g}(i)$, and payoffs are realized.
-\end{itemize}
-
-The model's central alignment is easiest to see by separating quality
-losses for transacted and giving beneficiaries:
-\[
-q=-\int_{0}^{m}\left(d^{m}(i)-(\bar{a}-a(i))\right)^{2}di-\int_{0}^{g}\left(d^{g}(i)-(\bar{a}-a(i))\right)^{2}di.
-\]
-Maximum philanthropic quality is achieved when $d(i)=\bar{a}-a(i)$
-for every assisted beneficiary, so $q=0$. For beneficiaries employed
-inside the firm, the same tailored disbursal also raises productive
-output up to the standard-worker level. Thus, when the entrepreneur
-transacts with beneficiaries and learns their abilities, the revenue
-incentive and the quality incentive point in the same direction.
-
-Putting these pieces together, the entrepreneur chooses $m$, $g$,
-and disbursals to solve:
+Because abilities are unknown at $t=0$, the entrepreneur maximizes expected
+utility:
 
 \begin{equation}
-\max_{m,g,d(i)}\;v\left[R(a)+D(n)-\mathbb{E}\int_{0}^{m}d^{m}(i)di-\mathbb{E}\int_{0}^{g}d^{g}(i)di-C(m)\right]+\gamma q\;\mbox{ s.t. }\;\;n=m+g,\label{eq:-1}
+\max_{m,g,d^{m},d^{g}}\;v\mathbb{E}[P]+\gamma\mathbb{E}[q]
+\quad\mbox{s.t.}\quad n=m+g,\;0\leq m\leq w,\;g\geq0,\;
+d^{m}(i),d^{g}(i)\geq0.\label{eq:-1}
 \end{equation}
 
-The bracketed term is the net monetary payoff, consisting of productive
-revenue plus donations, less disbursals and measurement costs. The last term is
-the quality payoff. Productive revenue depends on $m$ and on the
-transactional disbursals chosen by the entrepreneur:
-
-\[
-R(a)=r(w-m)\bar{a}+r\cdot\mathbb{E}\int_{0}^{m}\min\{a(i)+d^{m}(i),\bar{a}\}di.
-\]
-
-The quality component is
-
-\[
-\gamma q=-\gamma\cdot\mathbb{E}\left[\int_{0}^{m}\left(d^{m}(i)-(\bar{a}-a(i))\right)^{2}di\right]-\gamma\cdot\mathbb{E}\left[\int_{0}^{g}\left(d^{g}(i)-(\bar{a}-a(i))\right)^{2}di\right].
-\]
+The model's central alignment is now immediate. For a giving beneficiary,
+the entrepreneur must choose $d^{g}(i)$ without knowing $a(i)$. For
+a transactional beneficiary, measurement reveals $a(i)$, and the tailored
+disbursal $d^{m}(i)=\bar{a}-a(i)$ both raises productive revenue and
+maximizes targeting quality. Profit and mission therefore point in the
+same direction when the firm transacts with beneficiaries.
 
 
 \section{Analysis of the Entrepreneur's Choices}\label{sec:analysis}

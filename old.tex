@@ -442,29 +442,18 @@ more against the quality loss from giving too little or too much. This
 gives
 
 \begin{equation}
-d^{g*}(i)=\max\left\{0,\bar{a}-\mathbb{E}(a)-\frac{v}{2\gamma}\right\}
-\;\;\forall i\in[0,g].\label{eq:2}
+d^{g*}(i)=\bar{a}-\mathbb{E}(a)-\frac{v}{2\gamma}\;\;\forall i\in[0,g].\label{eq:2}
 \end{equation}
 
 The last term, $\frac{v}{2\gamma}$, reflects the entrepreneur's monetary
 incentive to economize on disbursals. This incentive vanishes as
 $\gamma\rightarrow\infty.$\footnote{For each giving beneficiary, the relevant first-order condition is
 $-v-2\gamma(d-(\bar{a}-\mathbb{E}(a)))=0$, which yields equation
-(\ref{eq:2}) when the solution is interior. If the resulting disbursal is nonpositive, the nonnegativity constraint binds and $d^{g*}(i)=0$.} Thus, the more the entrepreneur values effectiveness, the closer
+(\ref{eq:2}).} Thus, the more the entrepreneur values effectiveness, the closer
 she will set disbursals to the average need of the beneficiaries ($\bar{a}-\mathbb{E}(a)$).
 Additionally, the monetary incentive to underprovide vanishes as $v\rightarrow0$,
 consistent with the theory that the non-distribution constraint provides
 greater incentives to generate more charity.
-
-Unless otherwise stated, the baseline analysis below focuses on the interior
-giving region,
-\[
-\bar{a}-\mathbb{E}(a)>\frac{v}{2\gamma},
-\]
-where $d^{g*}(i)>0$. When this condition fails, the giving disbursal
-is zero. This corner does not affect the measurement logic in the
-lemmas below, but it changes the marginal expressions governing scale
-and the choice between giving and transacting.
 
 I next solve for $d^{m*}(i)$, conditional on the entrepreneur transacting
 with beneficiaries and incurring measurement costs such that she observes
@@ -481,9 +470,8 @@ if $d^{m}(i)>\bar{a}-a(i)$, the disbursal is wasteful because $a$
 cannot exceed $\bar{a}.$ Therefore, increasing disbursals beyond
 this amount does not improve the quality of philanthropy.
 \begin{lem}\label{lem:measure-if-transact}
-Without loss of generality, an entrepreneur who chooses to transact
-with beneficiaries incurs measurement costs and tailors disbursals
-to their abilities.
+If the entrepreneur chooses to transact with beneficiaries, she will
+always incur measurement costs and tailor disbursals to their abilities.
 \end{lem}
 If the entrepreneur transacts with beneficiaries but does not measure
 their abilities, she sets $d$ without knowing their true $a$. In
@@ -503,15 +491,6 @@ serves beneficiaries through a productive relationship, her profit
 and mission incentives both point toward learning their needs and
 tailoring disbursals.
 
-For the interior comparative statics below, I assume that $C$ is strictly
-convex, $D$ is strictly concave with $\lim_{n\rightarrow\infty}D'(n)=0$,
-and the relevant displayed first-order conditions have solutions. I also assume
-that $w$ is sufficiently large that the capacity constraint does not
-bind. These conditions make the relevant candidate solutions finite
-and unique. If capacity binds, transacting is capped at $m^{*}=w$.
-If measurement is not worthwhile at $m=0$, the pure-giving corner
-applies, as discussed in \secref{subsec:legal-form-effects}.
-
 The remaining choice is how many beneficiaries to serve through each
 channel. Each increase in scale $n$ can be implemented either by
 raising $m$ or by raising $g$. Raising $m$ expands scale through
@@ -520,8 +499,8 @@ the expected disbursal, and pays the marginal measurement cost. Raising
 $g$ expands scale through giving. The entrepreneur receives the marginal
 donation and pays the expected disbursal, but also bears the expected
 quality loss from untailored assistance. For a candidate allocation
-$(n',m',g')$ in the maintained interior region, substituting the optimal
-disbursal rules into equation (\ref{eq:-1}) gives
+$(n',m',g')$, expected utility in equation (\ref{eq:-1}) can be
+rewritten as
 
 \begin{equation}
 \begin{aligned}
@@ -550,14 +529,10 @@ C'(m')<D'(n')-\left(\bar{a}-\mathbb{E}(a)\right).
 These conditions
 imply that the marginal cost of measurement must be lower than both
 the expected quality loss from giving and the marginal donation net
-of the expected disbursal. The first inequality makes expansion through
-transactions preferable to expansion through giving. The second ensures
-that expansion through transactions has a positive marginal return.
-If the first inequality fails, the entrepreneur raises $g$ only when
-the marginal return from giving is positive. If neither channel has
-a positive marginal return, she stops expanding.
+of the expected disbursal. If these conditions are not met, the entrepreneur will
+increase $n$ by raising $g$. 
 
-At an interior optimum with $m^{*}>0$ and nonbinding capacity, one of two constraints stops expansion through transactions.
+At the optimum, one of two constraints stops expansion through transactions.
 The first, $m_{mec}^{*}$,
 satisfies what I call the ``measurement effectiveness constraint.''
 Beyond this point, the measurement costs of employing more beneficiaries
@@ -602,15 +577,18 @@ D'(n_{mec}^{*})=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}+\left(\bar{a}-\mathbb{E
 \]
 This implies that $n_{mec}^{*}$ decreases as $Var(a)$ and $\gamma$
 increase. Conversely, $m_{mec}^{*}$ increases with $Var(a)$ and $\gamma$
-because $C(m)$ is strictly convex over the relevant range.
+because $C(m)$ is continuous and convex over the relevant range.
+When $m^{*}=m_{mcc}^{*}=n_{mcc}^{*}$,
+\[
+D'(n_{mcc}^{*})<\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}+\left(\bar{a}-\mathbb{E}(a)\right),
+\]
+which implies that $n_{mcc}^{*}>n_{mec}^{*}$ because $D(n)$ is concave.
 \lemref{lem:mapping} and \propref{prop:comparative-statics} summarize these comparative statics.
 \begin{lem}\label{lem:mapping}
-In the mixed regime, there exists a one-to-one mapping between $m^{*}$
-and $n^{*}$, between $m^{*}$ and $g^{*}$, and between $g^{*}$ and
-$n^{*}$.
+There exists a one-to-one mapping between $m^{*}$ and $n^{*}$, between
+$m^{*}$ and $g^{*}$, and between $g^{*}$ and $n^{*}$.
 \end{lem}
 \begin{prop}\label{prop:comparative-statics}
-Under the maintained interior and regularity conditions:
 \textbf{(A)} When the variance in abilities ($Var(a)$) is high and
 the entrepreneur has high regard for quality ($\gamma$ is high),
 she transacts with a larger number of beneficiaries ($m$). Conversely,
@@ -637,7 +615,7 @@ This proposition highlights the trade-off faced by social entrepreneurs
 between scale and the quality of philanthropy. The scale of philanthropy is determined
 by $n$. Quality is defined as $q=-\int_{0}^{n}\left(d(i)-(\bar{a}-a(i))\right)^{2}di,$
 where misallocation of disbursals reduces the quality of philanthropy.
-Under the maintained interior condition, \lemref{lem:tailoring} and equation (\ref{eq:2}) imply that expected quality is $\mathbb{E}\left[q\right]=-g^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)$.
+Using \lemref{lem:tailoring} and equation (\ref{eq:2}), expected quality is: $\mathbb{E}\left[q\right]=-g^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)$.
 Maximum philanthropic quality is achieved when the entrepreneur engages exclusively
 in transacting ($g^{*}=0$), resulting in $\mathbb{E}\left[q\right]=0$.
 When the entrepreneur mixes transacting and giving, $\frac{\partial n^{*}}{\partial m^{*}}(Var(a),\gamma)<0$
@@ -1390,12 +1368,11 @@ for that beneficiary is
 v r\left(\mathbb{E}\left[\min(a+d,\bar{a})\right]-\bar{a}\right)\leq0,
 \]
 with strict inequality whenever $\Pr(a+d<\bar{a})>0$. Thus, for any
-beneficiary served through a transaction without measurement, the entrepreneur
-weakly prefers to reclassify that beneficiary as giving. Repeating
-this replacement yields an allocation with weakly higher utility and
-$m_{2}=0$. Therefore, without loss of generality, every beneficiary
-served through a transaction is measured and, by \lemref{lem:tailoring},
-receives a tailored disbursal.
+unmeasured transactional beneficiary, the entrepreneur weakly prefers
+to reclassify that beneficiary as giving. It follows that no optimum
+contains unmeasured transacting. Therefore $m_{2}^{*}=0$, and any
+beneficiary served through a transaction is measured and, by \lemref{lem:tailoring},
+tailored.
 \subsection{Proof of \lemref{lem:mapping}}
 
 Let
@@ -1407,13 +1384,14 @@ so
 \[
 C'(m^{*})=S(v),\qquad D'(n^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v).
 \]
-Because $C$ is strictly convex and $D$ is strictly concave, $C'$ is
-strictly increasing and $D'$ is strictly decreasing. Thus, $m^{*}$
-and $n^{*}$ are each uniquely pinned down by the same scalar $S(v)$,
-with $m^{*}$ increasing and $n^{*}$ decreasing in $S(v)$. Hence, there
-is a one-to-one mapping between $m^{*}$ and $n^{*}$ in the mixed regime.
-Since $g^{*}=n^{*}-m^{*}$ is strictly decreasing in $S(v)$, it also
-has a one-to-one mapping with both $m^{*}$ and $n^{*}$.
+Because $C'$ is increasing and $D'$ is decreasing, $m^{*}$ and $n^{*}$
+are each uniquely pinned down by the same scalar $S(v)$. Hence, in
+the mixed regime, there is a one-to-one mapping between $m^{*}$ and
+$n^{*}$. Since $g^{*}=n^{*}-m^{*}$, $g^{*}$ is pinned down as well.
+In the pure-transacting regime, the measurement-compensation constraint
+binds, so $n^{*}=m^{*}$ and $g^{*}=0$. Thus, conditional on parameters
+and the relevant regime, $m^{*}$, $n^{*}$, and $g^{*}$ jointly determine
+one another.
 
 \subsection{Proof of \propref{prop:comparative-statics}}
 
@@ -1844,10 +1822,10 @@ F'(n^{*})=\bar{a}-\mathbb{E}(a)+\left(\frac{\mathbb{E}\left[\gamma\right]}{v}+\p
 \]
 
 In the observable-scale benchmark, the donor observes $n$ but not $m$,
-$g$, or $d$. In the mixed region, \lemref{lem:mapping} provides a one-to-one
-mapping from $n^{*}$ to $m^{*}$ and $g^{*}$. The donor can therefore
-infer expected quality and the entrepreneur's true $\gamma$ from observed
-scale. In the pure-transacting region,
+$g$, or $d$. By \lemref{lem:mapping}, however, there is a one-to-one mapping from
+$n^{*}$ to $m^{*}$ and $g^{*}$ within each regime. In the mixed region,
+the donor can therefore infer expected quality and the entrepreneur's
+true $\gamma$ from observed scale. In the pure-transacting region,
 observed scale does not necessarily pin down the exact value of $\gamma$,
 but it does reveal that $g=0$ and expected quality is maximal. Accordingly,
 the expectation terms above can be replaced by realized values in the
@@ -1897,9 +1875,8 @@ giving remains.
 
 The main analysis assumes that scale is observable ex ante.
 However, if scale is not observable ex ante, the donor cannot use
-\lemref{lem:mapping} to infer the true $\gamma$ from realized scale
-in the mixed regime, because funding must be chosen before $n^{*}$
-is observed. Instead,
+\lemref{lem:mapping} to infer the true $\gamma$ from realized scale,
+because funding must be chosen before $n^{*}$ is observed. Instead,
 he chooses donations based on expected scale and his expectations
 over $\gamma$. Thus, in this case, one cannot replace $\mathbb{E}\left[\gamma\right]$
 and $\mathbb{E}_{\gamma}\left[\frac{1}{\gamma}\right]$ with $\gamma$

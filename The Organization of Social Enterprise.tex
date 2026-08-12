@@ -264,9 +264,10 @@ The model formalizes a simple targeting problem. An entrepreneur wants
 to assist disadvantaged beneficiaries, but she does not initially know
 how much assistance each beneficiary needs. She can help beneficiaries
 through giving, which can reach many people but must be based on imperfect
-information. Or she can help beneficiaries through transactions with
-them, which reveal beneficiary-specific information but require costly
-measurement. The central tradeoff is therefore between scale and targeting.
+information. Alternatively, she can transact with beneficiaries. These
+transactions create an opportunity to measure beneficiary-specific abilities
+and tailor assistance, but measurement is costly. The central tradeoff is
+therefore between scale and targeting.
 
 There is one entrepreneur and a continuum of potential beneficiaries.
 Each beneficiary $i$ has ability $a(i)\in[0,\bar{a})$, where $\bar{a}$
@@ -297,7 +298,7 @@ compares legal forms.
 For concreteness, the formal model uses a work-integration firm. The
 firm has a fixed number $w$ of jobs. If it employs $m$ disadvantaged
 beneficiaries, the remaining $w-m$ jobs are filled by standard workers,
-so $0\leq m\leq w$.\footnote{The same structure maps to other beneficiary-facing firms. In a fair-trade application, $w$ is the firm's fixed number of supplier relationships, $m$ consists of low-income farmer-suppliers, and the remaining $w-m$ are standard suppliers; revenue depends on the farmers' productivity or input quality after assistance. In microfinance, $w$ is lending capacity and revenue depends on borrowers' ability to repay. For a low-cost service provider, $w$ is the fixed number of customers the firm serves, $m$ consists of low-income customer-beneficiaries, and the remaining $w-m$ are standard customers; revenue depends on customers' ability to pay. In each application, transacting both produces revenue and reveals information relevant to tailoring assistance.}
+so $0\leq m\leq w$.\footnote{A similar structure applies to other beneficiary-facing firms. In a fair-trade application, $w$ is the firm's fixed number of supplier relationships, $m$ consists of low-income farmer-suppliers, and the remaining $w-m$ are standard suppliers; revenue depends on the farmers' productivity or input quality after assistance. In microfinance, $w$ is lending capacity and revenue depends on borrowers' ability to repay. For a low-cost service provider, $w$ is the fixed number of customers the firm serves, $m$ consists of low-income customer-beneficiaries, and the remaining $w-m$ are standard customers; revenue depends on customers' ability to pay. In each application, transacting both produces revenue and reveals information relevant to tailoring assistance.}
 Beneficiaries served through giving are assisted outside the firm and
 do not occupy these jobs.
 
@@ -394,6 +395,13 @@ on effective assistance. Thus, $\gamma$ captures altruism, reputational
 pressure, or both. Unlike \citet{glaeserShleifer2001}, where mission
 utility increases with the quantity disbursed, the entrepreneur here
 cares about whether assistance is matched to beneficiary need.
+
+Anticipating \lemref{lem:measure-if-transact}, I write the entrepreneur's
+problem in reduced form. The lemma proves that no optimum contains an
+unmeasured transaction, because the entrepreneur weakly prefers to assist
+such a beneficiary through giving. Thus, in the reduced problem, all
+transactional beneficiaries are measured, measurement costs are $C(m)$,
+and no separate measurement choice is required.
 
 Because abilities are unknown at $t=0$, the entrepreneur maximizes expected
 utility:

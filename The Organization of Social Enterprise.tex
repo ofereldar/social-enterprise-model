@@ -498,12 +498,12 @@ if the disbursal is insufficient to raise her ability to $\bar{a}$.
 Unmeasured transacting therefore offers no targeting advantage and
 may reduce revenue, so giving weakly dominates it.
 
-For the comparative statics below, I focus on a finite, unique interior
-solution with positive measurement and nonbinding production capacity.\footnote{Specifically, I assume that $C$ is strictly convex, $D$ is strictly concave with $\lim_{n\rightarrow\infty}D'(n)=0$, and the relevant first-order conditions have solutions. I also assume that $w$ is sufficiently large that the capacity constraint does not bind. If capacity binds, transacting is capped at $m^{*}=w$. If measurement is not worthwhile at $m=0$, the pure-giving corner applies, as discussed in \secref{subsec:legal-form-effects}.}
-
 Having characterized the optimal disbursal under each channel, I now
 consider how the entrepreneur allocates beneficiaries between transacting
-and giving. She can increase total scale $n$ either by raising $m$
+and giving. For the comparative statics below, I focus on a finite,
+unique interior solution with positive measurement and nonbinding production
+capacity.\footnote{Specifically, I assume that $C$ is strictly convex, $D$ is strictly concave with $\lim_{n\rightarrow\infty}D'(n)=0$, and the relevant first-order conditions have solutions. I also assume that $w$ is sufficiently large that the capacity constraint does not bind. If capacity binds, transacting is capped at $m^{*}=w$. If measurement is not worthwhile at $m=0$, the pure-giving corner applies, as discussed in \secref{subsec:legal-form-effects}.}
+The entrepreneur can increase total scale $n$ either by raising $m$
 or by raising $g$. Raising $m$ expands scale through
 transactions. The entrepreneur receives the marginal donation, pays
 the expected disbursal, and pays the marginal measurement cost. Raising
@@ -530,41 +530,39 @@ If $n$ is increased by raising $g$, the marginal change is
 \[
 v\left(D'(n')-\left(\bar{a}-\mathbb{E}(a)\right)\right)-\gamma Var(a)+\frac{v^{2}}{4\gamma}.
 \]
-The entrepreneur will expand through transactions rather than giving
-only if
+Define
 \[
-C'(m')<\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}
+S(v)\equiv\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}.
+\]
+$S(v)$ is the marginal advantage of measured transacting over giving,
+expressed in monetary-payoff units. The entrepreneur will expand through
+transactions rather than giving only if
+\[
+C'(m')<S(v)
 \quad\text{and}\quad
 C'(m')<D'(n')-\left(\bar{a}-\mathbb{E}(a)\right).
 \]
-These conditions
-imply that the marginal cost of measurement must be lower than both
-the expected quality loss from giving and the marginal donation net
-of the expected disbursal. The first inequality makes expansion through
-transactions preferable to expansion through giving. The second ensures
-that expansion through transactions has a positive marginal return.
+The first condition requires the targeting benefit from measurement
+to exceed its marginal cost. The second requires marginal donative
+funding, net of the expected disbursal, to cover that cost.
 If the first inequality fails, the entrepreneur raises $g$ only when
 the marginal return from giving is positive. If neither channel has
 a positive marginal return, she stops expanding.
 
-At an interior optimum with $m^{*}>0$ and nonbinding capacity, one of two constraints stops expansion through transactions.
-The first, $m_{mec}^{*}$,
-satisfies what I call the ``measurement effectiveness constraint.''
-Beyond this point, the measurement costs of employing more beneficiaries
-exceed the gains in effectiveness, $\text{i.e., }\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}$,
-even if more donations are available:
+At an interior optimum, one of two limits stops expansion through transactions.
+The targeting limit, $m_{T}^{*}$, is reached when
 
 \begin{equation}
-C'(m_{mec}^{*})=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}<D'(m_{mec}^{*})-\left(\bar{a}-\mathbb{E}(a)\right).\label{eq:4}
+C'(m_{T}^{*})=S(v)<D'(m_{T}^{*})-\left(\bar{a}-\mathbb{E}(a)\right).\label{eq:4}
 \end{equation}
-The second, $m_{mcc}^{*}$, satisfies the ``measurement compensation
-constraint.'' Here, the entrepreneur requires that part of the donations,
-net of the disbursal to beneficiaries, covers the costs incurred
-in performing the measurement function:
+Beyond this point, additional measurement costs more than its targeting
+benefit. The funding limit, $m_{F}^{*}$, is reached when
 
 \begin{equation}
-C'(m_{mcc}^{*})=D'(m_{mcc}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)<\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}.\label{eq:5}
+C'(m_{F}^{*})=D'(m_{F}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)<S(v).\label{eq:5}
 \end{equation}
+Beyond this point, marginal donative funding net of the expected disbursal
+no longer covers measurement cost.
 
 These conditions show that transacting with beneficiaries is preferable
 when $Var(a)$ is large, reflecting the informational advantage of
@@ -575,23 +573,18 @@ is low. Thus, the entrepreneur internalizes the need to tailor disbursals
 when the variance in abilities is greater and she places higher value
 on subsidy effectiveness.
 
-Moreover, equations (\ref{eq:4}) and (\ref{eq:5}) imply that I
-can infer the entrepreneur's optimal choices for $m^{*}$, $g^{*}$,
-and $n^{*}$ based on the parameters of the distribution of $a$,
-$\gamma$, and the legal form ($v$). When $Var(a)$ and $\gamma$ are
-sufficiently large, the measurement compensation constraint binds.
-In that regime the entrepreneur serves beneficiaries only through
-transactions, so
+If the funding limit binds first, the entrepreneur serves beneficiaries
+only through transactions, so
 \[
-m^{*}=m_{mcc}^{*},\qquad n_{mcc}^{*}=m_{mcc}^{*},\qquad g_{mcc}^{*}=0.
+m^{*}=n^{*}=m_{F}^{*},\qquad g^{*}=0.
 \]
-When instead the measurement effectiveness constraint binds first,
-the entrepreneur increases $n$ through giving until
+If the targeting limit binds first, she sets $m^{*}=m_{T}^{*}$ and
+increases $n$ through giving until
 \[
-D'(n_{mec}^{*})=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}+\left(\bar{a}-\mathbb{E}(a)\right).
+D'(n_{T}^{*})=S(v)+\left(\bar{a}-\mathbb{E}(a)\right).
 \]
-This implies that $n_{mec}^{*}$ decreases as $Var(a)$ and $\gamma$
-increase. Conversely, $m_{mec}^{*}$ increases with $Var(a)$ and $\gamma$
+This implies that $n_{T}^{*}$ decreases as $Var(a)$ and $\gamma$
+increase. Conversely, $m_{T}^{*}$ increases with $Var(a)$ and $\gamma$
 because $C(m)$ is strictly convex over the relevant range.
 \lemref{lem:mapping} and \propref{prop:comparative-statics} summarize these comparative statics.
 \begin{lem}\label{lem:mapping}
@@ -607,20 +600,20 @@ she transacts with a larger number of beneficiaries ($m$). Conversely,
 when $Var(a)$ and $\gamma$ are low, she is more likely to engage
 in giving to a greater number of beneficiaries ($g$). 
 
-\textbf{(B)} When $Var(a)$ and $\gamma$ are small, such that $m^{*}=m_{mec}^{*}$,
-where $C'(m_{mec}^{*})=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}<D'(m_{mec}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)$,
+\textbf{(B)} When $Var(a)$ and $\gamma$ are small, such that $m^{*}=m_{T}^{*}$,
+where $C'(m_{T}^{*})=S(v)<D'(m_{T}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)$,
 the total number of beneficiaries the entrepreneur chooses to assist
 ($n^{*}$) decreases with the number transacted with ($\frac{\partial n^{*}}{\partial m^{*}}(Var(a),\gamma)<0$)
 and increases with the number helped through giving ($\frac{\partial n^{*}}{\partial g^{*}}(Var(a),\gamma)>0$). 
 
-\textbf{(C)} When $Var(a)$ and $\gamma$ are large, such that $m^{*}=m_{mcc}^{*}$,
-where $C'(m_{mcc}^{*})=D'(m_{mcc}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)<\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}$,
+\textbf{(C)} When $Var(a)$ and $\gamma$ are large, such that $m^{*}=m_{F}^{*}$,
+where $C'(m_{F}^{*})=D'(m_{F}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)<S(v)$,
 the total number of beneficiaries the entrepreneur chooses to assist
-($n_{mcc}^{*}$) is equal to the number of beneficiaries the entrepreneur
-transacts with ($m_{mcc}^{*}$), and the entrepreneur does not engage
-in giving ($g_{mcc}^{*}=0$). 
+($n_{F}^{*}$) is equal to the number of beneficiaries the entrepreneur
+transacts with ($m_{F}^{*}$), and the entrepreneur does not engage
+in giving ($g_{F}^{*}=0$).
 
-\textbf{(D)} In the pure-transacting regime, $n^{*}=m^{*}=m_{mcc}^{*}$
+\textbf{(D)} In the pure-transacting regime, $n^{*}=m^{*}=m_{F}^{*}$
 and $g^{*}=0$, so every assisted beneficiary is served through a transaction.
 \end{prop}
 This proposition highlights the trade-off faced by social entrepreneurs
@@ -637,10 +630,10 @@ and $\gamma$ increase, both the need for tailoring and the entrepreneur's
 regard for quality are higher, leading to larger $m^{*}$ and smaller
 $n^{*}$. For sufficiently high $Var(a)$, expected quality increases
 with $\gamma$, such that $\mathbb{E}\left[q\right]\rightarrow0$
-as $n,m\rightarrow m_{mcc}=n_{mcc}$.\footnote{The relationship between expected quality and $Var(a)$ is defined
+as $n^{*},m^{*}\rightarrow m_{F}^{*}=n_{F}^{*}$.\footnote{The relationship between expected quality and $Var(a)$ is defined
 as $\frac{\partial\mathbb{E}\left[q\right]}{\partial Var(a)}=-\frac{\partial g^{*}}{\partial Var(a)}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)-g^{*}$.
 This derivative may be negative or positive. Using the condition that
-$D'(n_{mec}^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}$,
+$D'(n_{T}^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v)$,
 it can be shown that $g^{*}\left(Var(a)\right)$ is a declining convex
 function of $Var(a)$, and $\frac{\partial g^{*}}{\partial Var(a)}\left(Var(a)\right)<0$
 is an increasing concave function. For high values of $Var(a)$, $\frac{\partial\mathbb{E}\left[q\right]}{\partial Var(a)}>0$.
@@ -648,8 +641,8 @@ By contrast, expected quality always increases with $\gamma.$ Specifically,
 $\frac{\partial\mathbb{E}\left[q\right]}{\partial\gamma}=-\frac{\partial g^{*}}{\partial\gamma}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)+\frac{g^{*}v^{2}}{2\gamma^{3}}>0$,
 because $\frac{\partial g^{*}}{\partial\gamma}<0$ .}
 \begin{cor}\label{cor:quality-scale}
-When $n^{*}=m^{*}=m_{mcc}^{*}$, the expected quality of philanthropy
-is maximized. Conversely, when $m^{*}=m_{mec}^{*}$ and $Var(a)$
+When $n^{*}=m^{*}=m_{F}^{*}$, the expected quality of philanthropy
+is maximized. Conversely, when $m^{*}=m_{T}^{*}$ and $Var(a)$
 is sufficiently high, the expected quality of philanthropy increases
 as $m^{*}\left(Var(a),\gamma\right)$ rises and $n^{*}\left(Var(a),\gamma\right)$
 declines.
@@ -678,7 +671,7 @@ respectively. The key effect of a lower $v$ is simple: it lowers
 the entrepreneur's private monetary payoff, so the quality term becomes
 relatively more important. A nonprofit entrepreneur is therefore willing
 to bear higher measurement costs; specifically,
-$\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}>\gamma Var(a)-\frac{1}{4\gamma}$
+$S(v)>S(1)$
 (see equation (\ref{eq:4})). As illustrated in Figure 2, three main
 cases arise depending on the levels of $\gamma$ and $Var(a)$:
 
@@ -708,17 +701,17 @@ for-profit ($fp$). }
 $\;$
 
 \textbf{Case 1. Pure Giving:} Pure giving occurs when measurement
-is never worth its cost. Formally, the measurement effectiveness constraint
+is never worth its cost. Formally, the targeting limit
 in equation (\ref{eq:4}) is not satisfied for any $m$. Suppose
-$C'(0)>\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}$.
+$C'(0)>S(v)$.
 This implies that when $Var(a)$ is low or $\gamma$ is small, the
 nonprofit entrepreneur will form a donative organization ($m_{np}^{*}=0$).
 Similarly, the for-profit entrepreneur will engage in pure giving
-($m_{fp}^{*}=0$) because $\frac{\gamma}{v}\times Var(a)-\frac{v}{4\gamma}>\gamma Var(a)-\frac{1}{4\gamma}$,
+($m_{fp}^{*}=0$) because $S(v)>S(1)$,
 and $C(m)$ is convex. Setting $m^{*}=0$ and solving equation (\ref{eq:-1}),
 the number of beneficiaries served by donative organizations is determined
-by $D'(n_{np}^{*})=\bar{a}-\mathbb{E}(a)+\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}.$
-For for-profits, $D'(n_{fp}^{*})=\bar{a}-\mathbb{E}(a)+\gamma Var(a)-\frac{1}{4\gamma}<D'(n_{np}^{*})$.
+by $D'(n_{np}^{*})=\bar{a}-\mathbb{E}(a)+S(v).$
+For for-profits, $D'(n_{fp}^{*})=\bar{a}-\mathbb{E}(a)+S(1)<D'(n_{np}^{*})$.
 Since $D(n)$ is concave, this implies that $n_{np}^{*}=g_{np}^{*}<g_{fp}^{*}=n_{fp}^{*}$.
 While for-profits give to more beneficiaries, nonprofits provide higher
 per-capita disbursals because $d_{np}^{g*}=\bar{a}-\mathbb{E}(a)-\frac{v}{2\gamma}>d_{fp}^{g*}=\bar{a}-\mathbb{E}(a)-\frac{1}{2\gamma}$.
@@ -727,30 +720,30 @@ higher: $\mathbb{E}\left[q_{np}\right]=-g_{np}^{*}\left(Var(a)+\frac{v^{2}}{4\ga
 
 \textbf{Case 2. Mixed Giving and Transacting:} Mixed giving and transacting
 occurs when measurement is useful for some beneficiaries but not for
-all additional scale. Suppose that $C'(m^{*})=\gamma Var(a)-\frac{1}{4\gamma}$
-satisfies the measurement effectiveness constraint for the for-profit
+all additional scale. Suppose that $C'(m^{*})=S(1)=\gamma Var(a)-\frac{1}{4\gamma}$
+satisfies the targeting limit for the for-profit
 firm (see equation (\ref{eq:4})). This means that the for-profit
 entrepreneur will continue to increase $n$ until $n$ satisfies the
-equation $D'(n_{fp}^{*})=\bar{a}-\mathbb{E}(a)+\gamma Var(a)-\frac{1}{4\gamma}$.
+equation $D'(n_{fp}^{*})=\bar{a}-\mathbb{E}(a)+S(1)$.
 Thus, the entrepreneur will mix transacting with beneficiaries and giving
 to them. At $m=m_{fp}^{*}$, the nonprofit entrepreneur will continue
 to increase the number of beneficiaries she transacts with because $C(m)$
 is convex, implying $m_{np}^{*}>m_{fp}^{*}.$ The nonprofit entrepreneur
 will increase $n$ up to $n_{np}^{*}<n_{fp}^{*}$, as in Case 1.\footnote{I assume the nonprofit also mixes between giving and transacting,
 although it is possible that the nonprofit will engage exclusively
-in transacting if the measurement compensation constraint is satisfied.} It follows that $g_{fp}^{*}>g_{np}^{*}\geq0$ because $n=m+g$. Accordingly,
+in transacting if the funding limit is reached.} It follows that $g_{fp}^{*}>g_{np}^{*}\geq0$ because $n=m+g$. Accordingly,
 $\mathbb{E}\left[q_{np}\right]>\mathbb{E}\left[q_{fp}\right]$.
 
 \textbf{Case 3. Pure Transacting:} Pure transacting occurs when beneficiary
 heterogeneity and the entrepreneur's concern for quality are high
-enough that the entrepreneur avoids giving altogether. The measurement
-compensation constraint in equation (\ref{eq:5}) is then satisfied,
+enough that the entrepreneur avoids giving altogether. The funding
+limit in equation (\ref{eq:5}) is then reached,
 i.e., $C'(m^{*})=D'(m^{*})-\left(\bar{a}-\mathbb{E}(a)\right)$.
 As $D(n)$ is concave, the marginal income from donations decreases
-with $n$, and at high levels of $\gamma Var(a)$, the measurement
-compensation constraint will bind. When the informational advantages
+with $n$, and at high levels of $\gamma Var(a)$, the funding limit
+will be reached. When the informational advantages
 are significant, social enterprises focus exclusively on transacting.
-Importantly, the measurement compensation constraint is identical
+Importantly, the funding limit is identical
 for both for-profit and nonprofit firms because it does not depend
 on $v$. Consequently, $m_{np}^{*}=m_{fp}^{*}=n_{np}^{*}=n_{fp}^{*}$,
 and $g_{np}^{*}=g_{fp}^{*}=0$. Moreover, since $d_{np}^{m*}=d_{fp}^{m*}=\bar{a}-a(i)$
@@ -1331,6 +1324,7 @@ $g$ & The number of beneficiaries that receive a subsidy through giving\tabularn
 $m$ & The number of beneficiaries the firm transacts with\tabularnewline
 $n$ & The total number of beneficiaries the firm assists\tabularnewline
 $r$ & The return per unit of worker ability, with $r>1$\tabularnewline
+$S(v)$ & The marginal advantage of measured transacting over giving, expressed in monetary-payoff units\tabularnewline
 $U^{D}$ & The utility of the donor\tabularnewline
 $U^{E}$ & The utility of the entrepreneur\tabularnewline
 $v$ & The portion of the firm's earnings the entrepreneur can appropriate, where $0<v\leq1$\tabularnewline
@@ -1342,8 +1336,8 @@ $\lambda$ & A parameter that denotes the increase in $D(n)$ due to tax deduction
  & \tabularnewline
 $fp$ & The firm allocations ($n_{fp}$, $m_{fp}$, and $g_{fp}$) when the entrepreneur forms a for-profit\tabularnewline
 $np$ & The firm allocations ($n_{np}$, $m_{np}$, and $g_{np}$) when the entrepreneur forms a nonprofit\tabularnewline
-$mcc$ & The firm allocations ($n_{mcc}$, $m_{mcc}$, and $g_{mcc}$) when the measurement compensation constraint in equation (\ref{eq:5}) is met\tabularnewline
-$mec$ & The firm allocations ($n_{mec}$, $m_{mec}$, and $g_{mec}$) when the measurement effectiveness constraint in equation (\ref{eq:4}) is met\tabularnewline
+$F$ & The firm allocations ($n_{F}$, $m_{F}$, and $g_{F}$) when the funding limit in equation (\ref{eq:5}) is reached\tabularnewline
+$T$ & The firm allocations ($n_{T}$, $m_{T}$, and $g_{T}$) when the targeting limit in equation (\ref{eq:4}) is reached\tabularnewline
 \end{tabularx}
 \end{table}
 
@@ -1392,7 +1386,7 @@ Let
 \[
 S(v)\equiv\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}.
 \]
-In the mixed regime, the measurement-effectiveness constraint binds,
+In the mixed regime, the targeting limit is reached,
 so
 \[
 C'(m^{*})=S(v),\qquad D'(n^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v).
@@ -1413,19 +1407,19 @@ by $C'(m^{*})=S(v)$, so $m^{*}$ increases with $Var(a)$ and $\gamma$.
 By contrast, $n^{*}$ is determined by $D'(n^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v)$.
 Since $D'$ is decreasing, a larger $S(v)$ implies a smaller $n^{*}$.
 Therefore $g^{*}=n^{*}-m^{*}$ falls as $Var(a)$ and $\gamma$ rise.
-Once $S(v)$ becomes large enough that the measurement-compensation
-constraint binds before the measurement-effectiveness constraint, the
+Once $S(v)$ becomes large enough that the funding limit is reached
+before the targeting limit, the
 entrepreneur moves to pure transacting.
 
 Part (B) is the mixed-regime statement just derived: in that region,
 $m^{*}$ rises while $n^{*}$ falls as $Var(a)$ and $\gamma$ increase,
 so additional emphasis on transacting comes with lower total scale.
 
-Part (C) follows directly from equation (\ref{eq:5}). When the measurement-compensation
-constraint binds, the entrepreneur stops exactly where the last transacted
+Part (C) follows directly from equation (\ref{eq:5}). When the funding
+limit is reached, the entrepreneur stops exactly where the last transacted
 beneficiary is just compensated by donations net of expected disbursal,
 so there is no further expansion through giving and $g^{*}=0$. Hence
-$n^{*}=m^{*}=m_{mcc}^{*}$.
+$n^{*}=m^{*}=m_{F}^{*}$.
 
 Part (D) is then immediate: in the pure-transacting regime every assisted
 beneficiary is served through a transaction.
@@ -1466,7 +1460,7 @@ expected quality is again decreasing in $v$. Hence, in the mixed regime,
 nonprofits produce higher quality while for-profits operate at greater
 scale.
 
-In Case 3 (pure transacting), the measurement-compensation constraint
+In Case 3 (pure transacting), the funding limit
 is
 \[
 C'(m^{*})=D'(m^{*})-\left(\bar{a}-\mathbb{E}(a)\right),
@@ -1966,8 +1960,8 @@ entrepreneur's choice of legal form because equation $\left(\ref{eq:6}\right)$
 is satisfied once $v$ is replaced by $v\kappa<1$. However, the analysis sheds light on the potential effect
 of extending income tax exemption to for-profits that engage in social
 missions. Within this model, this means setting $v=1$, such that
-$v\times\kappa=\kappa>1$. When the measurement compensation constraint
-binds without a tax exemption, a sufficiently large $\kappa$ may
+$v\times\kappa=\kappa>1$. When the funding limit is reached without
+a tax exemption, a sufficiently large $\kappa$ may
 shift a for-profit that engages exclusively in transacting to engaging
 also in giving. If the for-profit is already in the mixed regime,
 the exemption lowers expected quality further. Accordingly, extending
@@ -1981,27 +1975,27 @@ deduction into the analysis by multiplying $D(n)$ by a scalar $\lambda>1$
 in equation $\left(\ref{eq:-1}\right)$. This affects the nonprofit
 entrepreneur differently from income tax exemption.
 
-The measurement-effectiveness threshold
+The targeting threshold
 \[
 S(v)=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}
 \]
 is unchanged, because a marginal increase in scale raises donations
 equally whether the extra beneficiary is served through transacting
-or through giving. By contrast, the measurement-compensation condition
-in the pure-transacting region becomes
+or through giving. By contrast, the funding condition in the pure-transacting
+region becomes
 \[
 C'(m^{*})=\lambda D'(m^{*})-\left(\bar{a}-\mathbb{E}(a)\right).
 \]
 Hence a higher $\lambda$ raises the scale of pure transacting as long
-as the resulting allocation still satisfies the effectiveness bound
+as the resulting allocation still satisfies the targeting bound
 $C'(m^{*})<S(v)$.
 
 Let $\bar{\lambda}$ denote the value at which the pure-transacting
 solution just reaches the mixed-regime boundary:
 \[
-\bar{\lambda}D'(m_{mec}^{*})=S(v)+\left(\bar{a}-\mathbb{E}(a)\right),
+\bar{\lambda}D'(m_{T}^{*})=S(v)+\left(\bar{a}-\mathbb{E}(a)\right),
 \]
-where $m_{mec}^{*}$ solves $C'(m_{mec}^{*})=S(v)$. For $\lambda<\bar{\lambda}$,
+where $m_{T}^{*}$ solves $C'(m_{T}^{*})=S(v)$. For $\lambda<\bar{\lambda}$,
 the tax deduction increases the number of beneficiaries the nonprofit
 transacts with while preserving maximal quality. For $\lambda\geq\bar{\lambda}$,
 the entrepreneur begins to expand through giving, so expected quality
@@ -2068,8 +2062,8 @@ As $\gamma$ and $Var(a)$ increase, the entrepreneur's choice of $m$
 also increases and $g$ falls
 until $g^{*}=0$ and $n^{*}=m^{*}$. Note also that as $\gamma$ and
 $Var(a)$ increase, $n$ decreases. The expected quality of philanthropy
-increases up to the point where the measurement compensation constraint
-is satisfied. The graphs show the tradeoff between scale and quality.
+increases up to the point where the funding limit is reached. The graphs
+show the tradeoff between scale and quality.
 When there is a greater need for customized philanthropy and when
 entrepreneurs care about effectiveness, entrepreneurs invest their
 resources on helping a smaller number of beneficiaries rather than
@@ -2114,7 +2108,7 @@ nonprofit form ($U_{np}^{E}>U_{fp}^{E}$), even though $\mathbb{E}\left[q_{np}\ri
 In Figure OA3(b), with high altruism ($\gamma=1$), at $\lambda=1$,
 both forms yield maximal quality. As $\lambda$ rises, $m_{np}$ grows
 while the nonprofit remains in pure transacting. At $\lambda=1.34$,
-the measurement-effectiveness constraint becomes binding, and further increases in $\lambda$ cause
+the targeting limit is reached, and further increases in $\lambda$ cause
 $g_{np}$ to rise, resulting in a decline in expected quality, $\mathbb{E}\left[q_{np}\right]$.
 It is only in the yellow region ($\lambda>1.4$) that the tax advantage
 is large enough for the utility from forming a nonprofit to exceed

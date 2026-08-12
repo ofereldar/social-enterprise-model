@@ -389,7 +389,7 @@ at $q=0$, when every beneficiary receives exactly the assistance needed
 to reach $\bar{a}$ (that is, $d(i)=\bar{a}-a(i)$). The quadratic loss
 treats over-provision and under-provision symmetrically
 and provides a tractable measure of targeting accuracy. Quality falls
-as a disbursal departs from the beneficiary's need.\footnote{\secref{oa:no-penalty} of the Online Appendix discusses a quality measure with no penalty for waste. The conclusion discusses the case in which quality is defined by quantity.}
+as a disbursal departs from the beneficiary's need.\footnote{\secref{oa:no-penalty} of the Online Appendix discusses a quality measure with no penalty for waste.}
 
 The entrepreneur's utility is
 
@@ -466,13 +466,14 @@ is zero. This corner does not affect the measurement logic in the
 lemmas below, but it changes the marginal expressions governing scale
 and the choice between giving and transacting.
 
-I next solve for $d^{m*}(i)$, conditional on the entrepreneur transacting
-with beneficiaries and incurring measurement costs such that she observes
-$a$.
+I next solve for the optimal disbursals to the $m$ beneficiaries with
+whom the entrepreneur transacts. By incurring $C(m)$, she observes each
+beneficiary's ability $a(i)$.
 \begin{lem}\label{lem:tailoring}
-If the entrepreneur incurs $C(m)$ to measure transactional beneficiaries,
-she has both financial and altruistic incentives to tailor disbursals
-to beneficiaries\textquoteright{} needs at $t=1$. Thus,
+If the entrepreneur incurs $C(m)$ to observe the abilities of the $m$
+beneficiaries with whom she transacts, both her financial and altruistic
+incentives lead her to tailor each disbursal to the beneficiary's observed
+ability. Thus,
 $d^{m*}(i)=\bar{a}-a(i)$ for all $i\in[0,m]$.
 \end{lem}
 The intuition is that if $d^{m}(i)<\bar{a}-a(i)$, the entrepreneur
@@ -485,23 +486,16 @@ Without loss of generality, an entrepreneur who chooses to transact
 with beneficiaries incurs measurement costs and tailors disbursals
 to their abilities.
 \end{lem}
-If the entrepreneur transacts with beneficiaries but does not measure
-their abilities, she sets $d$ without knowing their true $a$. In
-this case, $d$ is chosen as if the entrepreneur is engaging through
-giving, though she has slightly stronger incentives to provide a higher
-disbursal since her revenues depend on the beneficiary's productivity.
-However, because the disbursal is not tailored to the beneficiary's
-abilities, it may be too small or too large. If the disbursal is insufficient
-to help the beneficiary reach the capabilities of standard workers
-($\bar{a}$), the entrepreneur loses revenue due to poor performance.
-Conversely, if the disbursal exceeds what is necessary to help the
-beneficiary reach $\bar{a}$, it results in waste. Transacting without
-measurement therefore combines the production cost of employing disadvantaged
-beneficiaries with the same targeting problem that arises under giving.
-This result shows why transactions matter in the model: once the entrepreneur
-serves beneficiaries through a productive relationship, her profit
-and mission incentives both point toward learning their needs and
-tailoring disbursals.
+The intuition is straightforward. Without measurement, the entrepreneur
+does not observe $a(i)$ and therefore cannot tailor $d(i)$. Compare
+this with assisting the same beneficiary through giving with the same
+disbursal. Both choices serve one beneficiary, attract the same donative
+funding, and produce the same targeting quality. Under giving, however,
+a standard worker remains in production. Under unmeasured transacting,
+the beneficiary replaces that worker and may remain less productive
+if the disbursal is insufficient to raise her ability to $\bar{a}$.
+Unmeasured transacting therefore offers no targeting advantage and
+may reduce revenue, so giving weakly dominates it.
 
 For the interior comparative statics below, I assume that $C$ is strictly
 convex, $D$ is strictly concave with $\lim_{n\rightarrow\infty}D'(n)=0$,

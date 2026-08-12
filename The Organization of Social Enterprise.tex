@@ -334,15 +334,6 @@ possibility because it would add complexity while providing limited
 additional insight into the paper's core mechanism.} If instead she
 serves $m$ beneficiaries through transactions, paying $C(m)$ allows
 her to observe their abilities before choosing $d^{m}(i)$.
-\lemref{lem:measure-if-transact}, discussed in
-\secref{subsec:transacting-giving}, shows that an entrepreneur who transacts
-with beneficiaries always chooses to incur $C(m)$, observe each beneficiary's
-ability $a(i)$, and tailor the beneficiary's disbursal to that ability
-(such that $d^{m}(i)=\bar{a}-a(i)$). This result allows me to omit a
-separate measurement choice from the entrepreneur's optimization problem.
-Accordingly, whenever the entrepreneur chooses $m$, she incurs $C(m)$,
-the cost of measuring the abilities of all $m$ beneficiaries with whom
-the firm transacts.
 
 Let $r>1$ be the revenue produced by one unit of worker ability. If
 the firm employs only standard workers, revenue is $rw\bar{a}$. If
@@ -374,6 +365,17 @@ giving channels, and less measurement costs:
 \[
 P=R(a)+D(n)-\int_{0}^{m}d^{m}(i)di-\int_{0}^{g}d^{g}(i)di-C(m).
 \]
+
+Note that the expression for $P$ treats the entrepreneur as incurring
+$C(m)$, the cost of measuring the abilities of all $m$ beneficiaries
+with whom the firm transacts. I write the problem this way for simplicity.
+\lemref{lem:measure-if-transact}, discussed in
+\secref{subsec:transacting-giving}, shows that this is without loss
+of generality. If the entrepreneur transacts with a beneficiary without
+measuring ability, she cannot tailor the disbursal. Assisting that beneficiary
+through giving therefore weakly dominates transacting without measurement
+because the beneficiary may not receive enough assistance to reach $\bar{a}$,
+reducing the firm's expected revenue.
 
 Quality means targeting accuracy, not product quality. Formally,
 

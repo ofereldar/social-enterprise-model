@@ -40,6 +40,7 @@
 \usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{adjustbox}
+\usepackage{tikz}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage{setspace}
 \onehalfspacing
@@ -61,6 +62,7 @@
 \newcommand{\lemref}[1]{\hyperref[#1]{Lemma~\ref*{#1}}}
 \newcommand{\propref}[1]{\hyperref[#1]{Proposition~\ref*{#1}}}
 \newcommand{\corref}[1]{\hyperref[#1]{Corollary~\ref*{#1}}}
+\newcommand{\figref}[1]{\hyperref[#1]{Figure~\ref*{#1}}}
 
 \makeatother
 
@@ -644,130 +646,162 @@ on more tailored support \citep{eldar2017}.
 
 \subsection{The Effect of Legal Form on the Scale and Quality of Philanthropy}\label{subsec:legal-form-effects}
 
-To evaluate the effect of legal form on the scale and quality of philanthropy,
-I consider the choices made by for-profit and nonprofit entrepreneurs.
-Recall that for nonprofits, $v<1$, and for for-profits, $v=1$. For
-this analysis, I assume $v<1$ (rather than $v\leq1$). The subscripts
-$fp$ and $np$ denote the choices of for-profit and nonprofit entrepreneurs,
-respectively. The key effect of a lower $v$ is simple: it lowers
-the entrepreneur's private monetary payoff, so the quality term becomes
-relatively more important. A nonprofit entrepreneur is therefore willing
-to bear higher measurement costs; specifically,
-$S(v)>S(1)$
-(see equation (\ref{eq:4})). As illustrated in Figure 2, three main
-cases arise depending on the levels of $\gamma$ and $Var(a)$:
+This subsection compares allocations conditional on legal form; the
+entrepreneur's choice of form is analyzed in \secref{subsec:legal-form-choice}.
+I hold $\gamma$ and the distribution of abilities fixed and compare
+the same entrepreneur operating a for-profit, where $v=1$, with a
+nonprofit, where $v\in(0,1)$. Thus, legal form changes only the share
+of net monetary payoff the entrepreneur can appropriate; it does not
+change the weight $\gamma$ on targeting quality. The subscripts $fp$
+and $np$ denote the choices under the two forms.
 
-$\;$
+Recall that
+\[
+S(v)=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}.
+\]
+Because
+\[
+S'(v)=-\frac{\gamma Var(a)}{v^{2}}-\frac{1}{4\gamma}<0,
+\]
+$S(v)>S(1)$. \figref{fig:allocation-regimes} summarizes the threshold
+structure.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=1.15cm,y=1cm]
+\draw[->,line width=0.7pt] (0,0) -- (12,0)
+    node[right] {$S(v)$};
+\draw[dashed,line width=0.6pt] (3.6,-0.2) -- (3.6,1.85);
+\draw[dashed,line width=0.6pt] (8.4,-0.2) -- (8.4,1.85);
 
-\noindent\begin{minipage}[t]{1\columnwidth}%
-\begin{center}
-Figure 2: \textbf{Legal Form and the Entrepreneur's Choice between
-Transacting and Giving}
-\par\end{center}
-\begin{center}
-\includegraphics[scale=0.45]{Figure 2.PNG}
-\par\end{center}
-\begin{center}
-\begin{minipage}[t]{0.95\textwidth}%
-\begin{spacing}{0}
-{\footnotesize This figure illustrates the three key outcomes of the
-entrepreneur's decision-making process in selecting $m$ and $n$,
-depending on whether the firm operates as a nonprofit ($np$) or a
-for-profit ($fp$). }
+\node[font=\bfseries] at (1.8,1.55) {Pure giving};
+\node at (1.8,0.92) {$m^{*}=0$};
+
+\node[font=\bfseries] at (6,1.55) {Mixed};
+\node at (6,0.92) {$m^{*}>0,\quad g^{*}>0$};
+
+\node[font=\bfseries] at (10.2,1.55) {Pure transacting};
+\node at (10.2,0.92) {$g^{*}=0,\quad n^{*}=m^{*}=m_F^{*}$};
+
+\node[below] at (3.6,-0.15) {$C'(0)$};
+\node[below] at (8.4,-0.15) {$C'(m_F^{*})$};
+\node at (6,-0.95) {$S(1)\;\longrightarrow\;S(v)\quad\text{for }v<1$};
+\end{tikzpicture}
+\caption{\textbf{Allocation Regimes as Targeting Incentives Rise}}
+\label{fig:allocation-regimes}
+\centering{}{\small{}%
+\begin{minipage}[t]{0.92\textwidth}%
+\begin{spacing}{1}
+Pure giving applies when $S(v)\leq C'(0)$, the mixed regime applies
+when $C'(0)<S(v)<C'(m_F^{*})$, and pure transacting applies when
+$S(v)\geq C'(m_F^{*})$. Because a nonprofit has $v<1$ and
+$S(v)>S(1)$, it lies to the right of an otherwise identical
+for-profit. Moving right weakly raises $m^{*}$ and lowers $g^{*}$
+and $n^{*}$.
 \end{spacing}
-%
-\end{minipage}
-\par\end{center}%
-\end{minipage}
+\end{minipage}}{\small\par}
+\end{figure}
 
-$\;$
+The nonprofit form therefore gives the entrepreneur a
+greater marginal incentive to replace giving with measured transactions.
+Under the conditions of \propref{prop:comparative-statics}, the choices
+characterized in \secref{subsec:transacting-giving} imply
+\[
+m_{np}^{*}\geq m_{fp}^{*},\qquad
+g_{np}^{*}\leq g_{fp}^{*},\qquad
+n_{np}^{*}\leq n_{fp}^{*}.
+\]
+Expected quality under legal form $j\in\{np,fp\}$ is
+\[
+\mathbb{E}[q_j]
+=-g_j^{*}\left(Var(a)+\frac{v_j^{2}}{4\gamma^{2}}\right),
+\qquad v_{np}=v,\quad v_{fp}=1.
+\]
+The nonprofit both relies weakly less on giving and, when it gives,
+chooses disbursals closer to average beneficiary need. It therefore
+produces weakly higher expected targeting quality.
 
-\textbf{Case 1. Pure Giving:} Pure giving occurs when measurement
-is never worth its cost. Formally, the targeting limit
-in equation (\ref{eq:4}) is not satisfied for any $m$. Suppose
-$C'(0)>S(v)$.
-This implies that when $Var(a)$ is low or $\gamma$ is small, the
-nonprofit entrepreneur will form a donative organization ($m_{np}^{*}=0$).
-Similarly, the for-profit entrepreneur will engage in pure giving
-($m_{fp}^{*}=0$) because $S(v)>S(1)$,
-and $C(m)$ is convex. Setting $m^{*}=0$ and solving equation (\ref{eq:-1}),
-the number of beneficiaries served by donative organizations is determined
-by $D'(n_{np}^{*})=\bar{a}-\mathbb{E}(a)+S(v).$
-For for-profits, $D'(n_{fp}^{*})=\bar{a}-\mathbb{E}(a)+S(1)<D'(n_{np}^{*})$.
-Since $D(n)$ is concave, this implies that $n_{np}^{*}=g_{np}^{*}<g_{fp}^{*}=n_{fp}^{*}$.
-While for-profits give to more beneficiaries, nonprofits provide higher
-per-capita disbursals because $d_{np}^{g*}=\bar{a}-\mathbb{E}(a)-\frac{v}{2\gamma}>d_{fp}^{g*}=\bar{a}-\mathbb{E}(a)-\frac{1}{2\gamma}$.
-As a result, the expected quality of philanthropy by nonprofits is
-higher: $\mathbb{E}\left[q_{np}\right]=-g_{np}^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)>-g_{fp}^{*}\left(Var(a)+\frac{1}{4\gamma^{2}}\right)=\mathbb{E}\left[q_{fp}\right]$.
+The three canonical allocation regimes clarify the comparison.
 
-\textbf{Case 2. Mixed Giving and Transacting:} Mixed giving and transacting
-occurs when measurement is useful for some beneficiaries but not for
-all additional scale. Suppose that $C'(m^{*})=S(1)=\gamma Var(a)-\frac{1}{4\gamma}$
-satisfies the targeting limit for the for-profit
-firm (see equation (\ref{eq:4})). This means that the for-profit
-entrepreneur will continue to increase $n$ until $n$ satisfies the
-equation $D'(n_{fp}^{*})=\bar{a}-\mathbb{E}(a)+S(1)$.
-Thus, the entrepreneur will mix transacting with beneficiaries and giving
-to them. At $m=m_{fp}^{*}$, the nonprofit entrepreneur will continue
-to increase the number of beneficiaries she transacts with because $C(m)$
-is convex, implying $m_{np}^{*}>m_{fp}^{*}.$ The nonprofit entrepreneur
-will increase $n$ up to $n_{np}^{*}<n_{fp}^{*}$, as in Case 1.\footnote{I assume the nonprofit also mixes between giving and transacting,
-although it is possible that the nonprofit will engage exclusively
-in transacting if the funding limit is reached.} It follows that $g_{fp}^{*}>g_{np}^{*}\geq0$ because $n=m+g$. Accordingly,
-$\mathbb{E}\left[q_{np}\right]>\mathbb{E}\left[q_{fp}\right]$.
+\textbf{Case 1. Pure Giving:} Suppose $C'(0)\geq S(v)$, so measurement
+is not worthwhile even under the nonprofit form. Because $S(v)>S(1)$,
+both forms choose $m^{*}=0$ and serve all beneficiaries through giving.
+Their optimal scales satisfy
+\[
+D'(n_{np}^{*})=\bar a-\mathbb{E}(a)+S(v),\qquad
+D'(n_{fp}^{*})=\bar a-\mathbb{E}(a)+S(1).
+\]
+Since $D'$ is strictly decreasing, $n_{np}^{*}<n_{fp}^{*}$. Moreover,
+$d_{np}^{g*}(i)>d_{fp}^{g*}(i)$, so the nonprofit's disbursal is closer to
+average beneficiary need. Thus, the nonprofit operates at lower scale
+and produces higher expected quality.
 
-\textbf{Case 3. Pure Transacting:} Pure transacting occurs when beneficiary
-heterogeneity and the entrepreneur's concern for quality are high
-enough that the entrepreneur avoids giving altogether. The funding
-limit in equation (\ref{eq:5}) is then reached,
-i.e., $C'(m^{*})=D'(m^{*})-\left(\bar{a}-\mathbb{E}(a)\right)$.
-As $D(n)$ is concave, the marginal income from donations decreases
-with $n$, and at high levels of $\gamma Var(a)$, the funding limit
-will be reached. When the informational advantages
-are significant, social enterprises focus exclusively on transacting.
-Importantly, the funding limit is identical
-for both for-profit and nonprofit firms because it does not depend
-on $v$. Consequently, $m_{np}^{*}=m_{fp}^{*}=n_{np}^{*}=n_{fp}^{*}$,
-and $g_{np}^{*}=g_{fp}^{*}=0$. Moreover, since $d_{np}^{m*}=d_{fp}^{m*}=\bar{a}-a(i)$
-(per \lemref{lem:tailoring}), $\mathbb{E}\left[q_{np}\right]=\mathbb{E}\left[q_{fp}\right]=0.$
-Accordingly, the quality of philanthropy for both for-profit and nonprofit
-firms is maximal.
+\textbf{Case 2. Mixed Giving and Transacting:} Suppose both forms use
+transactions for some beneficiaries and giving for others. For legal
+form $j$,
+\[
+C'(m_j^{*})=S(v_j),\qquad
+D'(n_j^{*})=\bar a-\mathbb{E}(a)+S(v_j).
+\]
+Because $C'$ is strictly increasing, $D'$ is strictly decreasing,
+and $S(v)>S(1)$, the nonprofit chooses $m_{np}^{*}>m_{fp}^{*}$ and
+$n_{np}^{*}<n_{fp}^{*}$. Consequently, $g_{np}^{*}<g_{fp}^{*}$.
+The nonprofit again operates at lower scale and produces higher expected
+quality.
+
+The two forms need not always occupy the same regime. As $Var(a)$ or
+$\gamma$ rises, the nonprofit may begin transacting while the for-profit
+still uses pure giving, or the nonprofit may reach pure transacting
+while the for-profit still mixes. These are transitions between the
+three canonical cases. The orderings above continue to hold because
+the nonprofit has the larger value of $S$.
+
+\textbf{Case 3. Pure Transacting:} Suppose the funding limit binds
+before the targeting limit for the for-profit. It then also binds first
+for the nonprofit because $S(v)>S(1)$. Under either form, scale solves
+\[
+C'(m_F^{*})=D'(m_F^{*})-\left(\bar a-\mathbb{E}(a)\right),
+\]
+which does not depend on $v$. Therefore,
+\[
+m_{np}^{*}=n_{np}^{*}=m_{fp}^{*}=n_{fp}^{*}=m_F^{*},
+\qquad g_{np}^{*}=g_{fp}^{*}=0.
+\]
+By \lemref{lem:tailoring}, both forms tailor every disbursal, so
+$\mathbb{E}[q_{np}]=\mathbb{E}[q_{fp}]=0$.
+
 \begin{prop}\label{prop:legal-form-effects}
-When $Var(a)$ and $\gamma$ are medium or low, a nonprofit is expected
-to produce higher-quality philanthropy, measured as subsidy-effectiveness
-($\mathbb{E}\left[q_{np}\right]>\mathbb{E}\left[q_{fp}\right]$),
-while a for-profit produces philanthropy at a greater scale than a
-nonprofit ($n_{np}^{*}<n_{fp}^{*}$). When $Var(a)$ and $\gamma$
-are high, such that the entrepreneur engages exclusively in transacting
-with beneficiaries, nonprofits and for-profits produce the same quality
-($\mathbb{E}\left[q_{np}\right]=\mathbb{E}\left[q_{fp}\right]$) and
-scale ($n_{np}^{*}=n_{fp}^{*}$ and $g_{np}^{*}=g_{fp}^{*}=0$).
+Under the conditions of \propref{prop:comparative-statics}, compare
+a nonprofit with $v\in(0,1)$ and a for-profit with $v=1$, holding
+$\gamma$ and the distribution of abilities fixed. Then
+$m_{np}^{*}\geq m_{fp}^{*}$, $g_{np}^{*}\leq g_{fp}^{*}$,
+$n_{np}^{*}\leq n_{fp}^{*}$, and
+$\mathbb{E}[q_{np}]\geq\mathbb{E}[q_{fp}]$.
+If the for-profit uses giving, $g_{fp}^{*}>0$, the inequalities for
+$g^{*}$, $n^{*}$, and expected quality are strict. If the for-profit
+uses pure transacting, both forms choose
+$n^{*}=m^{*}=m_F^{*}$ and $g^{*}=0$, and both attain maximal expected
+quality.
 \end{prop}
-This result shows that when informational asymmetries are not substantial,
-nonprofit entrepreneurs do not necessarily produce more charity than
-for-profits but instead deliver higher-quality philanthropy. However,
-when informational asymmetries are substantial, entrepreneurs already
-have strong incentives to gather information about beneficiaries\textquoteright{}
-abilities and tailor disbursals accordingly. In such cases, where
-all disbursals are tied to transactions and measurement, the nonprofit
-form is no longer necessary to ensure effectiveness. This finding
-reinforces the view that for-profits can be just as effective as nonprofits
-in delivering high-quality philanthropy \citep{haber2016,pallotta2022}.
+
+The comparison holds the entrepreneur's concern for quality fixed.
+When the for-profit still uses giving, the nonprofit's lower $v$ shifts
+assistance toward measured transactions and trades scale for better
+targeting. Once even the for-profit uses pure transacting, transactions
+align monetary and targeting incentives, so the nonprofit constraint
+no longer changes the allocation. In that region, a for-profit can
+match the nonprofit's targeting quality \citep{haber2016,pallotta2022}.
+
 \begin{cor}\label{cor:no-info}
-Without information asymmetries (i.e., when $a(i)$ is observable
-for every $i$), social enterprises are redundant: there is an optimum
-with $m^{*}=0$. A for-profit produces philanthropy at a greater
-scale than a nonprofit ($n_{np}^{*}<n_{fp}^{*}$), and a nonprofit
-provides higher-quality philanthropy than a for-profit ($q_{np}>q_{fp}$).
+Suppose the beneficiary pool remains fixed and, after the beneficiaries
+to be assisted are determined, the entrepreneur observes each beneficiary's
+ability before choosing disbursals, without incurring measurement costs.
+Then an optimum can be achieved with $m^{*}=0$.
 \end{cor}
-When there are no information asymmetries, there is no benefit to
-measurement because the entrepreneur already observes $a$. Social
-enterprises emerge primarily in development contexts, where entrepreneurs
-are not able to observe the abilities of disadvantaged groups, such
-as productivity or creditworthiness. In contrast, in other social
-contexts, such as providing assistance to the destitute, information
-asymmetries are less significant, and the need for tailoring is correspondingly
-lower.
+The corollary does not assume that conventional firms are unable to
+learn about beneficiaries. It identifies when beneficiary-facing transactions
+matter in the model. If ability can be observed without transacting,
+transactions provide no informational advantage and are unnecessary
+for achieving an optimum.
 
 \subsection{The Entrepreneur's Choice of Legal Form}\label{subsec:legal-form-choice}
 
@@ -1509,72 +1543,101 @@ $m_F^{*}$ is the minimum optimal scale as $Var(a)$ increases.
 
 \subsection{Proof of \propref{prop:legal-form-effects}}
 
-Let
+Let $A\equiv\bar a-\mathbb{E}(a)$ and let
 \[
-S(v)\equiv\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma},\qquad0<v\leq1.
+s\equiv S(v)=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}.
 \]
-Since
+Dividing expected utility in equation (\ref{eq:3}) by $v$ and omitting
+the constant $rw\bar a$ gives
+\[
+\Phi_s(m,g)=D(m+g)-C(m)-A(m+g)-sg.
+\]
+The three regimes can therefore be characterized by $s$. Under pure
+giving, $m^{*}=0$ and
+\[
+D'(n^{*})=A+s.
+\]
+In the mixed regime,
+\[
+C'(m^{*})=s,\qquad D'(n^{*})=A+s.
+\]
+Under pure transacting,
+\[
+n^{*}=m^{*}=m_F^{*},\qquad g^{*}=0,
+\]
+where $m_F^{*}$ solves
+\[
+C'(m_F^{*})=D'(m_F^{*})-A.
+\]
+Equivalently, pure giving applies when $s\leq C'(0)$, the mixed regime
+applies when $C'(0)<s<C'(m_F^{*})$, and pure transacting applies when
+$s\geq C'(m_F^{*})$. The adjacent regimes yield the same allocation
+at each boundary.
+
+These choices are monotone in $s$ across all three regimes. Under
+pure giving,
+\[
+\frac{dn^{*}}{ds}=\frac{dg^{*}}{ds}=\frac{1}{D''(n^{*})}<0.
+\]
+In the mixed regime,
+\[
+\frac{dm^{*}}{ds}=\frac{1}{C''(m^{*})}>0,
+\qquad
+\frac{dn^{*}}{ds}=\frac{1}{D''(n^{*})}<0,
+\]
+and
+\[
+\frac{dg^{*}}{ds}
+=\frac{1}{D''(n^{*})}-\frac{1}{C''(m^{*})}<0.
+\]
+Under pure transacting, $m^{*}$ and $n^{*}$ are fixed at $m_F^{*}$
+and $g^{*}=0$. The choices are continuous at the boundaries between
+regimes. Hence, globally, $m^{*}$ is weakly increasing in $s$, while
+$g^{*}$ and $n^{*}$ are weakly decreasing in $s$.
+
+For a nonprofit, $v\in(0,1)$, whereas for a for-profit, $v=1$. Because
 \[
 S'(v)=-\frac{\gamma Var(a)}{v^{2}}-\frac{1}{4\gamma}<0,
 \]
-lower values of $v$ place greater weight on effectiveness.
+$S(v)>S(1)$. It follows that
+\[
+m_{np}^{*}\geq m_{fp}^{*},\qquad
+g_{np}^{*}\leq g_{fp}^{*},\qquad
+n_{np}^{*}\leq n_{fp}^{*}.
+\]
+Expected quality under form $j$ is
+\[
+\mathbb{E}[q_j]
+=-g_j^{*}\left(Var(a)+\frac{v_j^{2}}{4\gamma^{2}}\right),
+\qquad v_{np}=v,\quad v_{fp}=1.
+\]
+The nonprofit has both a weakly smaller $g^{*}$ and a strictly smaller
+targeting-loss coefficient. Therefore,
+$\mathbb{E}[q_{np}]\geq\mathbb{E}[q_{fp}]$. If $g_{fp}^{*}>0$,
+then $S(1)$ lies below the pure-transacting threshold. As $s$ rises
+from $S(1)$, $g^{*}$ and $n^{*}$ fall strictly until that threshold
+is reached and remain constant only afterward. Because $S(v)>S(1)$,
+the endpoint inequalities for $g^{*}$ and $n^{*}$ are strict, as is
+the expected-quality inequality.
+If $g_{fp}^{*}=0$, the for-profit has reached pure transacting. Since
+$S(v)>S(1)$, the nonprofit has also reached pure transacting, and both
+forms choose $n^{*}=m^{*}=m_F^{*}$ and attain expected quality zero.
 
-In Case 1 (pure giving), $m^{*}=0$ and $n^{*}$ solves
-\[
-D'(n^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v).
-\]
-Because $D'$ is decreasing and $S(v)$ is decreasing in $v$, $n^{*}$
-is increasing in $v$. Hence $n_{np}^{*}<n_{fp}^{*}$. Expected quality
-is
-\[
-\mathbb{E}[q]=-n^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right),
-\]
-and both $n^{*}$ and the coefficient in parentheses are increasing
-in $v$, so expected quality is decreasing in $v$. Therefore $\mathbb{E}[q_{np}]>\mathbb{E}[q_{fp}]$.
+\subsection{Proof of \corref{cor:no-info}}
 
-In Case 2 (mixed giving and transacting), $m^{*}$ solves $C'(m^{*})=S(v)$
-and therefore decreases in $v$, while $n^{*}$ still solves $D'(n^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v)$
-and therefore increases in $v$. It follows that $g^{*}=n^{*}-m^{*}$
-is increasing in $v$. Since
-\[
-\mathbb{E}[q]=-g^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right),
-\]
-expected quality is again decreasing in $v$. Hence, in the mixed regime,
-nonprofits produce higher quality while for-profits operate at greater
-scale.
-
-In Case 3 (pure transacting), the funding limit
-is
-\[
-C'(m^{*})=D'(m^{*})-\left(\bar{a}-\mathbb{E}(a)\right),
-\]
-which does not depend on $v$. Therefore $m_{np}^{*}=m_{fp}^{*}=n_{np}^{*}=n_{fp}^{*}$
-and $g_{np}^{*}=g_{fp}^{*}=0$. By \lemref{lem:tailoring}, disbursals are perfectly
-tailored, so the quality of philanthropy is maximal and $\mathbb{E}[q_{np}]=\mathbb{E}[q_{fp}]=0$.
-
-\subsection*{B.2 Proof of \corref{cor:no-info}}
-
-When the entrepreneur knows the abilities of disadvantaged people,
-she need not expend any costs in measuring the abilities of the beneficiaries,
-and there is no informational gain from transacting rather than giving.
-Accordingly, there is an optimum with $m^{*}=0$, so social enterprises
-are redundant in this case. The entrepreneur can tailor disbursals under
-giving to each beneficiary, choosing
-\[
-d^{g*}(i)=\bar{a}-a(i)-\frac{v}{2\gamma}\qquad\forall i\in[0,n].
-\]
-Substituting into utility yields the first-order condition
-\[
-D'(n^{*})=\bar{a}-\mathbb{E}(a)-\frac{v}{4\gamma}.
-\]
-Because the right-hand side is decreasing in $v$ and $D'$ is decreasing,
-$n^{*}$ is increasing in $v$, so $n_{np}^{*}<n_{fp}^{*}$. Quality
-is
-\[
-q=-n^{*}\frac{v^{2}}{4\gamma^{2}},
-\]
-which is decreasing in $v$ because both $n^{*}$ and $v^{2}$ are increasing
-in $v$. Hence $q_{np}>q_{fp}$.
+Consider any feasible allocation in which the entrepreneur transacts
+with a beneficiary. Reclassify that beneficiary as being served through
+giving while holding the beneficiary and disbursal fixed. Total scale,
+donative funding, disbursal costs, and targeting quality are unchanged.
+Because ability is observable without measurement, the reclassification
+also entails no loss of information or additional measurement cost.
+Under giving, a standard worker remains in production and produces
+$r\bar a$. Under transacting, the beneficiary produces
+$r\min\{a(i)+d(i),\bar a\}\leq r\bar a$. The reclassification therefore
+weakly raises the firm's monetary payoff without lowering targeting
+quality. Repeating this step for every beneficiary with whom the entrepreneur
+transacts produces an allocation with $m=0$ and weakly higher utility.
+Starting from an optimum proves that an optimum exists with $m^{*}=0$.
 
 \subsection{Proof of \propref{prop:legal-form-choice}}
 

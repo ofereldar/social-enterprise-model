@@ -605,55 +605,32 @@ before the targeting limit, the optimum is pure transacting:
 $n^{*}=m^{*}=m_{F}^{*}$ and $g^{*}=0$. Every assisted beneficiary
 is then served through a transaction.
 \end{prop}
-This proposition makes precise the trade-off between scale and targeting.
-To isolate the role of heterogeneity, let $\sigma^{2}\equiv Var(a)$,
-holding $\mathbb{E}(a)$ fixed. In the mixed regime,
-\lemref{lem:tailoring} and equation (\ref{eq:2}) imply that expected
-quality is
-\[
-\mathbb{E}[q]=-g^{*}\left(\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right).
-\]
-An increase in $\sigma^{2}$ has two opposing effects. It increases the
-expected targeting loss from each beneficiary assisted through giving.
-But it also induces the entrepreneur to replace giving with measured
-transactions, thereby reducing $g^{*}$. The next corollary provides
-the exact condition under which this reallocation effect dominates.
+This proposition also yields a simple trade-off between quality and scale.
 \begin{cor}\label{cor:quality-scale}
-Holding $\mathbb{E}(a)$ fixed, an increase in $Var(a)$ increases $m^{*}$
-and decreases both $n^{*}$ and $g^{*}$ in the mixed regime. Its effect
-on expected quality is
-\[
-\frac{\partial\mathbb{E}[q]}{\partial Var(a)}=
-\frac{\gamma}{v}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)
-\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)-g^{*}.
-\]
-Consequently, expected quality increases with $Var(a)$ if and only if
-\[
-\frac{\gamma}{v}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)
-\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)>g^{*}.
-\]
-Expected quality is maximized at the pure-transacting allocation, where
-$n^{*}=m^{*}=m_{F}^{*}$, $g^{*}=0$, and $\mathbb{E}[q]=0$.
+In the mixed regime, an increase in the entrepreneur's concern for
+quality ($\gamma$) increases expected quality but decreases total scale
+$n^{*}$. Expected quality is maximized at the pure-transacting allocation,
+where $n^{*}=m^{*}=m_{F}^{*}$, $g^{*}=0$, and $\mathbb{E}[q]=0$.
 \end{cor}
-The condition in \corref{cor:quality-scale} has a direct interpretation.
-Greater heterogeneity improves expected quality precisely when the resulting
-reduction in untailored giving more than offsets the greater targeting loss
-from each remaining giving beneficiary. If the mixed regime reaches a
-pure-transacting boundary, the condition holds for values of $Var(a)$
-sufficiently close to that boundary because $g^{*}$ approaches zero
-while the reallocation effect remains positive. In that region, the model
-generates a trade-off between expected quality and scale (see \exampleref{ex:oa-tradeoff}
-in \secref{oa:examples} of the Online Appendix). Entrepreneurs
-who prioritize effectiveness tend to focus on a smaller number of
-beneficiaries, while those operating in environments with lower information
-asymmetries and relying on standardized disbursals are more likely
-to prioritize scale. Thus, some social enterprises achieve broader
-reach at the expense of quality, whereas others concentrate on delivering
-tailored support to a more limited group. For example, large corporations
-that market fair-trade products may achieve greater scale while relying
-more on standardized support. In contrast, smaller sourcing organizations
-may focus on repeated transactions with a more limited number of disadvantaged
-farmers and on more tailored support \citep{eldar2017}.
+The intuition is simple. An entrepreneur who places greater weight on
+effectiveness shifts from giving toward measured transactions. Targeting
+improves, but fewer beneficiaries are served. In the mixed regime,
+\lemref{lem:tailoring} and equation (\ref{eq:2}) imply
+\[
+\mathbb{E}[q]=-g^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right).
+\]
+An increase in $Var(a)$ has the same directional effect on the entrepreneur's
+choices: $m^{*}$ rises, while $g^{*}$ and $n^{*}$ fall. Unlike an increase
+in $\gamma$, however, greater heterogeneity also makes each remaining
+untailored disbursal less accurate, so its net effect on quality need not
+be monotonic. \exampleref{ex:oa-tradeoff} makes this trade-off concrete.
+Expected quality initially falls over a small low-variance range. It then
+rises as measured transactions replace giving and total scale falls,
+until the pure-transacting allocation is reached. Large corporations that market fair-trade
+products may achieve greater scale while relying more on standardized
+support. In contrast, smaller sourcing organizations may focus on repeated
+transactions with a more limited number of disadvantaged farmers and
+on more tailored support \citep{eldar2017}.
 
 \subsection{The Effect of Legal Form on the Scale and Quality of Philanthropy}\label{subsec:legal-form-effects}
 
@@ -1411,38 +1388,22 @@ a transaction.
 
 \subsection{Proof of \corref{cor:quality-scale}}
 
-Let $\sigma^{2}=Var(a)$ and hold $\mathbb{E}(a)$ fixed. In the mixed
-regime,
+In the mixed regime, \propref{prop:comparative-statics} implies that
+$\partial n^{*}/\partial\gamma<0$ and $\partial g^{*}/\partial\gamma<0$.
+Because
 \[
-C'(m^{*})=S(v),\qquad
-D'(n^{*})=\bar{a}-\mathbb{E}(a)+S(v),
+\mathbb{E}[q]=-g^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right),
 \]
-where $\partial S(v)/\partial\sigma^{2}=\gamma/v$. Implicit differentiation
-therefore gives
+differentiation gives
 \[
-\frac{\partial m^{*}}{\partial\sigma^{2}}
-=\frac{\gamma/v}{C''(m^{*})}>0
-\qquad\text{and}\qquad
-\frac{\partial n^{*}}{\partial\sigma^{2}}
-=\frac{\gamma/v}{D''(n^{*})}<0.
+\frac{\partial\mathbb{E}[q]}{\partial\gamma}
+=-\frac{\partial g^{*}}{\partial\gamma}
+\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)
++\frac{g^{*}v^{2}}{2\gamma^{3}}>0.
 \]
-Because $g^{*}=n^{*}-m^{*}$,
-\[
-\frac{\partial g^{*}}{\partial\sigma^{2}}
-=\frac{\gamma}{v}\left(\frac{1}{D''(n^{*})}-\frac{1}{C''(m^{*})}\right)<0.
-\]
-Differentiating expected quality and substituting this expression yields
-\[
-\frac{\partial\mathbb{E}[q]}{\partial\sigma^{2}}
-=\frac{\gamma}{v}\left(\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right)
-\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)-g^{*},
-\]
-which establishes the condition in the corollary. At the pure-transacting
+Thus, expected quality rises while total scale falls. At the pure-transacting
 allocation, $g^{*}=0$, so expected quality equals its maximum value of
-zero. If the mixed regime approaches a pure-transacting boundary, continuity
-and the curvature conditions stated above imply that the positive reallocation
-term remains strictly positive as $g^{*}$ approaches zero. Expected quality
-therefore increases with $Var(a)$ sufficiently close to that boundary.
+zero.
 
 \subsection{Proof of \propref{prop:legal-form-effects}}
 
@@ -2078,20 +2039,19 @@ Figure OA1: \textbf{The For-Profit Entrepreneur's Choices}
 \centering{}\includegraphics[width=0.48\textwidth]{figA1a}\hfill\includegraphics[width=0.48\textwidth]{figA1b}
 \end{figure}
 
-As $\gamma$ and $Var(a)$ increase, the entrepreneur's choice of $m$
-also increases and $g$ falls
-until $g^{*}=0$ and $n^{*}=m^{*}$. Note also that as $\gamma$ and
-$Var(a)$ increase, $n$ decreases. The expected quality of philanthropy
-increases up to the point where the funding limit is reached. The graphs
-show the tradeoff between scale and quality.
-When there is a greater need for customized philanthropy and when
-entrepreneurs care about effectiveness, entrepreneurs invest their
-resources on helping a smaller number of beneficiaries rather than
-spreading the donations they receive across a larger set of individuals.
-Note however that for very low $Var(a)$, expected quality decreases
-in $Var(a)$ simply because the costs of misallocating disbursals
-are very low. The giving model is thus more effective when there is
-less need for tailoring subsidies to beneficiaries' abilities.
+As $\gamma$ increases, the entrepreneur chooses a larger $m$ and smaller
+$g$ and $n$. Expected quality rises until the funding limit is reached,
+where $g^{*}=0$ and $n^{*}=m^{*}$. Changes in $Var(a)$ produce the
+same allocation pattern, but the quality effect differs at very low
+levels of heterogeneity. In that range, expected quality initially falls
+as $Var(a)$ rises because giving performs well when there is little need
+to tailor disbursals. Beyond that range, the shift from giving to measured
+transactions dominates: expected quality rises while total scale falls,
+until the pure-transacting allocation is reached. The graphs therefore
+illustrate the trade-off between scale and quality. When tailoring is
+more important or the entrepreneur cares more about effectiveness, she
+concentrates resources on assisting fewer beneficiaries rather than
+spreading donations across a larger group.
 \end{example}
 $\,$
 \begin{example}\label{ex:oa-legal-form}

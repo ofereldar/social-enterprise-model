@@ -502,7 +502,7 @@ Having characterized the optimal disbursal under each channel, I now
 consider how the entrepreneur allocates beneficiaries between transacting
 and giving. For the comparative statics below, I focus on a finite,
 unique interior solution with positive measurement and nonbinding production
-capacity.\footnote{Specifically, I assume that $C$ is strictly convex, $D$ is strictly concave with $\lim_{n\rightarrow\infty}D'(n)=0$, and the relevant first-order conditions have solutions. I also assume that $w$ is sufficiently large that the capacity constraint does not bind. If capacity binds, transacting is capped at $m^{*}=w$. If measurement is not worthwhile at $m=0$, the pure-giving corner applies, as discussed in \secref{subsec:legal-form-effects}.}
+capacity.\footnote{Specifically, I assume that, over the relevant range, $C$ and $D$ are twice continuously differentiable, $C''(m)>0$, $D''(n)<0$, $\lim_{n\rightarrow\infty}D'(n)=0$, and the relevant first-order conditions have solutions. I also assume that $w$ is sufficiently large that the capacity constraint does not bind. If capacity binds, transacting is capped at $m^{*}=w$. If measurement is not worthwhile at $m=0$, the pure-giving corner applies, as discussed in \secref{subsec:legal-form-effects}.}
 The entrepreneur can increase total scale $n$ either by raising $m$
 or by raising $g$. Raising $m$ expands scale through
 transactions. The entrepreneur receives the marginal donation, pays
@@ -616,39 +616,45 @@ in giving ($g_{F}^{*}=0$).
 \textbf{(D)} In the pure-transacting regime, $n^{*}=m^{*}=m_{F}^{*}$
 and $g^{*}=0$, so every assisted beneficiary is served through a transaction.
 \end{prop}
-This proposition highlights the trade-off faced by social entrepreneurs
-between scale and the quality of philanthropy. The scale of philanthropy is determined
-by $n$. Quality is defined as $q=-\int_{0}^{n}\left(d(i)-(\bar{a}-a(i))\right)^{2}di,$
-where misallocation of disbursals reduces the quality of philanthropy.
-Under the maintained interior condition, \lemref{lem:tailoring} and equation (\ref{eq:2}) imply that expected quality is $\mathbb{E}\left[q\right]=-g^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)$.
-Maximum philanthropic quality is achieved when the entrepreneur engages exclusively
-in transacting ($g^{*}=0$), resulting in $\mathbb{E}\left[q\right]=0$.
-When the entrepreneur mixes transacting and giving, $\frac{\partial n^{*}}{\partial m^{*}}(Var(a),\gamma)<0$
-and $\frac{\partial n^{*}}{\partial g^{*}}(Var(a),\gamma)>0$. For
-very small $Var(a)$, the need for transacting is low. As $Var(a)$
-and $\gamma$ increase, both the need for tailoring and the entrepreneur's
-regard for quality are higher, leading to larger $m^{*}$ and smaller
-$n^{*}$. For sufficiently high $Var(a)$, expected quality increases
-with $\gamma$, such that $\mathbb{E}\left[q\right]\rightarrow0$
-as $n^{*},m^{*}\rightarrow m_{F}^{*}=n_{F}^{*}$.\footnote{The relationship between expected quality and $Var(a)$ is defined
-as $\frac{\partial\mathbb{E}\left[q\right]}{\partial Var(a)}=-\frac{\partial g^{*}}{\partial Var(a)}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)-g^{*}$.
-This derivative may be negative or positive. Using the condition that
-$D'(n_{T}^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v)$,
-it can be shown that $g^{*}\left(Var(a)\right)$ is a declining convex
-function of $Var(a)$, and $\frac{\partial g^{*}}{\partial Var(a)}\left(Var(a)\right)<0$
-is an increasing concave function. For high values of $Var(a)$, $\frac{\partial\mathbb{E}\left[q\right]}{\partial Var(a)}>0$.
-By contrast, expected quality always increases with $\gamma.$ Specifically,
-$\frac{\partial\mathbb{E}\left[q\right]}{\partial\gamma}=-\frac{\partial g^{*}}{\partial\gamma}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)+\frac{g^{*}v^{2}}{2\gamma^{3}}>0$,
-because $\frac{\partial g^{*}}{\partial\gamma}<0$ .}
+This proposition makes precise the trade-off between scale and targeting.
+To isolate the role of heterogeneity, let $\sigma^{2}\equiv Var(a)$,
+holding $\mathbb{E}(a)$ fixed. In the mixed regime, where $g^{*}>0$,
+\lemref{lem:tailoring} and equation (\ref{eq:2}) imply that expected
+quality is
+\[
+\mathbb{E}[q]=-g^{*}\left(\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right).
+\]
+An increase in $\sigma^{2}$ has two opposing effects. It increases the
+expected targeting loss from each beneficiary assisted through giving.
+But it also induces the entrepreneur to replace giving with measured
+transactions, thereby reducing $g^{*}$. The next corollary provides
+the exact condition under which this reallocation effect dominates.
 \begin{cor}\label{cor:quality-scale}
-When $n^{*}=m^{*}=m_{F}^{*}$, the expected quality of philanthropy
-is maximized. Conversely, when $m^{*}=m_{T}^{*}$ and $Var(a)$
-is sufficiently high, the expected quality of philanthropy increases
-as $m^{*}\left(Var(a),\gamma\right)$ rises and $n^{*}\left(Var(a),\gamma\right)$
-declines.
+Holding $\mathbb{E}(a)$ fixed, an increase in $Var(a)$ increases $m^{*}$
+and decreases both $n^{*}$ and $g^{*}$ in the mixed regime. Its effect
+on expected quality is
+\[
+\frac{\partial\mathbb{E}[q]}{\partial Var(a)}=
+\frac{\gamma}{v}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)
+\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)-g^{*}.
+\]
+Consequently, expected quality increases with $Var(a)$ if and only if
+\[
+\frac{\gamma}{v}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)
+\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)>g^{*}.
+\]
+Expected quality is maximized at the pure-transacting allocation, where
+$n^{*}=m^{*}=m_{F}^{*}$, $g^{*}=0$, and $\mathbb{E}[q]=0$.
 \end{cor}
-Accordingly, there is a trade-off between expected quality of philanthropy and scale
-(See \exampleref{ex:oa-tradeoff} in \secref{oa:examples} of the Online Appendix). Entrepreneurs
+The condition in \corref{cor:quality-scale} has a direct interpretation.
+Greater heterogeneity improves expected quality precisely when the resulting
+reduction in untailored giving more than offsets the greater targeting loss
+from each remaining giving beneficiary. If the mixed regime reaches a
+pure-transacting boundary, the condition holds for values of $Var(a)$
+sufficiently close to that boundary because $g^{*}$ approaches zero
+while the reallocation effect remains positive. In that region, the model
+generates a trade-off between expected quality and scale (see \exampleref{ex:oa-tradeoff}
+in \secref{oa:examples} of the Online Appendix). Entrepreneurs
 who prioritize effectiveness tend to focus on a smaller number of
 beneficiaries, while those operating in environments with lower information
 asymmetries and relying on standardized disbursals are more likely
@@ -1423,6 +1429,41 @@ $n^{*}=m^{*}=m_{F}^{*}$.
 
 Part (D) is then immediate: in the pure-transacting regime every assisted
 beneficiary is served through a transaction.
+
+\subsection{Proof of \corref{cor:quality-scale}}
+
+Let $\sigma^{2}=Var(a)$ and hold $\mathbb{E}(a)$ fixed. In the mixed
+regime,
+\[
+C'(m^{*})=S(v),\qquad
+D'(n^{*})=\bar{a}-\mathbb{E}(a)+S(v),
+\]
+where $\partial S(v)/\partial\sigma^{2}=\gamma/v$. Implicit differentiation
+therefore gives
+\[
+\frac{\partial m^{*}}{\partial\sigma^{2}}
+=\frac{\gamma/v}{C''(m^{*})}>0
+\qquad\text{and}\qquad
+\frac{\partial n^{*}}{\partial\sigma^{2}}
+=\frac{\gamma/v}{D''(n^{*})}<0.
+\]
+Because $g^{*}=n^{*}-m^{*}$,
+\[
+\frac{\partial g^{*}}{\partial\sigma^{2}}
+=\frac{\gamma}{v}\left(\frac{1}{D''(n^{*})}-\frac{1}{C''(m^{*})}\right)<0.
+\]
+Differentiating expected quality and substituting this expression yields
+\[
+\frac{\partial\mathbb{E}[q]}{\partial\sigma^{2}}
+=\frac{\gamma}{v}\left(\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right)
+\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)-g^{*},
+\]
+which establishes the condition in the corollary. At the pure-transacting
+allocation, $g^{*}=0$, so expected quality equals its maximum value of
+zero. If the mixed regime approaches a pure-transacting boundary, continuity
+and the maintained curvature conditions imply that the positive reallocation
+term remains strictly positive as $g^{*}$ approaches zero. Expected quality
+therefore increases with $Var(a)$ sufficiently close to that boundary.
 
 \subsection{Proof of \propref{prop:legal-form-effects}}
 

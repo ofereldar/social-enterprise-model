@@ -466,11 +466,10 @@ incentives lead her to tailor each disbursal to the beneficiary's observed
 ability. Thus,
 $d^{m*}(i)=\bar{a}-a(i)$ for all $i\in[0,m]$.
 \end{lem}
-The explanation is that if $d^{m}(i)<\bar{a}-a(i)$, the entrepreneur
-loses revenue because the beneficiary performs poorly. Conversely,
-if $d^{m}(i)>\bar{a}-a(i)$, the disbursal is wasteful because $a$
-cannot exceed $\bar{a}.$ Therefore, increasing disbursals beyond
-this amount does not improve the quality of philanthropy.
+Below $\bar{a}-a(i)$, an additional unit of disbursal raises revenue
+by $r$ and costs one. Above $\bar{a}-a(i)$, it raises no revenue and
+is wasteful. Targeting quality is also maximized exactly at
+$d^{m}(i)=\bar{a}-a(i)$.
 \begin{lem}\label{lem:measure-if-transact}
 Without loss of generality, an entrepreneur who chooses to transact
 with beneficiaries incurs measurement costs and tailors disbursals
@@ -494,7 +493,7 @@ and giving. For the comparative statics below, I assume that each beneficiary
 served through giving receives a positive disbursal,
 $\bar{a}-\mathbb{E}(a)>v/(2\gamma)$, and focus
 on a finite, unique optimum with $m^{*}<w$, so the firm's fixed number
-of jobs does not constrain transacting.\footnote{Over the relevant range, I assume that $C$ and $D$ are twice continuously differentiable, $C''(m)>0$, $D''(n)<0$, $\lim_{n\rightarrow\infty}D'(n)=0$, and the relevant first-order conditions have solutions. If the optimal disbursal to each beneficiary served through giving is zero, $d^{g*}(i)=0$, the calculations below change. If $m^{*}=0$, the pure-giving case applies, as discussed in \secref{subsec:legal-form-effects}. If $m^{*}=w$, the fixed number of jobs limits transacting.}
+of jobs does not constrain transacting.\footnote{For the values of $m$ and $n$ considered below, I assume that $C$ and $D$ are twice continuously differentiable, $C''(m)>0$, $D''(n)<0$, $\lim_{n\rightarrow\infty}D'(n)=0$, and equations (\ref{eq:4}) and (\ref{eq:5}) have finite solutions when they apply. If the optimal disbursal to each beneficiary served through giving is zero, $d^{g*}(i)=0$, the calculations below change. If $m^{*}=0$, the pure-giving case applies, as discussed in \secref{subsec:legal-form-effects}. If $m^{*}=w$, the fixed number of jobs limits transacting.}
 The resulting allocation can take one of three forms. Under pure giving,
 $m^{*}=0$ and $g^{*}=n^{*}$. In the mixed regime, $m^{*}>0$ and
 $g^{*}>0$, so $n^{*}>m^{*}$. Under pure transacting, $g^{*}=0$
@@ -506,9 +505,9 @@ transactions. The entrepreneur receives the marginal donation, pays
 the expected disbursal, and pays the marginal measurement cost. Raising
 $g$ expands scale through giving. The entrepreneur receives the marginal
 donation and pays the expected disbursal, but also bears the expected
-quality loss from untailored assistance. For a candidate allocation
-$(n',m',g')$ under these assumptions, substituting the optimal disbursal
-rules into equation (\ref{eq:-1}) gives
+quality loss from disbursals chosen without observing individual ability.
+At any allocation $(n',m',g')$ satisfying $n'=m'+g'$, substituting the
+optimal disbursal rules into equation (\ref{eq:-1}) gives
 
 \begin{equation}
 \begin{aligned}
@@ -582,7 +581,7 @@ D'(n_{T}^{*})=S(v)+\left(\bar{a}-\mathbb{E}(a)\right).
 \]
 This implies that $n_{T}^{*}$ decreases as $Var(a)$ and $\gamma$
 increase. Conversely, $m_{T}^{*}$ increases with $Var(a)$ and $\gamma$
-because $C(m)$ is strictly convex over the relevant range.
+because $C''(m)>0$.
 \lemref{lem:mapping} and \propref{prop:comparative-statics} summarize these comparative statics.
 \begin{lem}\label{lem:mapping}
 In the mixed regime, there exists a one-to-one mapping between $m^{*}$
@@ -612,9 +611,11 @@ quality, and scale.
 \begin{cor}\label{cor:quality-scale}
 Holding $\mathbb{E}(a)$ fixed, an increase in $Var(a)$ shifts assistance
 from giving toward measured transactions. In the mixed regime, $m^{*}$
-rises while $g^{*}$ and total scale $n^{*}$ fall. If $Var(a)$ becomes
-high enough to induce pure transacting, optimal scale reaches its minimum,
-$n^{*}=m^{*}=m_{F}^{*}$, while expected quality reaches its maximum,
+rises while $g^{*}$ and total scale $n^{*}$ fall. If increasing $Var(a)$
+eventually leads to pure transacting, then expected quality rises and
+total scale falls for values of $Var(a)$ sufficiently close to that
+point from below. At that point, optimal scale reaches its minimum,
+$n^{*}=m^{*}=m_{F}^{*}$, and expected quality reaches its maximum,
 $\mathbb{E}[q]=0$.
 \end{cor}
 The intuition is simple. As beneficiaries become more heterogeneous,
@@ -625,13 +626,17 @@ in total. In the mixed regime,
 \[
 \mathbb{E}[q]=-g^{*}\left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right).
 \]
-Expected quality need not rise at every point in the mixed regime because
-greater heterogeneity also makes each remaining untailored disbursal less
-accurate. \exampleref{ex:oa-tradeoff} shows the full path. Quality falls
-slightly over a narrow low-variance range, but then rises as measured
-transactions replace giving and total scale falls, reaching its maximum
-at the pure-transacting allocation. This is the central trade-off: higher
-quality is achieved by serving fewer beneficiaries. Large corporations that market fair-trade
+The formula reveals two opposing effects. A higher $Var(a)$ reduces
+$g^{*}$, which improves expected quality because fewer beneficiaries
+receive untailored disbursals. But it also makes each remaining untailored
+disbursal less accurate, which reduces expected quality. At lower levels
+of variance, either effect can dominate. Close enough to the point at which giving
+disappears, however, the reduction in $g^{*}$ dominates, so expected
+quality rises while scale falls. \exampleref{ex:oa-tradeoff}
+shows this path. Quality falls slightly over a narrow low-variance range
+and then rises to its maximum as giving disappears. This produces the
+central trade-off in the model. Higher quality is achieved by serving
+fewer beneficiaries. Large corporations that market fair-trade
 products may achieve greater scale while relying more on standardized
 support. In contrast, smaller sourcing organizations may focus on repeated
 transactions with a more limited number of disadvantaged farmers and
@@ -1323,17 +1328,23 @@ $T$ & The firm allocations ($n_{T}$, $m_{T}$, and $g_{T}$) when the targeting li
 
 \subsection{Proof of \lemref{lem:tailoring}}
 
-Suppose the entrepreneur decides to expend $C(m)$ and sets the allocations
-such that $d^{m'}(j)=\bar{a}-a(j)-\varepsilon\;$for the $j$'th worker,
-and $d^{m}(i)=\bar{a}-a(i)$ for all $i\neq j$, where $\varepsilon>0$.
-She can increase her utility by setting $d^{m'}(j)=\bar{a}-a(j)$.
-The reason is that increasing $d^{m'}(j)$ by $\varepsilon$ increases
-her utility by$\;v\left(r-1\right)\varepsilon+\gamma\times\varepsilon^{2}$,
-the additional profit from setting the subsidy to the right amount,
-and the reputational benefits from additional effectiveness. Alternatively,
-setting $d^{m'}(j)=\bar{a}-a(j)+\varepsilon$ is clearly disadvantageous
-because it does not increase profits, but will only result in reputational
-costs from ineffectiveness.
+Fix a measured beneficiary $i$ with ability $a(i)$ and suppress terms
+that do not depend on her disbursal. Her contribution to the entrepreneur's
+utility is
+\[
+u_i(d)=v\left[r\min\{a(i)+d,\bar a\}-d\right]
+-\gamma\left(d-(\bar a-a(i))\right)^2.
+\]
+For $d<\bar a-a(i)$,
+\[
+u_i'(d)=v(r-1)+2\gamma\left(\bar a-a(i)-d\right)>0.
+\]
+For $d>\bar a-a(i)$,
+\[
+u_i'(d)=-v-2\gamma\left(d-(\bar a-a(i))\right)<0.
+\]
+Thus, utility rises up to $d=\bar a-a(i)$ and falls thereafter. The
+unique optimum is $d^{m*}(i)=\bar a-a(i)$.
 
 \subsection{Proof of \lemref{lem:measure-if-transact}}
 
@@ -1341,10 +1352,11 @@ Suppose instead that an allocation contains $m_{2}>0$ beneficiaries
 who are served through transactions but whose abilities are not measured.
 Fix any such beneficiary and any disbursal level $d$. Relative to
 serving that same beneficiary through giving with the same disbursal,
-the quality term is identical, and the donation count $n$ is also
-unchanged. The only difference is on the revenue side. If the entrepreneur
-transacts without measuring, she replaces a standard worker with expected
-output $r\bar{a}$ by a disadvantaged worker with expected output $r\mathbb{E}\left[\min(a+d,\bar{a})\right]\leq r\bar{a}$.
+the disbursal cost, quality term, donation count $n$, and measurement
+cost are unchanged. The only difference is on the revenue side. If the
+entrepreneur transacts without measuring, she replaces a standard worker
+with output $r\bar{a}$ by a disadvantaged worker with expected output
+$r\mathbb{E}\left[\min(a+d,\bar{a})\right]\leq r\bar{a}$.
 Hence the utility difference between unmeasured transacting and giving
 for that beneficiary is
 \[
@@ -1353,7 +1365,7 @@ v r\left(\mathbb{E}\left[\min(a+d,\bar{a})\right]-\bar{a}\right)\leq0,
 with strict inequality whenever $\Pr(a+d<\bar{a})>0$. Thus, for any
 beneficiary served through a transaction without measurement, the entrepreneur
 weakly prefers to reclassify that beneficiary as giving. Repeating
-this replacement yields an allocation with weakly higher utility and
+this replacement produces an allocation with weakly higher utility and
 $m_{2}=0$. Therefore, without loss of generality, every beneficiary
 served through a transaction is measured and, by \lemref{lem:tailoring},
 receives a tailored disbursal.
@@ -1369,46 +1381,131 @@ so
 C'(m^{*})=S(v),\qquad D'(n^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v).
 \]
 Because $C$ is strictly convex and $D$ is strictly concave, $C'$ is
-strictly increasing and $D'$ is strictly decreasing. Thus, $m^{*}$
-and $n^{*}$ are each uniquely pinned down by the same scalar $S(v)$,
-with $m^{*}$ increasing and $n^{*}$ decreasing in $S(v)$. Hence, there
-is a one-to-one mapping between $m^{*}$ and $n^{*}$ in the mixed regime.
-Since $g^{*}=n^{*}-m^{*}$ is strictly decreasing in $S(v)$, it also
-has a one-to-one mapping with both $m^{*}$ and $n^{*}$.
+strictly increasing and $D'$ is strictly decreasing. Implicit differentiation
+with respect to $S$ gives
+\[
+\frac{d m^{*}}{dS}=\frac{1}{C''(m^{*})}>0,
+\qquad
+\frac{d n^{*}}{dS}=\frac{1}{D''(n^{*})}<0,
+\]
+and therefore
+\[
+\frac{d g^{*}}{dS}
+=\frac{1}{D''(n^{*})}-\frac{1}{C''(m^{*})}<0.
+\]
+Thus, $m^{*}$ rises strictly with $S(v)$, while $n^{*}$ and $g^{*}$
+fall strictly. Observing any one of these choices therefore identifies
+$S(v)$ and, through the two equations above, uniquely determines the
+other two. This establishes the three one-to-one mappings.
 
 \subsection{Proof of \propref{prop:comparative-statics}}
 
-In the mixed regime, $S(v)$ increases with both $Var(a)$ and $\gamma$.
-Because $C'(m^{*})=S(v)$ and $C'$ is increasing, $m^{*}$ increases.
-Because $D'(n^{*})=\bar{a}-\mathbb{E}(a)+S(v)$ and $D'$ is decreasing,
-$n^{*}$ decreases. It follows that $g^{*}=n^{*}-m^{*}$ also decreases.
-These observations establish parts (A) and (B).
+The derivatives of $S(v)$ with respect to the two parameters are
+\[
+\frac{\partial S(v)}{\partial Var(a)}=\frac{\gamma}{v}>0,
+\qquad
+\frac{\partial S(v)}{\partial\gamma}
+=\frac{Var(a)}{v}+\frac{v}{4\gamma^{2}}>0.
+\]
+Combining these derivatives with those established in the proof of
+\lemref{lem:mapping} shows that an increase in either parameter raises
+$m^{*}$ and lowers both $n^{*}$ and $g^{*}$. This proves parts (A)
+and (B).
 
-Part (C) follows from equation (\ref{eq:5}). When the funding
-limit is reached, the entrepreneur stops exactly where the last transacted
-beneficiary is just compensated by donations net of expected disbursal,
-so there is no further expansion through giving and $g^{*}=0$. Hence
-$n^{*}=m^{*}=m_{F}^{*}$, and every assisted beneficiary is served through
-a transaction.
+For part (C), divide the entrepreneur's expected utility in equation
+(\ref{eq:3}) by $v$ and omit the term $r w\bar a$, which does not depend
+on $m$ or $g$. Using $n=m+g$, the remaining expression is
+\[
+\Phi(m,g)=D(m+g)-C(m)-(m+g)\left(\bar a-\mathbb{E}(a)\right)-gS(v).
+\]
+At $m=m_F^{*}$ and $g=0$, equation (\ref{eq:5}) implies
+\[
+\frac{\partial\Phi}{\partial m}
+=D'(m_F^{*})-C'(m_F^{*})-\left(\bar a-\mathbb{E}(a)\right)=0
+\]
+and
+\[
+\frac{\partial\Phi}{\partial g}
+=D'(m_F^{*})-\left(\bar a-\mathbb{E}(a)\right)-S(v)
+=C'(m_F^{*})-S(v)<0.
+\]
+Thus, the entrepreneur optimally expands transactions to $m_F^{*}$
+but does not add any giving. Because $D$ is strictly concave and $C$
+is strictly convex, $\Phi$ is strictly concave in $m$ and $g$. The two
+derivative conditions therefore identify the unique optimum under
+$m\geq0$, $g\geq0$, and $m\leq w$ as
+$n^{*}=m^{*}=m_F^{*}$ and $g^{*}=0$.
 
 \subsection{Proof of \corref{cor:quality-scale}}
 
 Let $\sigma^{2}=Var(a)$ and hold $\mathbb{E}(a)$ fixed. In the mixed
-regime, \propref{prop:comparative-statics} implies that $m^{*}$ rises,
-while $g^{*}$ and $n^{*}$ fall, as $\sigma^{2}$ increases. Expected
-quality is
+regime, differentiating the two equations in the proof of
+\lemref{lem:mapping} with respect to $\sigma^{2}$ gives
+\[
+\frac{d m^{*}}{d\sigma^{2}}
+=\frac{\gamma}{vC''(m^{*})}>0,
+\qquad
+\frac{d n^{*}}{d\sigma^{2}}
+=\frac{\gamma}{vD''(n^{*})}<0,
+\]
+and
+\[
+\frac{d g^{*}}{d\sigma^{2}}
+=\frac{\gamma}{v}
+\left(\frac{1}{D''(n^{*})}-\frac{1}{C''(m^{*})}\right)<0.
+\]
+By \lemref{lem:tailoring}, measured transactions produce no targeting
+loss. For a beneficiary served through giving, equation (\ref{eq:2})
+implies
+\[
+d^{g*}(i)-(\bar a-a(i))=a(i)-\mathbb{E}(a)-\frac{v}{2\gamma}.
+\]
+Therefore,
+\[
+\mathbb{E}\left[\left(d^{g*}(i)-(\bar a-a(i))\right)^2\right]
+=\sigma^2+\frac{v^2}{4\gamma^2},
+\]
+and consequently
 \[
 \mathbb{E}[q]=-g^{*}\left(\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right).
 \]
-The direct effect of greater variance makes untailored disbursals less
-accurate, while the reduction in $g^{*}$ improves quality. The net effect
-need not have the same sign throughout the mixed regime. If $\sigma^{2}$
-becomes high enough that the funding limit binds first, however,
-\propref{prop:comparative-statics} implies $g^{*}=0$ and
-$n^{*}=m^{*}=m_{F}^{*}$. Expected quality then equals its maximum value
-of zero. Because $n^{*}$ decreases throughout the mixed regime and reaches
-$m_{F}^{*}$ at the pure-transacting boundary, this allocation also has
-the minimum optimal scale along this comparative-static path.
+Differentiating yields
+\[
+\frac{d\mathbb{E}[q]}{d\sigma^{2}}
+=\frac{\gamma}{v}
+\left(\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right)
+\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)-g^{*}.
+\]
+The first term is the quality gain from reducing the number of beneficiaries
+served through giving. The second is the increase in targeting loss for
+the beneficiaries who remain in giving.
+Thus, expected quality rises exactly when
+\[
+\frac{\gamma}{v}
+\left(\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right)
+\left(\frac{1}{C''(m^{*})}-\frac{1}{D''(n^{*})}\right)>g^{*}.
+\]
+
+Suppose pure transacting begins at a finite value $\bar\sigma^{2}$ of
+$Var(a)$, defined by $S(v)=C'(m_F^{*})$. As $\sigma^{2}$ approaches
+this value from below,
+$m^{*}$ and $n^{*}$ approach $m_F^{*}$ and $g^{*}$ approaches zero.
+By continuity, the derivative of expected quality approaches
+\[
+\frac{\gamma}{v}
+\left(\bar\sigma^{2}+\frac{v^{2}}{4\gamma^{2}}\right)
+\left(\frac{1}{C''(m_F^{*})}-\frac{1}{D''(m_F^{*})}\right)>0.
+\]
+It is therefore positive for all $\sigma^{2}$ sufficiently close to
+$\bar\sigma^{2}$ from below, while $d n^{*}/d\sigma^{2}<0$. At
+$\bar\sigma^{2}$,
+$g^{*}=0$ and $n^{*}=m^{*}=m_F^{*}$, so expected quality equals its
+maximum value of zero. For $\sigma^{2}>\bar\sigma^{2}$,
+\propref{prop:comparative-statics}(C) continues to apply. Equation
+(\ref{eq:5}) does not depend on $\sigma^{2}$, so the entrepreneur continues
+to choose $n^{*}=m^{*}=m_F^{*}$ and $g^{*}=0$. Since $n^{*}$ decreases
+as $\sigma^{2}$ approaches $\bar\sigma^{2}$ and remains constant thereafter,
+$m_F^{*}$ is the minimum optimal scale as $Var(a)$ increases.
 
 \subsection{Proof of \propref{prop:legal-form-effects}}
 

@@ -449,22 +449,12 @@ d^{g*}(i)=\max\left\{0,\bar{a}-\mathbb{E}(a)-\frac{v}{2\gamma}\right\}
 The last term, $\frac{v}{2\gamma}$, reflects the entrepreneur's monetary
 incentive to economize on disbursals. This incentive vanishes as
 $\gamma\rightarrow\infty.$\footnote{For each giving beneficiary, the relevant first-order condition is
-$-v-2\gamma(d-(\bar{a}-\mathbb{E}(a)))=0$, which yields equation
-(\ref{eq:2}) when the solution is interior. If the resulting disbursal is nonpositive, the nonnegativity constraint binds and $d^{g*}(i)=0$.} Thus, the more the entrepreneur values effectiveness, the closer
+$-v-2\gamma(d-(\bar{a}-\mathbb{E}(a)))=0$. If its solution is nonpositive,
+the nonnegativity constraint imposes $d^{g*}(i)=0$.} Thus, the more the entrepreneur values effectiveness, the closer
 she will set disbursals to the average need of the beneficiaries ($\bar{a}-\mathbb{E}(a)$).
 Additionally, the monetary incentive to underprovide vanishes as $v\rightarrow0$,
 consistent with the theory that the non-distribution constraint provides
 greater incentives to generate more charity.
-
-Unless otherwise stated, the baseline analysis below focuses on the interior
-giving region,
-\[
-\bar{a}-\mathbb{E}(a)>\frac{v}{2\gamma},
-\]
-where $d^{g*}(i)>0$. When this condition fails, the giving disbursal
-is zero. This corner does not affect the measurement logic in the
-lemmas below, but it changes the marginal expressions governing scale
-and the choice between giving and transacting.
 
 I next solve for the optimal disbursals to the $m$ beneficiaries with
 whom the entrepreneur transacts. By incurring $C(m)$, she observes each
@@ -500,9 +490,15 @@ may reduce revenue, so giving weakly dominates it.
 
 Having characterized the optimal disbursal under each channel, I now
 consider how the entrepreneur allocates beneficiaries between transacting
-and giving. For the comparative statics below, I focus on a finite,
-unique interior solution with positive measurement and nonbinding production
-capacity.\footnote{Specifically, I assume that, over the relevant range, $C$ and $D$ are twice continuously differentiable, $C''(m)>0$, $D''(n)<0$, $\lim_{n\rightarrow\infty}D'(n)=0$, and the relevant first-order conditions have solutions. I also assume that $w$ is sufficiently large that the capacity constraint does not bind. If capacity binds, transacting is capped at $m^{*}=w$. If measurement is not worthwhile at $m=0$, the pure-giving corner applies, as discussed in \secref{subsec:legal-form-effects}.}
+and giving. For the comparative statics below, I assume that the giving
+disbursal is positive, $\bar{a}-\mathbb{E}(a)>v/(2\gamma)$, and focus
+on a finite, unique optimum with nonbinding production
+capacity.\footnote{Over the relevant range, I assume that $C$ and $D$ are twice continuously differentiable, $C''(m)>0$, $D''(n)<0$, $\lim_{n\rightarrow\infty}D'(n)=0$, and the relevant first-order conditions have solutions. If the giving-disbursal condition fails, $d^{g*}(i)=0$ and the marginal expressions governing scale change. If $m^{*}=0$, the pure-giving case applies, as discussed in \secref{subsec:legal-form-effects}. If capacity binds, transacting is capped at $m^{*}=w$.}
+The resulting allocation can take one of three forms. Under pure giving,
+$m^{*}=0$ and $g^{*}=n^{*}$. In the mixed regime, $m^{*}>0$ and
+$g^{*}>0$, so $n^{*}>m^{*}$. Under pure transacting, $g^{*}=0$
+and $n^{*}=m^{*}>0$.
+
 The entrepreneur can increase total scale $n$ either by raising $m$
 or by raising $g$. Raising $m$ expands scale through
 transactions. The entrepreneur receives the marginal donation, pays
@@ -510,8 +506,8 @@ the expected disbursal, and pays the marginal measurement cost. Raising
 $g$ expands scale through giving. The entrepreneur receives the marginal
 donation and pays the expected disbursal, but also bears the expected
 quality loss from untailored assistance. For a candidate allocation
-$(n',m',g')$ in the maintained interior region, substituting the optimal
-disbursal rules into equation (\ref{eq:-1}) gives
+$(n',m',g')$ under these assumptions, substituting the optimal disbursal
+rules into equation (\ref{eq:-1}) gives
 
 \begin{equation}
 \begin{aligned}
@@ -549,7 +545,7 @@ If the first inequality fails, the entrepreneur raises $g$ only when
 the marginal return from giving is positive. If neither channel has
 a positive marginal return, she stops expanding.
 
-At an interior optimum, one of two limits stops expansion through transactions.
+One of two limits stops expansion through transactions.
 The targeting limit, $m_{T}^{*}$, is reached when
 
 \begin{equation}
@@ -578,8 +574,8 @@ only through transactions, so
 \[
 m^{*}=n^{*}=m_{F}^{*},\qquad g^{*}=0.
 \]
-If the targeting limit binds first, she sets $m^{*}=m_{T}^{*}$ and
-increases $n$ through giving until
+If the targeting limit binds first at $m_{T}^{*}>0$, the optimum is
+mixed. The entrepreneur sets $m^{*}=m_{T}^{*}$ and increases $n$ through giving until
 \[
 D'(n_{T}^{*})=S(v)+\left(\bar{a}-\mathbb{E}(a)\right).
 \]
@@ -593,32 +589,25 @@ and $n^{*}$, between $m^{*}$ and $g^{*}$, and between $g^{*}$ and
 $n^{*}$.
 \end{lem}
 \begin{prop}\label{prop:comparative-statics}
-Under the maintained interior and regularity conditions:
-\textbf{(A)} When the variance in abilities ($Var(a)$) is high and
-the entrepreneur has high regard for quality ($\gamma$ is high),
-she transacts with a larger number of beneficiaries ($m$). Conversely,
-when $Var(a)$ and $\gamma$ are low, she is more likely to engage
-in giving to a greater number of beneficiaries ($g$). 
+Holding $\mathbb{E}(a)$ fixed, suppose that the giving disbursal is
+positive, the optimum is finite and unique, $C''(m)>0$, $D''(n)<0$,
+and production capacity does not bind. Then:
+\textbf{(A)} In the mixed regime, an increase in $Var(a)$ or $\gamma$
+increases $m^{*}$ and decreases $g^{*}$.
+The entrepreneur therefore shifts assistance from giving toward transactions.
 
-\textbf{(B)} When $Var(a)$ and $\gamma$ are small, such that $m^{*}=m_{T}^{*}$,
-where $C'(m_{T}^{*})=S(v)<D'(m_{T}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)$,
-the total number of beneficiaries the entrepreneur chooses to assist
-($n^{*}$) decreases with the number transacted with ($\frac{\partial n^{*}}{\partial m^{*}}(Var(a),\gamma)<0$)
-and increases with the number helped through giving ($\frac{\partial n^{*}}{\partial g^{*}}(Var(a),\gamma)>0$). 
+\textbf{(B)} In the mixed regime, an increase in either $Var(a)$ or
+$\gamma$ decreases total scale $n^{*}$. Thus, the shift toward transactions
+is accompanied by assistance to fewer beneficiaries.
 
-\textbf{(C)} When $Var(a)$ and $\gamma$ are large, such that $m^{*}=m_{F}^{*}$,
-where $C'(m_{F}^{*})=D'(m_{F}^{*})-\left(\bar{a}-\mathbb{E}(a)\right)<S(v)$,
-the total number of beneficiaries the entrepreneur chooses to assist
-($n_{F}^{*}$) is equal to the number of beneficiaries the entrepreneur
-transacts with ($m_{F}^{*}$), and the entrepreneur does not engage
-in giving ($g_{F}^{*}=0$).
-
-\textbf{(D)} In the pure-transacting regime, $n^{*}=m^{*}=m_{F}^{*}$
-and $g^{*}=0$, so every assisted beneficiary is served through a transaction.
+\textbf{(C)} If $S(v)$ is large enough that the funding limit binds
+before the targeting limit, the optimum is pure transacting:
+$n^{*}=m^{*}=m_{F}^{*}$ and $g^{*}=0$. Every assisted beneficiary
+is then served through a transaction.
 \end{prop}
 This proposition makes precise the trade-off between scale and targeting.
 To isolate the role of heterogeneity, let $\sigma^{2}\equiv Var(a)$,
-holding $\mathbb{E}(a)$ fixed. In the mixed regime, where $g^{*}>0$,
+holding $\mathbb{E}(a)$ fixed. In the mixed regime,
 \lemref{lem:tailoring} and equation (\ref{eq:2}) imply that expected
 quality is
 \[
@@ -1407,28 +1396,18 @@ has a one-to-one mapping with both $m^{*}$ and $n^{*}$.
 
 \subsection{Proof of \propref{prop:comparative-statics}}
 
-Part (A) follows from the fact that $S(v)$ is increasing in both
-$Var(a)$ and $\gamma$. In the mixed regime, $m^{*}$ is determined
-by $C'(m^{*})=S(v)$, so $m^{*}$ increases with $Var(a)$ and $\gamma$.
-By contrast, $n^{*}$ is determined by $D'(n^{*})=\left(\bar{a}-\mathbb{E}(a)\right)+S(v)$.
-Since $D'$ is decreasing, a larger $S(v)$ implies a smaller $n^{*}$.
-Therefore $g^{*}=n^{*}-m^{*}$ falls as $Var(a)$ and $\gamma$ rise.
-Once $S(v)$ becomes large enough that the funding limit is reached
-before the targeting limit, the
-entrepreneur moves to pure transacting.
+In the mixed regime, $S(v)$ increases with both $Var(a)$ and $\gamma$.
+Because $C'(m^{*})=S(v)$ and $C'$ is increasing, $m^{*}$ increases.
+Because $D'(n^{*})=\bar{a}-\mathbb{E}(a)+S(v)$ and $D'$ is decreasing,
+$n^{*}$ decreases. It follows that $g^{*}=n^{*}-m^{*}$ also decreases.
+These observations establish parts (A) and (B).
 
-Part (B) is the mixed-regime statement just derived: in that region,
-$m^{*}$ rises while $n^{*}$ falls as $Var(a)$ and $\gamma$ increase,
-so additional emphasis on transacting comes with lower total scale.
-
-Part (C) follows directly from equation (\ref{eq:5}). When the funding
+Part (C) follows from equation (\ref{eq:5}). When the funding
 limit is reached, the entrepreneur stops exactly where the last transacted
 beneficiary is just compensated by donations net of expected disbursal,
 so there is no further expansion through giving and $g^{*}=0$. Hence
-$n^{*}=m^{*}=m_{F}^{*}$.
-
-Part (D) is then immediate: in the pure-transacting regime every assisted
-beneficiary is served through a transaction.
+$n^{*}=m^{*}=m_{F}^{*}$, and every assisted beneficiary is served through
+a transaction.
 
 \subsection{Proof of \corref{cor:quality-scale}}
 
@@ -1461,7 +1440,7 @@ Differentiating expected quality and substituting this expression yields
 which establishes the condition in the corollary. At the pure-transacting
 allocation, $g^{*}=0$, so expected quality equals its maximum value of
 zero. If the mixed regime approaches a pure-transacting boundary, continuity
-and the maintained curvature conditions imply that the positive reallocation
+and the curvature conditions stated above imply that the positive reallocation
 term remains strictly positive as $g^{*}$ approaches zero. Expected quality
 therefore increases with $Var(a)$ sufficiently close to that boundary.
 

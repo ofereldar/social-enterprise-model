@@ -244,10 +244,11 @@ The final part of the paper studies certification. The key implication
 is not that certifiers can directly verify impact. Instead, certifiers
 may be able to verify a narrower and more realistic object, namely whether
 the firm actually transacts with a defined beneficiary group. That
-kind of certification can help donors and public funders identify high-quality
-organizations without requiring them to observe impact beneficiary by
-beneficiary or the entrepreneur's true commitment to costly tailoring.
-This intuition is consistent with the emergence of institutions such
+kind of certification makes beneficiary transactions contractible. When
+certified scale remains within the range in which the revenue benefit
+from measurement exceeds its cost, it allows donors and public funders
+to support high-quality expansion without observing impact beneficiary
+by beneficiary. This intuition is consistent with institutions such
 as fair trade and community-development certification, which allow
 entrepreneurs to commit credibly to beneficiary transactions and, through
 them, to higher-quality philanthropy.
@@ -962,144 +963,161 @@ legal form the entrepreneur chooses when giving remains.
 
 \section{Certification of Transactions with Beneficiaries}\label{sec:certification}
 
-As \corref{cor:quality-scale} shows, the highest-quality outcome
-in the model is the pure-transacting outcome: when the entrepreneur
-relies entirely on transactions with beneficiaries, expected quality
-is maximized, but further expansion through giving would reduce quality.
-This creates a scaling challenge, which is consistent with recurring
-concerns about the difficulty social enterprises face in scaling their
-impact. In the observable-scale benchmark,
-however, certification is not yet needed. As \secref{oa:donors-quality}
-of the Online Appendix shows, even when donors care directly about
-expected quality, observable scale either reveals $\gamma$ when giving
-remains or reveals that the entrepreneur uses pure transacting. Donors
-can therefore infer quality in either case. Certification becomes relevant
-when planned scale cannot perform this informational role.
+As \corref{cor:quality-scale} shows, the highest-quality positive-scale
+outcome in the model is pure transacting. When the entrepreneur relies
+entirely on transactions with beneficiaries, expected quality is maximized,
+but further expansion through giving would reduce quality. Limited scale
+therefore reflects a commitment to quality. The entrepreneur forgoes
+the funding associated with assisting additional beneficiaries rather
+than expand through untailored giving. This creates a scaling challenge,
+which is consistent with recurring concerns about the difficulty social
+enterprises face in scaling their impact.
 
-This observability problem is developed formally in \secref{oa:scale-unobservable}
-of the Online Appendix. Once scale is not verifiable ex ante, donors
-cannot infer the entrepreneur's true $\gamma$ or expected quality from
-scale and instead base funding on posterior beliefs. Donors may place
-too much weight on high-$\gamma$ types and overfund an entrepreneur whose
-$\gamma$ is low, or too much weight on low-$\gamma$ types and underfund
-a high-quality organization, keeping it at inefficiently low scale.\footnote{A similar problem would arise if donors could not observe
+The preceding analysis assumes that planned scale $n$ is observable.
+In a separating equilibrium in which some giving remains, scale allows
+donors to infer the entrepreneur's $\gamma$. A higher-$\gamma$ entrepreneur
+places more weight on targeting quality, relies less on giving, and
+chooses lower total scale. Observably limited scale therefore signals
+a stronger concern for quality. In the pure-transacting region, scale
+may not reveal the entrepreneur's exact $\gamma$, but that information
+is unnecessary because every type provides maximal quality. These results
+are developed formally in \secref{oa:donors-quality} of the Online Appendix.
+Certification becomes valuable when planned scale is not verifiable
+and donors cannot otherwise infer quality, or more generally whenever
+scale cannot perform this informational role.
+
+When scale cannot be used to infer quality, donors instead base support
+on posterior beliefs. They may place too much weight on high-$\gamma$
+types and overfund an entrepreneur whose $\gamma$ is low, or too much
+weight on low-$\gamma$ types and underfund a high-quality organization,
+keeping it at inefficiently low scale.\footnote{A similar problem would arise if donors could not observe
 the entrepreneur's measurement technology or cost of transacting, $C(m)$.
 Donors may then be reluctant to fund an entrepreneur who has developed
 an unusually effective measurement technology that allows her to transact
 with many beneficiaries at low cost if that technology is not observable
 to them. Conversely, if donors overestimate the entrepreneur's measurement
 technology, they may overfund an organization that cannot in fact deliver
-high-quality philanthropy at the expected scale.} The problem matters even if donors care only about
-scale, because in the main model they still face reputational costs
-when philanthropy is ineffective. It is exacerbated when donors care
-directly about expected quality.
+high-quality philanthropy at the expected scale.} Donors who care mainly about scale also cannot verify whether promised
+beneficiary transactions will occur. Certification addresses both problems
+by making a narrower activity contractible.
 
-The analysis in this paper offers a simple certification mechanism.
-The certifier does not verify philanthropic quality directly, which
-is unknown ex ante. Instead, the certifier verifies the entrepreneur's
-commitment to transact with $m^{*}$ beneficiaries. Certification
-is typically conducted by a government agency or a nonprofit organization.\footnote{Alternatively, a nonprofit may own a for-profit or contract with one,
+The certifier verifies completed transactions with a fixed number $m^{c}$
+of identified beneficiaries. A certified entrepreneur receives a fixed
+subsidy $T(m^{c})$ conditional on completing those transactions. The
+certified payment replaces the scale-based donation schedule $D(n)$.
+The certifier does not observe individual ability, disbursals, or philanthropic
+impact. The cost function $C$ and the distribution of beneficiary ability
+are common knowledge. Certification is typically conducted by a government agency
+or a nonprofit organization.\footnote{Alternatively, a nonprofit may own a for-profit or contract with one,
 requiring it to transact with beneficiaries \citep{eldar2017,eldarOrberg2026}. These mechanisms are most practical when the nonprofit
 is the donor and can use its ownership to control the entrepreneur's
 choices. In contrast, certification is suited to a broader donor base,
 including consumers and private investors \citep[see][]{eldar2020}.} Beneficiaries may be defined by income, unemployment status, geographic
-location, or lack of access to technology.\footnote{For a discussion of how beneficiaries can be classified and the challenges
-involved in doing so, see \citet{eldar2020}.} A well-known example is fair trade certification, which ensures firms
-source products from disadvantaged farmers in developing countries.
-Through certification, the entrepreneur commits to transact with $m$
-beneficiaries. She will do so if donations compensate her for measurement
-and disbursal costs, so $D'(m^{*})\geq C'(m^{*})+\left(\bar{a}-\mathbb{E}(a)\right)$.
-The quality of philanthropy is then maximized ($\mathbb{E}\left[q\right]=0$)
-because the entrepreneur, incentivized by revenue, sets $d_{i}^{m}=\bar{a}-a(i)$
-for every transacted beneficiary. Failing to do so reduces revenue
-(see \lemref{lem:tailoring}). The donor sets the donation amount according
-to the donor's own value of scale, so $D'(m^{*})=F'(m^{*})$, where
-$F$ is the donor's benefit from beneficiaries assisted.
-Together, these conditions imply that certified scale must satisfy
-$F'(m^{*})\geq C'(m^{*})+\left(\bar{a}-\mathbb{E}(a)\right)$. 
+location, or lack of access to technology.\footnote{See \citet{eldar2020} for a discussion of beneficiary classification.}
+
+Verifying a transaction does not by itself verify measurement. The
+entrepreneur must also have a private incentive to learn beneficiary
+ability. To state a sufficient condition, consider the conservative
+case $\gamma=0$. If the entrepreneur measures a beneficiary, the expected
+net monetary contribution before measurement cost is
+$r\bar a-\mathbb{E}[\bar a-a]$. If she transacts without measuring,
+she chooses a common disbursal $d$ to maximize expected net revenue.
+Define the purely monetary value of measurement as
+\begin{equation}
+\Delta_{0}\equiv r\bar a-\mathbb{E}[\bar a-a]
+-\max_{d\geq0}\left\{r\mathbb{E}[\min\{a+d,\bar a\}]-d\right\}.
+\label{eq:measurement-value}
+\end{equation}
+When $Var(a)>0$ and $r>1$, $\Delta_{0}>0$. Measurement avoids both
+lost revenue from giving too little and unnecessary spending from giving
+too much. Because $\gamma>0$ adds an incentive to avoid targeting errors,
+$\Delta_{0}$ is a lower bound on the private value of measurement for
+the social-mission entrepreneurs studied in the paper.
+
+Certified scale must therefore satisfy
+\begin{equation}
+C'(m^{c})<\Delta_{0}.
+\label{eq:certified-measurement}
+\end{equation}
+Because $C$ is convex, this condition implies that the entrepreneur
+measures every certified beneficiary. If $C'(0)<\Delta_{0}$, it holds
+for a positive range of sufficiently small certified scales. By
+\lemref{lem:tailoring}, the entrepreneur then sets
+$d^{m}(i)=\bar a-a(i)$ for every certified beneficiary. Certification
+thus removes the need for donors to infer $\gamma$: within this range,
+the entrepreneur's revenue incentive itself ensures tailored assistance.
+
+Certification of giving does not provide the same assurance. For any
+disbursal $d$ chosen without observing individual ability,
+\begin{equation}
+\mathbb{E}\left[\left(d-(\bar a-a)\right)^{2}\right]
+=Var(a)+\left(d-\left(\bar a-\mathbb{E}[a]\right)\right)^{2}.
+\label{eq:giving-certification-loss}
+\end{equation}
+Thus, when $Var(a)>0$, certifying that the entrepreneur gives to a fixed
+number of beneficiaries cannot guarantee maximal targeting quality.
+If $\gamma$ is also unobserved, the donor cannot infer the entrepreneur's
+giving disbursal or expected quality from the certificate alone.
+
+\begin{prop}\label{prop:certification}
+Suppose $Var(a)>0$ and $\gamma>0$. A certified entrepreneur receives
+a fixed subsidy $T(m^{c})\geq C(m^{c})+m^{c}(\bar a-\mathbb{E}[a])$
+conditional on completing transactions with $m^{c}$ identified beneficiaries.
+If $C'(m^{c})<\Delta_{0}$, the entrepreneur measures every certified
+beneficiary, sets $d^{m}(i)=\bar a-a(i)$, and chooses $g=0$. Certification
+therefore guarantees maximal expected quality ($\mathbb{E}[q]=0$),
+even though the donor does not observe $\gamma$, individual ability,
+disbursals, or impact. In contrast, certification of $g$ alone cannot
+guarantee maximal quality.
+\end{prop}
 
 Certification changes what donors need to infer. Without certification,
-donors who care about quality may read small scale as a signal that
-the entrepreneur cares about the quality of philanthropy, while donors
-who care mainly about scale may still be unable to verify whether
-promised beneficiary transactions will actually occur. With certification,
-donors no longer need to rely on scale alone because the certified
-entrepreneur is committed to transact with a defined beneficiary group,
-and those transactions themselves create the information needed for
-correct tailoring.
+limited observable scale can signal that the entrepreneur is committed
+to quality, but this signal also constrains the organization's funding.
+With certification, donors can condition support on a verifiable number
+of beneficiary transactions. The entrepreneur can therefore expand
+through transactions without relying on limited scale to signal quality,
+provided certified scale remains within the measurement-incentive condition
+in equation (\ref{eq:certified-measurement}). Certification can thus
+relax the scaling challenge without requiring direct impact assessment.
 
-This mechanism is narrower than direct impact certification. The certifier
-verifies transactions with beneficiaries, not the entire impact process.
-That interpretation is broadly consistent with institutions such as
-fair trade and CDFI certification, even though the model is not meant
-as a literal description of every detail of those programs. Fair trade
-certification verifies sourcing from certified producers, while CDFI
-certification verifies service to underserved communities and unlocks
-subsidized capital \citep{dragusanuGiovannucciNunn2014,dragusanuMonteroNunn2022,frbny2023}. In both cases, certification verifies a limited
-mission-related activity rather than impact itself, which is the narrower
-point captured by the model.
+This mechanism is narrower than impact certification. It is broadly
+consistent with institutions such as fair trade and CDFI certification,
+even though the model is not meant as a literal description of every
+detail of those programs. Fair trade certification verifies sourcing
+from certified producers, while CDFI certification verifies service
+to underserved communities and unlocks subsidized capital
+\citep{dragusanuGiovannucciNunn2014,dragusanuMonteroNunn2022,frbny2023}.
+In both cases, certification verifies a limited mission-related activity
+rather than impact itself.
 
-It is important to emphasize that certification for verifying quality
-through giving ($g$) is largely a futile mechanism. Even if a legal
-mechanism certifies that the entrepreneur gives to beneficiaries,
-donors cannot accurately predict the actual quality of philanthropy
-because neither the donor nor the entrepreneur knows $a$. And if scale
-is not observable, such that donors cannot infer $\gamma$, donors cannot
-infer the giving rule or the actual disbursals the entrepreneur will
-give. As a result,
-certifying giving is impossible without a technology that measures
-actual disbursals to individual beneficiaries. But such measurement,
-essentially general impact assessment, is typically prohibitively costly.
-In contrast, when the entrepreneur is certified as transacting with
-beneficiaries, she has a market platform and financial incentives
-to allocate effective, tailored disbursals (see \lemref{lem:measure-if-transact}). Certification
-of transacting does not require monitoring actual disbursals because
-the entrepreneur who submits to certification has an economic stake
-in incurring $C(m^{*})$ to learn the true $a$ and allocate optimal
-disbursals. Thus, certification ensures maximal quality without general
-impact assessment by aligning entrepreneurial incentives with optimal
-philanthropy.
-\begin{prop}\label{prop:certification}
-Certification of the number of beneficiaries the entrepreneur transacts
-with ($m$) enables donors to ensure that entrepreneurs provide maximal
-quality philanthropy ($\mathbb{E}\left[q\right]=0$). In contrast,
-certification of the number of beneficiaries the entrepreneur gives
-to ($g$) cannot assure donors of philanthropic quality due to information
-asymmetries regarding the true abilities of beneficiaries ($a$). 
-\end{prop}
 Certification may be implemented by private actors, such as the Fair
 Trade Labeling Organization, or embedded in public programs that subsidize
-social enterprises, such as CDFIs. When embedded in a public program,
-the government plays a dual role, as both certifier and
-donor. As a donor, the government faces the same challenge as other
-donors who care about the quality of philanthropy, but it also possesses
-the legal authority and institutional tools to certify social enterprises.
-CDFIs, for example, are certified and subsidized by the CDFI Fund,
-a government agency, as financial institutions serving low-income
-communities. Similarly, several European legal regimes certify firms
-that employ disadvantaged workers and entitle them to subsidies \citep{eldar2020}. Such certifications enable for-profit firms to credibly commit
-to delivering high-quality philanthropy.
+social enterprises. CDFIs, for example, are certified and subsidized
+by the CDFI Fund as financial institutions serving low-income communities.
+Similarly, several European legal regimes certify firms that employ
+disadvantaged workers and entitle them to subsidies \citep{eldar2020}.
+Within the model, these arrangements allow support to be conditioned
+on the beneficiary transactions that generate information and improve
+targeting.
 
-The certification system also enables the government to set the optimal
-level of subsidies. These subsidies are conditional on the firm transacting
-with a specified number of beneficiaries. As long as the subsidy amount
-is equal to or greater than $C(m^{*})+m^{*}\left(\bar{a}-\mathbb{E}(a)\right)$,
-the entrepreneur will agree to transact with $m^{*}$ beneficiaries.
-Alternatively, the subsidy may take the form of a tax credit, which
-in this model functions like a tax deduction by reducing the cost
-of donations for private donors.\footnote{The tax deduction is incorporated by multiplying $D(n)$ by a scalar
-($\lambda>1$) in Equation $\left(\ref{eq:-1}\right)$. The tax credit
-required to incentivize the entrepreneur to transact with $m^{*}$ beneficiaries
-is given by $\lambda=\frac{C'(m^{*})+\left(\bar{a}-\mathbb{E}(a)\right)}{D'(m^{*})}$.} In this setting, the donors are often investors who provide capital
-at below-market rates. For example, the New Markets Tax Credit Program
-offers investors in CDFIs a tax credit equal to 39\% of the original
-investment. Unlike such targeted tax credits, which are conditional
-on transacting with $m$ beneficiaries, a general
-tax deduction for donations to nonprofits may actually encourage ineffective
-giving (see \secref{oa:tax-deductions} of the Online Appendix). Accordingly, to facilitate
-subsidized funding to social enterprises, policymakers should prioritize
-the development of certification mechanisms for firms that transact
-with their beneficiaries.
+The fixed subsidy in \propref{prop:certification} covers the measurement
+and expected disbursal costs of the certified transactions. If the donor's
+benefit from certified scale is $F(m)$ and the minimum implementing subsidy
+is $T(m)=C(m)+m(\bar a-\mathbb{E}[a])$, the donor-preferred interior
+scale satisfies
+\begin{equation}
+F'(m^{c})=C'(m^{c})+\bar a-\mathbb{E}[a],
+\label{eq:certified-donor-scale}
+\end{equation}
+subject to the measurement-incentive condition in equation
+(\ref{eq:certified-measurement}). Public programs may provide the subsidy
+directly or use tax benefits to reduce the cost of private support. Unlike
+support conditioned on certified transactions, a general tax deduction
+for donations may encourage ineffective giving, as shown in
+\secref{oa:tax-deductions} of the Online Appendix. Accordingly, policymakers
+seeking to support social enterprises should prioritize mechanisms that
+condition subsidies on verified transactions with beneficiaries.
 
 \section{Conclusion}\label{sec:conclusion}
 
@@ -1341,16 +1359,19 @@ Penguin Books India, 2007.
  & \tabularnewline
 $a$ & The ability of each beneficiary\tabularnewline
 $\bar{a}$ & The standard-worker ability level\tabularnewline
-$C(m)$ & The measurement cost of transacting with $m$ beneficiaries\tabularnewline
+$C(m)$ & The cost of measuring the abilities of $m$ beneficiaries\tabularnewline
 $d(i)$ & The disbursal to beneficiary $i$\tabularnewline
 $d^{m}(i)$ & The disbursal to beneficiary $i$ when the firm transacts with that beneficiary\tabularnewline
 $d^{g}(i)$ & The disbursal to beneficiary $i$ when the firm serves that beneficiary through giving\tabularnewline
 $D(n)$ & The amount of donations the firm receives\tabularnewline
+$\Delta_{0}$ & The purely monetary value of measuring a beneficiary's ability\tabularnewline
 $g$ & The number of beneficiaries that receive a subsidy through giving\tabularnewline
 $m$ & The number of beneficiaries the firm transacts with\tabularnewline
+$m^{c}$ & The certified number of beneficiaries the firm transacts with\tabularnewline
 $n$ & The total number of beneficiaries the firm assists\tabularnewline
 $r$ & The return per unit of worker ability, with $r>1$\tabularnewline
 $S(v)$ & The marginal advantage of measured transacting over giving, expressed in monetary-payoff units\tabularnewline
+$T(m^{c})$ & The fixed subsidy conditional on completing $m^{c}$ certified transactions\tabularnewline
 $U^{D}$ & The utility of the donor\tabularnewline
 $U^{E}$ & The utility of the entrepreneur\tabularnewline
 $v$ & The portion of the firm's earnings the entrepreneur can appropriate, where $0<v\leq1$\tabularnewline
@@ -1736,28 +1757,72 @@ and $0<v<1$ establishes a strict preference for the for-profit.
 
 \subsection{Proof of \propref{prop:certification}}
 
-Suppose certification requires the entrepreneur to transact with $m$
-identified beneficiaries and donor support is conditioned on that certified
-transactional activity. Conditional on transacting, \lemref{lem:tailoring} implies
-that the entrepreneur optimally chooses $d^{m}(i)=\bar{a}-a(i)$ for
-each certified beneficiary. Thus each certified transaction contributes
-zero to the quality loss. Moreover, once donations are tied to certified
-transactions rather than to total scale, expanding through giving
-does not raise donor support. Any additional giving would therefore
-only lower the entrepreneur's utility through extra disbursal costs
-and, unless perfectly targeted, a weakly lower quality term. Hence
-the entrepreneur optimally sets $g=0$, so $\mathbb{E}[q]=0$.
+Fix a certified target $m^{c}$ and temporarily let $h\leq m^{c}$ denote
+the number of certified beneficiaries whose abilities the entrepreneur
+measures. Measurement then costs $C(h)$. If a beneficiary is measured,
+\lemref{lem:tailoring} implies that the entrepreneur sets
+$d^{m}(i)=\bar a-a(i)$. The beneficiary produces revenue $r\bar a$,
+and the expected disbursal is $\mathbb{E}[\bar a-a]$. The expected net
+monetary contribution before measurement cost is therefore
+\[
+r\bar a-\mathbb{E}[\bar a-a].
+\]
 
-By contrast, certifying only the number of beneficiaries reached through
-giving does not reveal the beneficiaries' types or the entrepreneur's
-regard for quality. The giving disbursal is $d^{g*}(i)=\bar{a}-\mathbb{E}(a)-\frac{v}{2\gamma}$
-for all $i\in[0,g]$. Neither the entrepreneur nor the donor knows $a$,
-so the chosen giving disbursal may be too high or too low. The giving
-disbursal also depends on $\gamma$, so if scale is not observable and
-the donor does not know the entrepreneur's altruism, the donor has no
-way to know $d^{g}$, the actual disbursals the entrepreneur will give. Certification
-of $g$ alone therefore cannot assure donors of the level of philanthropic
-quality.
+Now consider the conservative case $\gamma=0$. If the entrepreneur
+transacts with a beneficiary without measuring ability, she chooses
+$d$ to maximize
+\[
+r\mathbb{E}[\min\{a+d,\bar a\}]-d.
+\]
+The difference between the measured and best unmeasured monetary contributions
+is $\Delta_{0}$ in equation (\ref{eq:measurement-value}). Equivalently,
+\[
+\Delta_{0}=\min_{d\geq0}\left\{d+r\mathbb{E}
+[(\bar a-a-d)_{+}]\right\}-\mathbb{E}[\bar a-a].
+\]
+For every $a$ and $d$,
+\[
+d+r(\bar a-a-d)_{+}\geq\bar a-a.
+\]
+If $d\geq\bar a-a$, this follows because $d\geq\bar a-a$. If
+$d<\bar a-a$, the left side equals
+$\bar a-a+(r-1)(\bar a-a-d)>\bar a-a$. When $Var(a)>0$, no common
+$d$ equals $\bar a-a$ almost surely, so the inequality is strict in
+expectation at the optimizing $d$. Hence $\Delta_{0}>0$.
+
+For $\gamma>0$, measurement also eliminates the targeting loss associated
+with an unmeasured disbursal. The utility gain from measuring a certified
+beneficiary is therefore at least $v\Delta_{0}$, while the marginal
+utility cost at measurement scale $h$ is $vC'(h)$. Convexity of $C$
+and $h\leq m^{c}$ imply
+\[
+C'(h)\leq C'(m^{c})<\Delta_{0}.
+\]
+It is therefore strictly optimal to measure every certified beneficiary,
+so $h=m^{c}$. Each receives $d^{m}(i)=\bar a-a(i)$ and contributes zero
+to the targeting loss.
+
+The fixed subsidy does not change when the entrepreneur adds giving.
+For any unmeasured giving disbursal $d$, equation
+(\ref{eq:giving-certification-loss}) implies a strictly positive expected
+targeting loss when $Var(a)>0$. Because $\gamma>0$, additional giving
+strictly lowers expected utility through this quality loss and any positive
+disbursal cost. The entrepreneur therefore sets $g=0$. Her expected
+net monetary payoff relative to employing only standard workers is
+\[
+T(m^{c})-C(m^{c})-m^{c}(\bar a-\mathbb{E}[a]),
+\]
+which is nonnegative under the subsidy condition in
+\propref{prop:certification}. Thus the entrepreneur is willing to complete
+the certified transactions and achieves $\mathbb{E}[q]=0$.
+
+By contrast, certifying $g$ alone leaves individual abilities unobserved.
+For every beneficiary assisted through giving, equation
+(\ref{eq:giving-certification-loss}) implies an expected targeting loss
+of at least $Var(a)>0$. Certification of $g$ therefore cannot guarantee
+maximal quality. If $\gamma$ is also unobserved, the certificate does
+not reveal the giving disbursal and hence does not reveal the exact level
+of expected quality.
 
 \clearpage{}
 
@@ -2117,8 +2182,12 @@ selection.
 This observation also clarifies the role of certification in \secref{sec:certification}.
 When donors cannot infer quality from scale, certification of beneficiary-facing
 transactions becomes more valuable because it gives donors an observable
-commitment to transact with beneficiaries and, through that commitment,
-to higher-quality philanthropy.
+commitment to transact with beneficiaries. As \propref{prop:certification}
+shows, if certified scale satisfies the measurement-incentive condition
+$C'(m^{c})<\Delta_{0}$, the entrepreneur's revenue incentive induces
+measurement independently of the donor's beliefs about $\gamma$. Certification
+can then support expansion through transactions while preserving maximal
+quality, without requiring the donor to infer $\gamma$ from limited scale.
 
 \section{The Effect of Tax Benefits}\label{oa:tax-benefits}
 

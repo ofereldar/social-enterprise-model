@@ -701,9 +701,10 @@ and $n^{*}$.
 \end{minipage}}{\small\par}
 \end{figure}
 
-The nonprofit form therefore gives the entrepreneur a
-greater marginal incentive to replace giving with measured transactions.
-Under the conditions of \propref{prop:comparative-statics}, the choices
+The nonprofit form means that the entrepreneur places greater weight
+on targeting quality relative to monetary payoff. This need not produce
+higher expected quality, however, because the two forms may choose the
+same allocation. Under the conditions of \propref{prop:comparative-statics}, the choices
 characterized in \secref{subsec:transacting-giving} imply
 \[
 m_{np}^{*}\geq m_{fp}^{*},\qquad
@@ -716,9 +717,10 @@ Expected quality under legal form $j\in\{np,fp\}$ is
 =-g_j^{*}\left(Var(a)+\frac{v_j^{2}}{4\gamma^{2}}\right),
 \qquad v_{np}=v,\quad v_{fp}=1.
 \]
-The nonprofit both relies weakly less on giving and, when it gives,
-chooses disbursals closer to average beneficiary need. It therefore
-produces weakly higher expected targeting quality.
+When giving remains, the nonprofit relies weakly less on it and chooses
+disbursals closer to average beneficiary need. When both forms use pure
+transacting, however, legal form changes neither the allocation nor
+expected quality.
 
 The three canonical allocation regimes clarify the comparison.
 
@@ -810,46 +812,21 @@ for achieving an optimum.
 
 \subsection{The Entrepreneur's Choice of Legal Form}\label{subsec:legal-form-choice}
 
-I now allow the entrepreneur to choose legal form. The central case
-is the high-heterogeneity region identified in
-\propref{prop:legal-form-effects}(A). When
-\[
-S(1)\geq C'(m_F^{*}),
-\]
-the for-profit and nonprofit choose the same pure-transacting allocation:
-\[
-n_{fp}^{*}=m_{fp}^{*}=n_{np}^{*}=m_{np}^{*}=m_F^{*},
-\qquad g_{fp}^{*}=g_{np}^{*}=0.
-\]
-Under either form, measurement reveals each beneficiary's ability and
-the entrepreneur tailors every disbursal to need. Transacting therefore
-aligns monetary and targeting incentives, and both forms attain maximal
-expected quality.
-
-Legal form nevertheless affects how much of the same monetary payoff
-the entrepreneur may appropriate. Let $\mathbb{E}[P_T^{*}]$ denote
-the expected net monetary payoff from the common pure-transacting
-allocation. Because targeting quality equals zero,
+I now allow the entrepreneur to choose legal form. In the high-heterogeneity
+region identified in \propref{prop:legal-form-effects}(A), both forms
+use pure transacting and attain maximal expected quality. Let
+$\mathbb{E}[P_T^{*}]$ denote the expected net monetary payoff from
+this common allocation, which I assume is positive. Because targeting
+quality equals zero,
 \[
 U_{fp}^{E}=\mathbb{E}[P_T^{*}],
 \qquad
 U_{np}^{E}=v\mathbb{E}[P_T^{*}].
 \]
-Under the maintained nonnegativity assumption, the entrepreneur therefore
-strictly chooses the for-profit whenever $\mathbb{E}[P_T^{*}]>0$ and
-is indifferent only in the boundary case $\mathbb{E}[P_T^{*}]=0$.
-Thus, whenever the project generates a positive monetary payoff, the
-for-profit both matches the nonprofit's quality and is preferred where
+Since $v<1$, the entrepreneur strictly prefers the for-profit. Thus,
+the for-profit both matches the nonprofit's quality and is preferred where
 beneficiary heterogeneity makes measurement and tailored assistance
 most important.
-
-For the remaining comparison, let
-\[
-M(m,g)\equiv rw\bar a+D(m+g)-C(m)
--(m+g)\left(\bar a-\mathbb{E}(a)\right)
-\]
-denote the monetary component in equation (\ref{eq:3}), and assume
-that it is nonnegative at each form's optimum.
 
 When the for-profit retains some giving, the comparison differs on
 quality but not on legal-form choice. By
@@ -858,21 +835,19 @@ expected targeting quality at lower scale. The entrepreneur nevertheless
 prefers the for-profit under the baseline assumptions. The reason is
 that a for-profit can adopt the nonprofit's scale and transaction choices,
 choose its own optimal giving disbursal, and place greater weight on
-the nonnegative monetary component. It can then optimize further. The
-formal revealed-preference argument is provided
-in the proof of \propref{prop:legal-form-choice} in Section B of the
-Appendix.
+the positive monetary payoff. This feasible allocation already gives
+the entrepreneur higher utility than the nonprofit allocation, so the
+for-profit optimum does as well.
 
 \begin{prop}\label{prop:legal-form-choice}
-Suppose the conditions of \propref{prop:comparative-statics} hold,
-nonprofits receive no tax benefits, scale is observable ex ante, and
-the monetary component $M$ is nonnegative at each form's optimum.
+Maintain the comparison in \propref{prop:legal-form-effects}, which
+holds $\gamma$ and the distribution of abilities fixed. Suppose nonprofits
+receive no tax benefits, scale is observable ex ante, and expected net
+monetary payoff is positive at each form's optimum.
 
 \textbf{(A)} If $S(1)\geq C'(m_F^{*})$, both forms choose the same
-pure-transacting allocation and attain maximal expected quality. The
-entrepreneur strictly prefers the for-profit whenever
-$\mathbb{E}[P_T^{*}]>0$ and is indifferent if
-$\mathbb{E}[P_T^{*}]=0$.
+pure-transacting allocation and attain maximal expected quality, but
+the entrepreneur strictly prefers the for-profit.
 
 \textbf{(B)} If $S(1)<C'(m_F^{*})$, the for-profit uses giving. The
 nonprofit would produce higher expected quality at lower scale, but
@@ -886,7 +861,8 @@ Rather, $v=1$ gives monetary payoff greater weight relative to targeting
 quality, so the for-profit tolerates more untailored giving. When
 $Var(a)$ is sufficiently high, that giving disappears and so does
 the nonprofit's quality advantage. \exampleref{ex:oa-legal-form} in
-\secref{oa:examples} of the Online Appendix illustrates both regions.
+\secref{oa:examples} of the Online Appendix illustrates the contrast
+between the giving and pure-transacting cases.
 
 The legal-form comparison also depends on two institutional assumptions.
 The first is that donations to
@@ -1678,6 +1654,10 @@ parameter $v$ is
 \[
 W_v(m,g)=vM(m,g)-\gamma Var(a)g+\frac{v^{2}g}{4\gamma}.
 \]
+At these disbursals, expected net monetary payoff is
+\[
+\Pi_v(m,g)=M(m,g)+\frac{vg}{2\gamma}.
+\]
 Let $(m_v^{*},g_v^{*})$ be the nonprofit optimum and let
 $(m_1^{*},g_1^{*})$ be the for-profit optimum. Evaluating the
 for-profit objective at the nonprofit's choices gives
@@ -1685,15 +1665,17 @@ for-profit objective at the nonprofit's choices gives
 \begin{aligned}
 W_1(m_v^{*},g_v^{*})-W_v(m_v^{*},g_v^{*})
 ={}&(1-v)M(m_v^{*},g_v^{*})\\
-&+\frac{(1-v^{2})g_v^{*}}{4\gamma}\geq0,
+&+\frac{(1-v^{2})g_v^{*}}{4\gamma}\\
+={}&(1-v)\left(\Pi_v(m_v^{*},g_v^{*})
++\frac{(1-v)g_v^{*}}{4\gamma}\right)>0,
 \end{aligned}
 \]
-where the inequality follows from $v\in(0,1)$ and the maintained
-nonnegativity assumption. Because the for-profit optimizes $W_1$,
+where the inequality follows from $v\in(0,1)$ and the assumed positive
+expected net monetary payoff. Because the for-profit optimizes $W_1$,
 \begin{equation}
 U_{fp}^{E}=W_1(m_1^{*},g_1^{*})
 \geq W_1(m_v^{*},g_v^{*})
-\geq W_v(m_v^{*},g_v^{*})=U_{np}^{E}.
+>W_v(m_v^{*},g_v^{*})=U_{np}^{E}.
 \label{eq:6}
 \end{equation}
 
@@ -1706,13 +1688,13 @@ Hence
 U_{fp}^{E}-U_{np}^{E}
 =(1-v)\mathbb{E}[P_T^{*}],
 \]
-which is positive if $\mathbb{E}[P_T^{*}]>0$ and zero otherwise.
+which is positive by assumption.
 
 For part (B), $S(1)<C'(m_F^{*})$ implies that the for-profit uses
 giving. By \propref{prop:legal-form-effects}(B), its allocation differs
-from the nonprofit allocation. Under the maintained uniqueness
-condition, the first inequality in equation (\ref{eq:6}) is therefore
-strict. It follows that $U_{fp}^{E}>U_{np}^{E}$.
+from the nonprofit allocation and the nonprofit would attain higher
+expected quality at lower scale. Equation (\ref{eq:6}) establishes
+the entrepreneur's strict preference for the for-profit.
 
 \subsection{Proof of \propref{prop:donor-quality}}
 

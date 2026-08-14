@@ -58,6 +58,8 @@
 \let\footnotesize\small
 \date{}
 \newcommand{\secref}[1]{\hyperref[#1]{Section~\ref*{#1}}}
+\newcommand{\appref}[1]{\hyperref[#1]{Appendix~\ref*{#1}}}
+\newcommand{\oaref}[1]{\hyperref[#1]{Online Appendix~\ref*{#1}}}
 \newcommand{\exampleref}[1]{\hyperref[#1]{Example~\ref*{#1}}}
 \newcommand{\lemref}[1]{\hyperref[#1]{Lemma~\ref*{#1}}}
 \newcommand{\propref}[1]{\hyperref[#1]{Proposition~\ref*{#1}}}
@@ -161,8 +163,7 @@ the firm. Fair-trade organizations and microfinance institutions can
 illustrate the same broad mechanism more loosely. In those settings,
 repeated transactions with low-income farmers or borrowers can reveal
 information that helps tailor assistance.\footnote{For a discussion of the definition of social enterprise and of the
-boundaries of the term in this paper, see \secref{oa:def-social-enterprise}
-of the Online Appendix.}
+boundaries of the term in this paper, see \oaref{oa:def-social-enterprise}.}
 
 Throughout the paper, ``quality'' refers to the quality of philanthropy
 in a narrow targeting sense, meaning the extent to which assistance is matched
@@ -257,9 +258,10 @@ The rest of the paper proceeds as follows. \secref{sec:model} presents the
 model and articulates the meaning of quality. \secref{sec:analysis} analyzes
 the entrepreneur's choice between giving and transacting, the trade-off
 between scale and quality, the choice of legal form, and the donor's
-decision. \secref{sec:certification} studies certification. \secref{sec:conclusion} concludes by
-briefly relating the model to quantity-based notions of philanthropy.
-The Appendix contains proofs, and the Online Appendix contains extensions.
+decision. \secref{sec:certification} studies certification. \secref{sec:conclusion}
+summarizes the main results. \appref{app:definitions} lists the notation,
+and \appref{app:proofs} contains the proofs omitted from the main text.
+The separate Online Appendix contains extensions and illustrative examples.
 
 \section{Model}\label{sec:model}
 
@@ -318,7 +320,7 @@ and payoffs are realized.
 
 The cost of measuring the abilities of $m$ beneficiaries is $C(m)$.
 The cost function $C$ is increasing, convex, and twice differentiable,
-with $C(0)=0$.\footnote{As shown in \secref{oa:linear-cost} of the Online Appendix, the analysis is robust
+with $C(0)=0$.\footnote{As shown in \oaref{oa:linear-cost}, the analysis is robust
 to a linear cost function.}
 
 For targeting purposes, the key difference between giving and transacting
@@ -392,7 +394,7 @@ at $q=0$, when every beneficiary receives exactly the assistance needed
 to reach $\bar{a}$ (that is, $d(i)=\bar{a}-a(i)$). The quadratic loss
 treats over-provision and under-provision symmetrically
 and provides a tractable measure of targeting accuracy. Quality falls
-as a disbursal departs from the beneficiary's need.\footnote{\secref{oa:no-penalty} of the Online Appendix discusses a quality measure with no penalty for waste.}
+as a disbursal departs from the beneficiary's need.\footnote{\oaref{oa:no-penalty} discusses a quality measure with no penalty for waste.}
 
 The entrepreneur's utility is
 
@@ -435,7 +437,7 @@ I now solve the entrepreneur's allocation choices for a fixed legal
 form $v$. The tradeoff is simple. Giving saves measurement costs but
 forces the entrepreneur to use imperfect information. Transacting
 requires measurement costs but allows the entrepreneur to tailor assistance
-to each beneficiary's need. \secref{app:proofs} of the Appendix provides
+to each beneficiary's need. \appref{app:proofs} provides
 the proofs omitted from the main text.
 
 Start with giving. Because the entrepreneur does not observe individual
@@ -862,7 +864,7 @@ Rather, $v=1$ gives monetary payoff greater weight relative to targeting
 quality, so the for-profit tolerates more untailored giving. When
 $Var(a)$ is sufficiently high, that giving disappears and so does
 the nonprofit's quality advantage. \exampleref{ex:oa-legal-form} in
-\secref{oa:examples} of the Online Appendix illustrates the contrast
+\oaref{oa:examples} illustrates the contrast
 between the giving and pure-transacting cases.
 
 The legal-form comparison also depends on two institutional assumptions.
@@ -875,7 +877,7 @@ firms with large charitable arms frequently attract substantial
 capital, via consumer premiums or investors accepting lower
 returns, even amid concerns over the quality of for-profit
 philanthropy \citep[see][]{masulisReza2015}.\footnote{The effect of tax deductibility on philanthropy quality is more nuanced.
-As shown in \secref{oa:tax-deductions} of the Online Appendix, tax benefits induce
+As shown in \oaref{oa:tax-deductions}, tax benefits induce
 entrepreneurs to scale up. When the tax incentive is modest, the entrepreneur
 increases scale by transacting with more beneficiaries, thereby maintaining
 high quality. However, excessively large tax benefits may encourage
@@ -899,7 +901,7 @@ does not change the choice between giving and transacting or the baseline
 choice of legal form.
 
 The more interesting case arises when donors care directly about expected
-quality. \secref{oa:donors-quality} of the Online Appendix develops
+quality. \oaref{oa:donors-quality} develops
 this extension formally. The entrepreneur knows her own $\gamma$, but
 the donor does not observe it. The donor observes legal form and planned
 scale $n$ ex ante, but not $m$, $g$, or the disbursals, and therefore
@@ -981,7 +983,7 @@ chooses lower total scale. Observably limited scale therefore signals
 a stronger concern for quality. In the pure-transacting region, scale
 may not reveal the entrepreneur's exact $\gamma$, but that information
 is unnecessary because every type provides maximal quality. These results
-are developed formally in \secref{oa:donors-quality} of the Online Appendix.
+are developed formally in \oaref{oa:donors-quality}.
 Certification becomes valuable when planned scale is not verifiable
 and donors cannot otherwise infer quality, or more generally whenever
 scale cannot perform this informational role.
@@ -1115,7 +1117,7 @@ subject to the measurement-incentive condition in equation
 directly or use tax benefits to reduce the cost of private support. Unlike
 support conditioned on certified transactions, a general tax deduction
 for donations may encourage ineffective giving, as shown in
-\secref{oa:tax-deductions} of the Online Appendix. Accordingly, policymakers
+\oaref{oa:tax-deductions}. Accordingly, policymakers
 seeking to support social enterprises should prioritize mechanisms that
 condition subsidies on verified transactions with beneficiaries.
 
@@ -2313,8 +2315,8 @@ that it is sufficiently large to (a) cause the entrepreneur to form
 a nonprofit rather than a for-profit, and (b) induce the nonprofit
 entrepreneur to engage in more giving than a for-profit entrepreneur
 would. Thus, tax deductions may reduce the quality of philanthropy
-when entrepreneurs' regard for quality ($\gamma$) is low (See \exampleref{ex:oa-tax-deduction}
-in \secref{oa:examples} of the Online Appendix). 
+when entrepreneurs' regard for quality ($\gamma$) is low (see \exampleref{ex:oa-tax-deduction}
+in \oaref{oa:examples}).
 
 Finally, extending tax deductions to for-profits is unlikely to improve
 philanthropic quality. When both legal forms receive the same deduction,

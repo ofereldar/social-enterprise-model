@@ -921,8 +921,10 @@ While many donors may be passive and rely primarily on observable scale,
 many others care directly about the expected quality of the programs
 they support. \oaref{oa:donors-quality} develops this extension formally.
 Expected quality depends in part on $\gamma$, the weight the entrepreneur
-places on effective assistance. The entrepreneur knows her own $\gamma$,
-but the donor does not observe it. The donor observes legal form and
+places on effective assistance. For this extension, let
+$\Gamma=[\underline{\gamma},\overline{\gamma}]\subset(0,\infty)$ denote
+the set of possible values of $\gamma$. The entrepreneur knows her own
+$\gamma$, but the donor does not observe it. The donor observes legal form and
 the entrepreneur's planned philanthropic scale $n$ ex ante, but not
 $m$, $g$, or the disbursals, and therefore
 forms beliefs about $\gamma$ conditional on legal form and scale.\footnote{This
@@ -945,25 +947,39 @@ so scale does not identify the exact $\gamma$. It nevertheless reveals
 that $m^{*}=n^{*}$, $g^{*}=0$, and expected quality is maximal.
 
 \begin{prop}\label{prop:donor-quality}
-Suppose $\gamma$ is privately known by the entrepreneur, while legal
-form and planned scale ($n$) are observable to donors.
-If every entrepreneur type in the donor's prior support lies strictly
-within the pure-transacting region under either legal form, donors correctly
-anticipate maximal quality without observing $\gamma$. Donor concern
-for expected quality then leaves funding and scale unchanged relative
-to the scale-only benchmark. Both legal forms choose the same allocation,
-and the entrepreneur strictly prefers the for-profit form absent tax
-benefits.
+Suppose $\gamma\in\Gamma$ is privately known by the entrepreneur, while
+legal form and planned scale ($n$) are observable to donors, who value
+both scale and expected quality. Let $0<\widehat n<w$ denote the unique
+solution to
+\[
+F'(\widehat n)=C'(\widehat n)+\bar a-\mathbb{E}(a).
+\]
+
+\textbf{(A)} If
+\[
+\underline{\gamma}Var(a)-\frac{1}{4\underline{\gamma}}>C'(\widehat n),
+\]
+then, for every $\gamma\in\Gamma$ and $j\in\{fp,np\}$,
+\[
+n_j^{*}=m_j^{*}=\widehat n,\qquad g_j^{*}=0,
+\qquad \mathbb{E}[q_j^{*}]=0.
+\]
+Donor concern for expected quality does not alter the marginal funding
+condition or equilibrium scale. Absent tax benefits,
+$U_{fp}^{E}>U_{np}^{E}$ for every $\gamma\in\Gamma$.
+
+\textbf{(B)} For any $\gamma\in\Gamma$ for which $g_j^{*}>0$ under at
+least one legal form $j\in\{fp,np\}$, the maintained assumptions do
+not sign $U_{fp}^{E}-U_{np}^{E}$.
 \end{prop}
 
-The premise of the proposition has a simple sufficient condition. If
-the possible values of $\gamma$ have a positive lower bound and $Var(a)$
-is high enough that even the lowest-$\gamma$ for-profit type chooses
-pure transacting, then every higher-$\gamma$ type does so as well. The
-nonprofit also chooses pure transacting because its nondistribution constraint
-places greater relative weight on targeting quality. The donor may be
-unable to distinguish these types from their common scale, but knows
-that all of them deliver maximal quality.
+The condition in part (A) compares the targeting advantage of transacting
+for the lowest-$\gamma$ for-profit type with the marginal cost of measurement
+at $\widehat n$. Because the left side increases with $Var(a)$, the condition
+holds when beneficiary heterogeneity is sufficiently high. Every higher-$\gamma$
+type then chooses pure transacting, as does the nonprofit. Donors therefore
+anticipate maximal quality even though common scale does not reveal the
+entrepreneur's exact $\gamma$.
 
 Limited scale in this region is itself a commitment to targeting quality.
 At the pure-transacting allocation, expansion through giving would attract
@@ -984,7 +1000,7 @@ generate the information needed for effective assistance. \propref{prop:donor-qu
 therefore preserves the paper's central legal-form
 result even when donors care directly about expected quality.
 
-When some giving remains, however, donor concern for expected quality
+Part (B) applies when some giving remains. Donor concern for expected quality
 does not yield a general legal-form ranking. If different entrepreneur
 types choose different planned scales, observed scale reveals $\gamma$,
 and the donor can condition funding on the implied quality. If different
@@ -1166,8 +1182,9 @@ monetary payoff, the entrepreneur then strictly prefers the for-profit.
 The paper's central result is therefore that the for-profit can deliver
 the same maximal quality as a nonprofit precisely where tailoring assistance
 is most important. The result continues to hold when donors care directly
-about expected quality, provided all entrepreneur types in the donor's
-prior support lie strictly within the pure-transacting region. When
+about expected quality under the sufficient condition in
+\propref{prop:donor-quality}(A), so every possible entrepreneur type
+chooses pure transacting. When
 some giving remains, the model does not generally rank the two legal
 forms under quality-sensitive funding.
 
@@ -1760,31 +1777,46 @@ the entrepreneur's strict preference for the for-profit.
 
 \subsection{Proof of \propref{prop:donor-quality}}
 
-By the premise, every type in the donor's prior support lies strictly
-within the pure-transacting region and chooses
-$g^{*}=0$ under either legal form. By \lemref{lem:tailoring}, every
-disbursal is then tailored and $\mathbb{E}[q]=0$, irrespective of the
-donor's beliefs about $\gamma$. Because the condition holds with slack,
-posterior expected quality also remains zero after a marginal change
-in scale. The donor's quality term therefore does not alter the scale-only
-funding condition. The entrepreneur chooses
-scale according to
+For part (A), the left side of the stated inequality is $S(1)$ for
+$\gamma=\underline{\gamma}$. Because $S(v)$ increases with $\gamma$
+and increases as $v$ falls below one, the inequality implies
+$S(v)>C'(\widehat n)$ for every $\gamma\in\Gamma$ under either legal
+form. Every type therefore lies strictly within the pure-transacting
+region at $\widehat n$. By \lemref{lem:tailoring}, $g^{*}=0$ implies
+$\mathbb{E}[q]=0$. The strict inequality also implies that expected
+quality remains zero after a marginal change in scale, so the donor's
+quality term drops out of the marginal funding condition. The donor's
+and entrepreneur's scale conditions are therefore
 \[
-D'(n^{*})=C'(n^{*})+\left(\bar{a}-\mathbb{E}(a)\right),
+D_v'(\widehat n)=F'(\widehat n)
+=C'(\widehat n)+\bar a-\mathbb{E}(a).
 \]
-which is independent of both $v$ and $\gamma$. Hence
+This yields
 \[
-n_{fp}^{*}=m_{fp}^{*}=n_{np}^{*}=m_{np}^{*},\qquad g_{fp}^{*}=g_{np}^{*}=0.
+n_j^{*}=m_j^{*}=\widehat n,\qquad g_j^{*}=0,
+\qquad \mathbb{E}[q_j^{*}]=0
+\quad\text{for }j\in\{fp,np\}.
 \]
-Let $P_T^{*}$ denote the common net monetary payoff at this allocation.
-It is strictly positive. The feasible allocation with no philanthropy
-has $P=rw\bar a>0$ and $q=0$. Because the optimum weakly dominates that
-allocation and $q\leq0$, its net monetary payoff must also be positive.
-The entrepreneur's utilities are therefore
+Let $P_T^{*}$ denote the common net monetary payoff. It is strictly
+positive because the entrepreneur can instead choose no philanthropy,
+which yields $P=rw\bar a>0$ and $q=0$. Hence
 \[
-U_{fp}^{E}=P_T^{*},\qquad U_{np}^{E}=vP_T^{*},
+U_{fp}^{E*}=P_T^{*}>vP_T^{*}=U_{np}^{E*}.
 \]
-and $0<v<1$ establishes a strict preference for the for-profit.
+
+For part (B), let $Q(n,v)$ denote the donor's expected quality conditional
+on observed scale and legal form, and let $\pi>0$ be the weight placed
+on expected quality. At a differentiable interior equilibrium in which
+giving remains, the donor's and entrepreneur's marginal conditions derived
+in \oaref{oa:donors-quality} combine to give
+\[
+F'(n^{*})+\pi Q_n(n^{*},v)
+=\bar a-\mathbb{E}(a)+S(v).
+\]
+The maintained assumptions do not restrict $Q_n(n^{*},v)$ across legal
+forms because it depends on equilibrium inference and on how scale changes
+giving. They therefore do not sign the entrepreneur's utility difference
+across legal forms.
 
 \subsection{Proof of \propref{prop:certification}}
 
@@ -2166,10 +2198,10 @@ with $\gamma$ and is larger for a nonprofit with $v<1$, condition
 (\ref{eq:donor-pure-condition}) implies pure transacting for every other
 type and for both legal forms. It is satisfied for sufficiently high
 $Var(a)$. In this region, donor concern for expected quality does not
-change funding or scale because expected quality is already maximal.
+change the marginal funding condition or scale because expected quality
+is already maximal.
 The two forms choose $n^{*}=m^{*}=\widehat n$ and $g^{*}=0$, and the argument
-in the proof of \propref{prop:donor-quality} establishes the entrepreneur's
-strict preference for the for-profit.
+in the proof of \propref{prop:donor-quality} establishes part (A).
 
 If condition (\ref{eq:donor-pure-condition}) fails and some giving remains,
 equations (\ref{eq:donor-quality-foc}) and
@@ -2183,7 +2215,7 @@ scale changes giving and on the donor's equilibrium inference. If types
 pool, it also depends on the posterior distribution in equation
 (\ref{eq:posterior-quality}). The baseline assumptions do not determine
 these responses across legal forms. The legal-form ranking is therefore
-not generally determined when giving remains.
+not generally determined when giving remains, establishing part (B).
 
 \subsection{Scale is Not Observable Ex Ante }\label{oa:scale-unobservable}
 

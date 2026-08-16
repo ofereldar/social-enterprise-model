@@ -1476,9 +1476,10 @@ unique optimum is $d^{m*}(i)=\bar a-a(i)$.
 
 \subsection{Proof of \lemref{lem:measure-if-transact}}
 
-Suppose instead that an allocation contains $m_{2}>0$ beneficiaries
-who are served through transactions but whose abilities are not measured.
-Fix any such beneficiary and any disbursal level $d$. Relative to
+Consider an expanded problem with $m_M$ measured transactions and $m_U$
+unmeasured transactions. Total scale is $n=m_M+m_U+g$, production capacity
+requires $m_M+m_U\leq w$, and measurement cost is $C(m_M)$. Suppose
+$m_U>0$, and fix an unmeasured transaction with disbursal $d$. Relative to
 serving that same beneficiary through giving with the same disbursal,
 the disbursal cost, quality term, donation count $n$, and measurement
 cost are unchanged. The only difference is on the revenue side. If the
@@ -1490,13 +1491,11 @@ for that beneficiary is
 \[
 v r\left(\mathbb{E}\left[\min(a+d,\bar{a})\right]-\bar{a}\right)\leq0,
 \]
-with strict inequality whenever $\Pr(a+d<\bar{a})>0$. Thus, for any
-beneficiary served through a transaction without measurement, the entrepreneur
-weakly prefers to reclassify that beneficiary as giving. Repeating
+with strict inequality whenever $\Pr(a+d<\bar{a})>0$. Thus, the entrepreneur
+weakly prefers to reclassify each unmeasured transaction as giving. Repeating
 this replacement produces an allocation with weakly higher utility and
-$m_{2}=0$. Therefore, without loss of generality, every beneficiary
-served through a transaction is measured and, by \lemref{lem:tailoring},
-receives a tailored disbursal.
+$m_U=0$. Relabeling $m_M$ as $m$ yields the reduced problem stated in
+the text; \lemref{lem:tailoring} then implies tailored disbursals.
 \subsection{Proof of \lemref{lem:mapping}}
 
 Let

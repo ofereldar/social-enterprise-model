@@ -406,12 +406,9 @@ The entrepreneur's utility is
 U=vP+\gamma q,
 \end{equation}
 
-where $P$ is the firm's net monetary payoff and $\gamma\geq0$ is
-the entrepreneur's weight on effective assistance. The analysis below
-focuses on social-mission entrepreneurs with $\gamma>0$; the limiting
-case $\gamma=0$ corresponds to a purely commercial firm with no weight
-on effective assistance. Thus, $\gamma$ captures altruism, reputational
-pressure, or both.
+where $P$ is the firm's net monetary payoff and $\gamma>0$ is
+the entrepreneur's weight on effective assistance. Thus, $\gamma$ captures
+altruism, reputational pressure, or both.
 
 Because abilities are unknown at $t=0$, the entrepreneur maximizes expected
 utility:
@@ -1030,15 +1027,10 @@ assistance is especially likely to be ineffective.
 
 \section{Certification of Transactions with Beneficiaries}\label{sec:certification}
 
-The preceding analysis assumes that planned scale is observable and that
-every possible entrepreneur places some positive weight on effective
-assistance. If planned scale is not verifiable, or if donors cannot rule out
-a purely commercial entrepreneur,\footnote{When $\gamma=0$, the entrepreneur
-sets $d^{g*}=0$ because giving produces no revenue and disbursals are costly.
-She may nevertheless choose $g^{*}>0$ if scale-based funding $D(n)$ is sufficiently
-valuable. Positive planned scale therefore need not imply positive assistance.} scale alone cannot assure them of expected
-quality. Certification offers a different route by making beneficiary
-transactions verifiable.
+The preceding analysis assumes that planned scale is observable. If planned
+scale is not verifiable, scale alone cannot assure donors of expected quality.
+Certification offers a different route by making beneficiary transactions
+verifiable.
 
 When scale cannot be used to infer quality, donors instead base support
 on posterior beliefs. They may place too much weight on high-$\gamma$
@@ -1067,9 +1059,10 @@ location, or lack of access to technology.\footnote{See \citet{eldar2020} for a 
 
 Verifying a transaction does not by itself verify measurement. The
 entrepreneur must also have a private incentive to learn beneficiary
-ability. To state a sufficient condition, consider the conservative
-case $\gamma=0$. If the entrepreneur measures a beneficiary, the expected
-net monetary contribution before measurement cost is
+ability. To state a sufficient condition, consider the limiting edge case
+in which $\gamma$ approaches zero and the incentive to measure is purely
+monetary. If the entrepreneur measures a beneficiary, the expected net
+monetary contribution before measurement cost is
 $r\bar a-\mathbb{E}[\bar a-a]$. If she transacts without measuring,
 she chooses a common disbursal $d$ to maximize expected net revenue.
 Define the purely monetary value of measurement as
@@ -1094,9 +1087,10 @@ measures every certified beneficiary. If $C'(0)<\Delta_{0}$, it holds
 for a positive range of sufficiently small certified scales. By
 \lemref{lem:tailoring}, the entrepreneur then sets
 $d^{m}(i)=\bar a-a(i)$ for every certified beneficiary. The revenue
-incentive therefore ensures tailored certified transactions even when
-$\gamma=0$. \propref{prop:certification} requires $\gamma>0$ only to rule
-out additional untailored giving and guarantee maximal overall quality.
+incentive therefore ensures tailored certified transactions even as
+$\gamma$ approaches zero. \propref{prop:certification} assumes $\gamma>0$
+and therefore also rules out additional untailored giving, guaranteeing
+maximal overall quality.
 
 Certification of giving alone provides little assurance. For any common
 disbursal $d$ chosen without observing individual ability,
@@ -1106,9 +1100,7 @@ disbursal $d$ chosen without observing individual ability,
 \label{eq:giving-certification-loss}
 \end{equation}
 Thus, when $Var(a)>0$, no common disbursal attains maximal targeting
-quality. Under a fixed payment conditioned only on the number nominally
-served, an entrepreneur with $\gamma=0$ sets $d=0$ and retains the payment.
-Even a required positive disbursal cannot establish targeting quality because
+quality. Even a required positive disbursal cannot establish targeting quality because
 the certifier does not observe individual need. Doing so would require
 beneficiary-by-beneficiary impact assessment. Transaction certification avoids
 that problem by giving the entrepreneur a revenue incentive to measure need
@@ -1123,7 +1115,7 @@ beneficiary, sets $d^{m}(i)=\bar a-a(i)$, and chooses $g=0$. Certification
 therefore guarantees maximal expected quality ($\mathbb{E}[q]=0$),
 even though the donor does not observe $\gamma$, individual ability,
 disbursals, or impact. In contrast, certification of $g$ alone cannot
-guarantee a positive disbursal, much less maximal targeting quality.
+guarantee maximal targeting quality.
 \end{prop}
 
 Certification changes what donors need to infer. Without certification,
@@ -1853,9 +1845,10 @@ monetary contribution before measurement cost is therefore
 r\bar a-\mathbb{E}[\bar a-a].
 \]
 
-Now consider the conservative case $\gamma=0$. If the entrepreneur
-transacts with a beneficiary without measuring ability, she chooses
-$d$ to maximize
+To obtain a lower bound, consider the limiting edge case in which $\gamma$
+approaches zero and the incentive to measure is purely monetary. If the
+entrepreneur transacts with a beneficiary without measuring ability, she
+chooses $d$ to maximize
 \[
 r\mathbb{E}[\min\{a+d,\bar a\}]-d.
 \]
@@ -1902,12 +1895,9 @@ which is nonnegative under the subsidy condition in
 the certified transactions and achieves $\mathbb{E}[q]=0$.
 
 By contrast, certifying $g$ alone leaves individual abilities unobserved.
-Under an analogous fixed payment conditioned only on $g$, an entrepreneur
-with $\gamma=0$ sets $d=0$ because giving produces no revenue and disbursals
-are costly. The certificate therefore does not ensure a positive disbursal.
-Even if the contract requires $d>0$, equation
-(\ref{eq:giving-certification-loss}) implies an expected targeting loss
-of at least $Var(a)>0$. Guaranteeing targeting quality would require the
+For any common disbursal, equation (\ref{eq:giving-certification-loss})
+implies an expected targeting loss of at least $Var(a)>0$. Guaranteeing
+targeting quality would require the
 certifier to observe both individual needs and disbursals. Certification
 of $g$ alone therefore cannot guarantee maximal quality or reveal its
 actual level.

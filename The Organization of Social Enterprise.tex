@@ -917,15 +917,18 @@ entrepreneur's tradeoff between giving and transacting. The entrepreneur
 still chooses her allocation in response to the support associated with
 each planned scale under $D(n)$.
 
-While many donors may be passive and rely primarily on observable scale,
-many others care directly about the expected quality of the programs
-they support. \oaref{oa:donors-quality} develops this extension formally.
+In the baseline, donor support depends only on observable scale. I now
+allow donor utility also to depend on the expected quality of the program.
+\oaref{oa:donors-quality} provides the derivation.
 Expected quality depends in part on $\gamma$, the weight the entrepreneur
 places on effective assistance. For this extension, let
 $\Gamma=[\underline{\gamma},\overline{\gamma}]\subset(0,\infty)$ denote
-the set of possible values of $\gamma$. The entrepreneur knows her own
-$\gamma$, but the donor does not observe it. The donor observes legal form and
-the entrepreneur's planned philanthropic scale $n$ ex ante, but not
+the set of possible values of $\gamma$, where $\underline{\gamma}$ and
+$\overline{\gamma}$ are the lowest and highest possible weights on effective
+assistance. The entrepreneur knows her own $\gamma$, but the donor does
+not observe it. The donor
+observes legal form and the entrepreneur's planned philanthropic scale
+$n$ ex ante, but not
 $m$, $g$, or the disbursals, and therefore
 forms beliefs about $\gamma$ conditional on legal form and scale.\footnote{This
 informational problem is not unique to the for-profit form. Donors also
@@ -933,8 +936,32 @@ cannot observe the entrepreneur's altruism when the enterprise is organized
 as a nonprofit. In \citet{glaeserShleifer2001}, by contrast, the analogous
 altruism parameter $b$ is assumed to be observable.}
 
-Observable scale nevertheless contains information about the entrepreneur's
-allocation and expected quality. In the mixed regime,
+Let
+\[
+Q(n,v)\equiv\mathbb{E}_{\gamma}\!\left[
+\mathbb{E}[q\mid\gamma,n,v]\mid n,v\right]
+\]
+denote the donor's expected quality after observing planned scale and
+legal form. Thus, $Q(n,v)$ averages targeting quality across the values
+of $\gamma$ the donor considers possible after observing $n$ and $v$.
+Donor utility is
+\[
+U^{D}=Y-D_v(n)+F\bigl(n,Q(n,v)\bigr),
+\]
+where $D_v(n)$ is the support provided to an enterprise with legal-form
+parameter $v$, with $D_v(0)=0$. The benefit function $F$ is differentiable and increasing
+in both scale and expected quality, so $F_n>0$ and $F_Q>0$, and is concave
+in scale. Subscripts on $F$ and $Q$ denote partial derivatives. The scale-only
+benchmark sets $F_Q=0$ and writes the resulting benefit as
+$F(n)=F(n,0)$. At a differentiable interior solution, the donor's marginal
+condition is
+\[
+D_v'(n^{*})=F_n\bigl(n^{*},Q(n^{*},v)\bigr)
++F_Q\bigl(n^{*},Q(n^{*},v)\bigr)Q_n(n^{*},v).
+\]
+
+Observable scale can reveal the entrepreneur's allocation and expected
+quality. In the mixed regime,
 \propref{prop:comparative-statics} implies that a higher $\gamma$ leads
 to a lower $n^{*}$, while \lemref{lem:mapping} establishes a one-to-one
 mapping among $n^{*}$, $m^{*}$, and $g^{*}$. For a given legal form
@@ -949,10 +976,10 @@ that $m^{*}=n^{*}$, $g^{*}=0$, and expected quality is maximal.
 \begin{prop}\label{prop:donor-quality}
 Suppose $\gamma\in\Gamma$ is privately known by the entrepreneur, while
 legal form and planned scale ($n$) are observable to donors, who value
-both scale and expected quality. Let $0<\widehat n<w$ denote the unique
-solution to
+both scale and expected quality. Let $0<\widehat n<w$ denote the
+pure-transacting scale, defined as the unique solution to
 \[
-F'(\widehat n)=C'(\widehat n)+\bar a-\mathbb{E}(a).
+F_n(\widehat n,0)=C'(\widehat n)+\bar a-\mathbb{E}(a).
 \]
 
 \textbf{(A)} If
@@ -964,22 +991,34 @@ then, for every $\gamma\in\Gamma$ and $j\in\{fp,np\}$,
 n_j^{*}=m_j^{*}=\widehat n,\qquad g_j^{*}=0,
 \qquad \mathbb{E}[q_j^{*}]=0.
 \]
-Donor concern for expected quality does not alter the marginal funding
-condition or equilibrium scale. Absent tax benefits,
+At this allocation, $Q(\widehat n,v)=Q_n(\widehat n,v)=0$, so
+$D_v'(\widehat n)=F_n(\widehat n,0)$ and scale is unchanged from the
+scale-only benchmark.
+Absent tax benefits,
 $U_{fp}^{E}>U_{np}^{E}$ for every $\gamma\in\Gamma$.
 
-\textbf{(B)} For any $\gamma\in\Gamma$ for which $g_j^{*}>0$ under at
-least one legal form $j\in\{fp,np\}$, the maintained assumptions do
-not sign $U_{fp}^{E}-U_{np}^{E}$.
+\textbf{(B)} For a type $\gamma\in\Gamma$, at any differentiable interior
+equilibrium in which $g^{*}>0$ under legal-form parameter $v$, scale satisfies
+\[
+F_n\bigl(n^{*},Q(n^{*},v)\bigr)
++F_Q\bigl(n^{*},Q(n^{*},v)\bigr)Q_n(n^{*},v)
+=\bar a-\mathbb{E}(a)+S(v).
+\]
+Without additional restrictions on $F$ and equilibrium beliefs,
+$Q(n^{*},v)$ and $Q_n(n^{*},v)$ are not ordered across legal forms.
+The sign of $U_{fp}^{E}-U_{np}^{E}$ is therefore not determined when
+giving remains under at least one form.
 \end{prop}
 
-The condition in part (A) compares the targeting advantage of transacting
-for the lowest-$\gamma$ for-profit type with the marginal cost of measurement
-at $\widehat n$. Because the left side increases with $Var(a)$, the condition
-holds when beneficiary heterogeneity is sufficiently high. Every higher-$\gamma$
-type then chooses pure transacting, as does the nonprofit. Donors therefore
-anticipate maximal quality even though common scale does not reveal the
-entrepreneur's exact $\gamma$.
+The left side of the condition in part (A) is $S(1)$ evaluated at
+$\gamma=\underline{\gamma}$, the targeting advantage for the lowest-$\gamma$
+for-profit type. It increases with $Var(a)$. Since $S(v)$ increases in
+$\gamma$ and decreases in $v$, the condition implies pure transacting
+for every type under both legal forms. Donors therefore anticipate maximal
+quality even though common scale does not reveal the entrepreneur's exact
+$\gamma$. Because $C'$ is increasing, the same condition holds at every
+$n\leq\widehat n$. Together with $D_v(0)=0$, the common marginal funding
+condition implies equal support under the two legal forms at $\widehat n$.
 
 Limited scale in this region is itself a commitment to targeting quality.
 At the pure-transacting allocation, expansion through giving would attract
@@ -987,29 +1026,31 @@ additional funding and increase expected monetary payoff, but would reduce
 targeting quality. The entrepreneur therefore forgoes profitable expansion
 rather than provide untailored assistance. Donors who observe scale can
 recognize this commitment even though scale does not reveal the entrepreneur's
-exact $\gamma$. This restraint creates the scaling challenge associated
-with social enterprise.
+exact $\gamma$. Scale therefore remains $\widehat n$ despite the positive
+monetary return from expanding through giving.
 
-This high-information-asymmetry case is substantively important. In
-many development settings, the central problem is not simply how much
-assistance to provide, but how to learn enough about beneficiaries'
-abilities and needs to improve employment opportunities, raise the
-productivity of farmers, or expand access to capital \citep{eldar2017}. In those settings,
-transactions with beneficiaries are especially valuable because they
-generate the information needed for effective assistance. \propref{prop:donor-quality}
-therefore preserves the paper's central legal-form
-result even when donors care directly about expected quality.
+In many development settings, improving employment opportunities, raising
+farmer productivity, or expanding access to capital requires information
+about beneficiaries' abilities and needs \citep{eldar2017}. Transactions
+with beneficiaries can generate that information. Under the condition
+in \propref{prop:donor-quality}(A), both legal forms attain
+$\mathbb{E}[q]=0$, and the entrepreneur prefers the for-profit even when
+donors value expected quality.
 
-Part (B) applies when some giving remains. Donor concern for expected quality
-does not yield a general legal-form ranking. If different entrepreneur
-types choose different planned scales, observed scale reveals $\gamma$,
-and the donor can condition funding on the implied quality. If different
-types choose the same scale, funding instead depends on the donor's
-posterior beliefs. In either case, quality-sensitive
-funding may change both transacting and total scale differently across
-legal forms. Without additional restrictions on the funding rule and
-equilibrium beliefs, the baseline assumptions do not determine which
-legal form the entrepreneur chooses when giving remains.
+Part (B) applies when some giving remains. The derivative $Q_n(n^{*},v)$
+is the change in donor-expected quality associated with a marginal increase
+in observed scale. It reflects both how the entrepreneur changes giving
+and what the donor infers about $\gamma$ from scale. Donor concern for
+expected quality therefore does not yield a general legal-form ranking.
+If the equilibrium mapping from $\gamma$ to $n^{*}$ is one-to-one, observed
+scale reveals $\gamma$, and the donor can condition funding on the implied
+quality. If types pool at the same scale, expected quality instead depends
+on the donor's posterior distribution over those types. Because $Q(n,v)$
+and $Q_n(n,v)$ can differ by legal
+form, the induced support schedules $D_v(n)$ need not be ordered. Without
+additional restrictions on the funding rule and equilibrium beliefs,
+the model does not determine which legal form the entrepreneur chooses
+when giving remains.
 
 \section{Certification of Transactions with Beneficiaries}\label{sec:certification}
 
@@ -1412,11 +1453,18 @@ $d(i)$ & The disbursal to beneficiary $i$\tabularnewline
 $d^{m}(i)$ & The disbursal to beneficiary $i$ when the firm transacts with that beneficiary\tabularnewline
 $d^{g}(i)$ & The disbursal to beneficiary $i$ when the firm serves that beneficiary through giving\tabularnewline
 $D(n)$ & The amount of donations the firm receives\tabularnewline
+$D_v(n)$ & Donor support conditional on planned scale and legal form, with $D_v(0)=0$\tabularnewline
 $\Delta_{0}$ & The purely monetary value of measuring a beneficiary's ability\tabularnewline
+$F(n,Q)$ & The donor's benefit from philanthropic scale and expected targeting quality\tabularnewline
 $g$ & The number of beneficiaries that receive a subsidy through giving\tabularnewline
+$\Gamma$ & The set $[\underline{\gamma},\overline{\gamma}]$ of possible values of $\gamma$\tabularnewline
+$\gamma$ & The entrepreneur's weight on effective assistance\tabularnewline
+$\underline{\gamma}$ & The lowest possible weight on effective assistance in the donor-quality extension\tabularnewline
+$\overline{\gamma}$ & The highest possible weight on effective assistance in the donor-quality extension\tabularnewline
 $m$ & The number of beneficiaries the firm transacts with\tabularnewline
 $m^{c}$ & The certified number of beneficiaries the firm transacts with\tabularnewline
 $n$ & The total number of beneficiaries the firm assists\tabularnewline
+$Q(n,v)$ & Expected targeting quality conditional on observed scale and legal form\tabularnewline
 $r$ & The return per unit of worker ability, with $r>1$\tabularnewline
 $S(v)$ & The marginal advantage of measured transacting over giving, expressed in monetary-payoff units\tabularnewline
 $T(m^{c})$ & The fixed subsidy conditional on completing $m^{c}$ certified transactions\tabularnewline
@@ -1779,7 +1827,7 @@ the entrepreneur's strict preference for the for-profit.
 
 For part (A), the left side of the stated inequality is $S(1)$ for
 $\gamma=\underline{\gamma}$. Because $S(v)$ increases with $\gamma$
-and increases as $v$ falls below one, the inequality implies
+and decreases with $v$, the inequality implies
 $S(v)>C'(\widehat n)$ for every $\gamma\in\Gamma$ under either legal
 form. Every type therefore lies strictly within the pure-transacting
 region at $\widehat n$. By \lemref{lem:tailoring}, $g^{*}=0$ implies
@@ -1788,7 +1836,7 @@ quality remains zero after a marginal change in scale, so the donor's
 quality term drops out of the marginal funding condition. The donor's
 and entrepreneur's scale conditions are therefore
 \[
-D_v'(\widehat n)=F'(\widehat n)
+D_v'(\widehat n)=F_n(\widehat n,0)
 =C'(\widehat n)+\bar a-\mathbb{E}(a).
 \]
 This yields
@@ -1797,6 +1845,10 @@ n_j^{*}=m_j^{*}=\widehat n,\qquad g_j^{*}=0,
 \qquad \mathbb{E}[q_j^{*}]=0
 \quad\text{for }j\in\{fp,np\}.
 \]
+Because $C'$ is increasing, the pure-transacting condition also holds
+for every $n\leq\widehat n$. Hence both legal forms have the same marginal
+support over this range. Together with $D_v(0)=0$, this implies the same
+support at $\widehat n$ under both forms.
 Let $P_T^{*}$ denote the common net monetary payoff. It is strictly
 positive because the entrepreneur can instead choose no philanthropy,
 which yields $P=rw\bar a>0$ and $q=0$. Hence
@@ -1804,19 +1856,18 @@ which yields $P=rw\bar a>0$ and $q=0$. Hence
 U_{fp}^{E*}=P_T^{*}>vP_T^{*}=U_{np}^{E*}.
 \]
 
-For part (B), let $Q(n,v)$ denote the donor's expected quality conditional
-on observed scale and legal form, and let $\pi>0$ be the weight placed
-on expected quality. At a differentiable interior equilibrium in which
-giving remains, the donor's and entrepreneur's marginal conditions derived
-in \oaref{oa:donors-quality} combine to give
+For part (B), at a differentiable interior equilibrium in which giving
+remains, the donor's and entrepreneur's marginal conditions combine
+to give
 \[
-F'(n^{*})+\pi Q_n(n^{*},v)
+F_n\bigl(n^{*},Q(n^{*},v)\bigr)
++F_Q\bigl(n^{*},Q(n^{*},v)\bigr)Q_n(n^{*},v)
 =\bar a-\mathbb{E}(a)+S(v).
 \]
-The maintained assumptions do not restrict $Q_n(n^{*},v)$ across legal
-forms because it depends on equilibrium inference and on how scale changes
-giving. They therefore do not sign the entrepreneur's utility difference
-across legal forms.
+Without additional restrictions on $F$ and equilibrium beliefs,
+$Q(n^{*},v)$ and $Q_n(n^{*},v)$ are not ordered across legal forms.
+The entrepreneur's utility difference across legal forms is therefore
+not signed.
 
 \subsection{Proof of \propref{prop:certification}}
 
@@ -2121,7 +2172,8 @@ $m$, $g$, or the disbursals. Let $H(\gamma\mid n,v)$ denote the donor's
 posterior. Under the interior giving-disbursal condition maintained in
 the main text, posterior expected quality is
 \begin{equation}
-Q(n,v)\equiv\mathbb{E}_{\gamma}\left[\mathbb{E}[q]\mid n,v\right]
+Q(n,v)\equiv\mathbb{E}_{\gamma}\left[
+\mathbb{E}[q\mid\gamma,n,v]\mid n,v\right]
 =-\int_{\Gamma}g^{*}(\gamma;n,v)
 \left(Var(a)+\frac{v^{2}}{4\gamma^{2}}\right)
 dH(\gamma\mid n,v).
@@ -2132,18 +2184,16 @@ distribution of $\gamma$, not simply its mean.
 
 Let donor utility be
 \[
-U^{D}=Y-D_{v}(n)+F(n)+\pi Q(n,v),
+U^{D}=Y-D_{v}(n)+F\bigl(n,Q(n,v)\bigr),
 \]
-where $F(n)$ is an increasing, concave benefit from scale, $D_{v}(n)$
-is the support paid to an enterprise with legal form $v$, and $\pi>0$
-is the weight the donor places on expected quality. I assume that, absent
-tax benefits, the donor has no direct preference over legal form. Thus,
-$F$ does not depend on $v$, and two enterprises with the same scale
-and expected quality receive the same support. At an interior supported
-allocation, and wherever the equilibrium inference rule is differentiable,
-the donor's marginal condition is
+where $D_{v}(n)$ is the support paid to an enterprise with legal form
+$v$, with $D_v(0)=0$. The function $F$ is differentiable and increasing in scale and
+expected quality, with $F_n>0$ and $F_Q>0$, and is concave in scale.
+At an interior supported allocation, and wherever the equilibrium inference
+rule is differentiable, the donor's marginal condition is
 \begin{equation}
-D_{v}'(n^{*})=F'(n^{*})+\pi Q_{n}(n^{*},v).
+D_{v}'(n^{*})=F_n\bigl(n^{*},Q(n^{*},v)\bigr)
++F_Q\bigl(n^{*},Q(n^{*},v)\bigr)Q_{n}(n^{*},v).
 \label{eq:donor-quality-foc}
 \end{equation}
 This condition does not assume that the donor observes $\gamma$; the
@@ -2177,12 +2227,12 @@ exact $\gamma$. But $g^{*}=0$ implies $Q(n,v)=0$ for every posterior.
 If the pure-transacting condition holds strictly, $Q_{n}(n,v)=0$ locally,
 and equation (\ref{eq:donor-quality-foc}) reduces to
 \[
-D_{v}'(n^{*})=F'(n^{*}).
+D_{v}'(n^{*})=F_n(n^{*},0).
 \]
 Combining the donor's and entrepreneur's conditions, let $0<\widehat n<w$ denote
 the unique interior solution to
 \begin{equation}
-F'(\widehat n)=C'(\widehat n)+\bar a-\mathbb{E}(a).
+F_n(\widehat n,0)=C'(\widehat n)+\bar a-\mathbb{E}(a).
 \label{eq:donor-pure-scale}
 \end{equation}
 
@@ -2207,15 +2257,17 @@ If condition (\ref{eq:donor-pure-condition}) fails and some giving remains,
 equations (\ref{eq:donor-quality-foc}) and
 (\ref{eq:donor-giving-scale}) combine to give
 \[
-F'(n^{*})+\pi Q_{n}(n^{*},v)
+F_n\bigl(n^{*},Q(n^{*},v)\bigr)
++F_Q\bigl(n^{*},Q(n^{*},v)\bigr)Q_n(n^{*},v)
 =\bar a-\mathbb{E}(a)+S(v;\gamma)
 \]
-in a separating equilibrium. The term $Q_{n}(n^{*},v)$ depends on how
-scale changes giving and on the donor's equilibrium inference. If types
-pool, it also depends on the posterior distribution in equation
-(\ref{eq:posterior-quality}). The baseline assumptions do not determine
-these responses across legal forms. The legal-form ranking is therefore
-not generally determined when giving remains, establishing part (B).
+at any differentiable interior equilibrium. The term $Q_{n}(n^{*},v)$
+depends on how scale changes giving and on the donor's equilibrium inference.
+If types pool, it also depends on the posterior distribution in equation
+(\ref{eq:posterior-quality}). Without additional restrictions on $F$
+and equilibrium beliefs, $Q(n^{*},v)$ and $Q_n(n^{*},v)$ are not ordered
+across legal forms. The legal-form ranking is therefore not determined
+when giving remains, establishing part (B).
 
 \subsection{Scale is Not Observable Ex Ante }\label{oa:scale-unobservable}
 

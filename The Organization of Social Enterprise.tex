@@ -824,8 +824,9 @@ I assume that nonprofits receive no tax benefits. In the high-heterogeneity
 region identified in \propref{prop:legal-form-effects}(A), both forms
 use pure transacting and attain maximal expected quality. Let
 $\mathbb{E}[P_T^{*}]$ denote the expected net monetary payoff from
-this common allocation, which I assume is positive. Because targeting
-quality equals zero,
+this common allocation. Because the entrepreneur can choose no philanthropy,
+which yields $P=rw\bar a>0$ and $q=0$, optimality implies
+$\mathbb{E}[P_T^{*}]>0$. Because targeting quality equals zero,
 \[
 U_{fp}^{E}=\mathbb{E}[P_T^{*}],
 \qquad
@@ -850,9 +851,8 @@ for-profit optimum does as well.
 \begin{prop}\label{prop:legal-form-choice}
 Maintain the comparison in \propref{prop:legal-form-effects}, which
 holds $\gamma$ and the distribution of abilities fixed. Suppose scale
-($n$) is observable ex ante and expected net monetary payoff
-($\mathbb{E}[P^{*}]$) is positive under each legal form. Absent tax
-benefits, the entrepreneur strictly prefers the for-profit form.
+($n$) is observable ex ante. Absent tax benefits, the entrepreneur
+strictly prefers the for-profit form.
 
 \textbf{(A)} If $S(1)\geq C'(m_F^{*})$, both forms choose the same
 pure-transacting allocation and attain the same maximal expected quality,
@@ -1753,8 +1753,17 @@ At these disbursals, expected net monetary payoff is
 \Pi_v(m,g)=M(m,g)+\frac{vg}{2\gamma}.
 \]
 Let $(m_v^{*},g_v^{*})$ be the nonprofit optimum and let
-$(m_1^{*},g_1^{*})$ be the for-profit optimum. Evaluating the
-for-profit objective at the nonprofit's choices gives
+$(m_1^{*},g_1^{*})$ be the for-profit optimum. Because
+$(m,g)=(0,0)$ is feasible,
+\[
+W_v(m_v^{*},g_v^{*})\geq W_v(0,0)=vrw\bar a>0.
+\]
+Because $W_v=v\Pi_v+\gamma\mathbb{E}[q]$ and expected targeting quality
+is nonpositive,
+\[
+\Pi_v(m_v^{*},g_v^{*})\geq\frac{W_v(m_v^{*},g_v^{*})}{v}>0.
+\]
+Evaluating the for-profit objective at the nonprofit's choices gives
 \[
 \begin{aligned}
 W_1(m_v^{*},g_v^{*})-W_v(m_v^{*},g_v^{*})
@@ -1764,8 +1773,8 @@ W_1(m_v^{*},g_v^{*})-W_v(m_v^{*},g_v^{*})
 +\frac{(1-v)g_v^{*}}{4\gamma}\right)>0,
 \end{aligned}
 \]
-where the inequality follows from $v\in(0,1)$ and the assumed positive
-expected net monetary payoff. Because the for-profit optimizes $W_1$,
+where the inequality follows from $v\in(0,1)$ and the positivity of
+$\Pi_v(m_v^{*},g_v^{*})$. Because the for-profit optimizes $W_1$,
 \begin{equation}
 U_{fp}^{E}=W_1(m_1^{*},g_1^{*})
 \geq W_1(m_v^{*},g_v^{*})
@@ -1782,7 +1791,7 @@ Hence
 U_{fp}^{E}-U_{np}^{E}
 =(1-v)\mathbb{E}[P_T^{*}],
 \]
-which is positive by assumption.
+which is positive by the argument above.
 
 For part (B), $S(1)<C'(m_F^{*})$ implies that the for-profit uses
 giving. By \propref{prop:legal-form-effects}(B), its allocation differs

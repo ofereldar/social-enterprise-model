@@ -951,10 +951,8 @@ U^{D}=Y-D_v(n)+F\bigl(n,Q(n,v)\bigr),
 where $D_v(n)$ is the support provided to an enterprise with legal-form
 parameter $v$, with $D_v(0)=0$. The benefit function $F$ is differentiable and increasing
 in both scale and expected quality, so $F_n>0$ and $F_Q>0$, and is concave
-in scale. Subscripts on $F$ and $Q$ denote partial derivatives. The scale-only
-benchmark sets $F_Q=0$ and writes the resulting benefit as
-$F(n)=F(n,0)$. At a differentiable interior solution, the donor's marginal
-condition is
+in scale. Subscripts on $F$ and $Q$ denote partial derivatives. At a
+differentiable interior solution, the donor's marginal condition is
 \[
 D_v'(n^{*})=F_n\bigl(n^{*},Q(n^{*},v)\bigr)
 +F_Q\bigl(n^{*},Q(n^{*},v)\bigr)Q_n(n^{*},v).
@@ -982,43 +980,35 @@ pure-transacting scale, defined as the unique solution to
 F_n(\widehat n,0)=C'(\widehat n)+\bar a-\mathbb{E}(a).
 \]
 
-\textbf{(A)} If
+\textbf{(A)} Holding $\mathbb{E}(a)$ fixed, if
 \[
-\underline{\gamma}Var(a)-\frac{1}{4\underline{\gamma}}>C'(\widehat n),
+Var(a)>\frac{C'(\widehat n)}{\underline{\gamma}}
++\frac{1}{4\underline{\gamma}^{2}},
 \]
 then, for every $\gamma\in\Gamma$ and $j\in\{fp,np\}$,
 \[
 n_j^{*}=m_j^{*}=\widehat n,\qquad g_j^{*}=0,
 \qquad \mathbb{E}[q_j^{*}]=0.
 \]
-At this allocation, $Q(\widehat n,v)=Q_n(\widehat n,v)=0$, so
-$D_v'(\widehat n)=F_n(\widehat n,0)$ and scale is unchanged from the
-scale-only benchmark.
-Absent tax benefits,
-$U_{fp}^{E}>U_{np}^{E}$ for every $\gamma\in\Gamma$.
+Both legal forms attain maximal expected quality. Absent tax benefits,
+$U_{fp}^{E}>U_{np}^{E}$ for every $\gamma\in\Gamma$, so the entrepreneur
+chooses the for-profit.
 
-\textbf{(B)} For a type $\gamma\in\Gamma$, at any differentiable interior
-equilibrium in which $g^{*}>0$ under legal-form parameter $v$, scale satisfies
-\[
-F_n\bigl(n^{*},Q(n^{*},v)\bigr)
-+F_Q\bigl(n^{*},Q(n^{*},v)\bigr)Q_n(n^{*},v)
-=\bar a-\mathbb{E}(a)+S(v).
-\]
-Without additional restrictions on $F$ and equilibrium beliefs,
-$Q(n^{*},v)$ and $Q_n(n^{*},v)$ are not ordered across legal forms.
-The sign of $U_{fp}^{E}-U_{np}^{E}$ is therefore not determined when
-giving remains under at least one form.
+\textbf{(B)} If giving remains under either legal form, the entrepreneur
+may prefer the nonprofit.
 \end{prop}
 
-The left side of the condition in part (A) is $S(1)$ evaluated at
-$\gamma=\underline{\gamma}$, the targeting advantage for the lowest-$\gamma$
-for-profit type. It increases with $Var(a)$. Since $S(v)$ increases in
+The condition in part (A) is equivalent to $S(1)>C'(\widehat n)$ for
+the lowest-$\gamma$ for-profit type. Since $S(v)$ increases in
 $\gamma$ and decreases in $v$, the condition implies pure transacting
 for every type under both legal forms. Donors therefore anticipate maximal
 quality even though common scale does not reveal the entrepreneur's exact
-$\gamma$. Because $C'$ is increasing, the same condition holds at every
-$n\leq\widehat n$. Together with $D_v(0)=0$, the common marginal funding
-condition implies equal support under the two legal forms at $\widehat n$.
+$\gamma$. At $\widehat n$, $Q(\widehat n,v)=Q_n(\widehat n,v)=0$, so
+the donor's marginal condition reduces to
+$D_v'(\widehat n)=F_n(\widehat n,0)$. Because $C'$ is increasing, the
+pure-transacting condition also holds at every $n\leq\widehat n$. Together
+with $D_v(0)=0$, the common marginal funding condition implies equal
+support under the two legal forms at $\widehat n$.
 
 Limited scale in this region is itself a commitment to targeting quality.
 At the pure-transacting allocation, expansion through giving would attract
@@ -1825,9 +1815,14 @@ the entrepreneur's strict preference for the for-profit.
 
 \subsection{Proof of \propref{prop:donor-quality}}
 
-For part (A), the left side of the stated inequality is $S(1)$ for
+For part (A), the stated condition is equivalent to
+\[
+\underline{\gamma}Var(a)-\frac{1}{4\underline{\gamma}}
+>C'(\widehat n),
+\]
+which is $S(1)>C'(\widehat n)$ for
 $\gamma=\underline{\gamma}$. Because $S(v)$ increases with $\gamma$
-and decreases with $v$, the inequality implies
+and decreases with $v$, the condition implies
 $S(v)>C'(\widehat n)$ for every $\gamma\in\Gamma$ under either legal
 form. Every type therefore lies strictly within the pure-transacting
 region at $\widehat n$. By \lemref{lem:tailoring}, $g^{*}=0$ implies
@@ -1867,7 +1862,8 @@ F_n\bigl(n^{*},Q(n^{*},v)\bigr)
 Without additional restrictions on $F$ and equilibrium beliefs,
 $Q(n^{*},v)$ and $Q_n(n^{*},v)$ are not ordered across legal forms.
 The entrepreneur's utility difference across legal forms is therefore
-not signed.
+not signed. The assumptions therefore do not rule out a preference for
+the nonprofit, establishing part (B).
 
 \subsection{Proof of \propref{prop:certification}}
 
@@ -2239,11 +2235,13 @@ F_n(\widehat n,0)=C'(\widehat n)+\bar a-\mathbb{E}(a).
 A primitive sufficient condition for every type to choose pure transacting
 under both legal forms is
 \begin{equation}
-\underline{\gamma}Var(a)-\frac{1}{4\underline{\gamma}}>C'(\widehat n).
+Var(a)>\frac{C'(\widehat n)}{\underline{\gamma}}
++\frac{1}{4\underline{\gamma}^{2}}.
 \label{eq:donor-pure-condition}
 \end{equation}
-The left side is $S(1;\underline{\gamma})$, the targeting advantage
-for the lowest-$\gamma$ for-profit type. Because $S(v;\gamma)$ increases
+Condition (\ref{eq:donor-pure-condition}) is equivalent to
+$S(1;\underline{\gamma})>C'(\widehat n)$ for the lowest-$\gamma$
+for-profit type. Because $S(v;\gamma)$ increases
 with $\gamma$ and is larger for a nonprofit with $v<1$, condition
 (\ref{eq:donor-pure-condition}) implies pure transacting for every other
 type and for both legal forms. It is satisfied for sufficiently high
@@ -2266,7 +2264,7 @@ depends on how scale changes giving and on the donor's equilibrium inference.
 If types pool, it also depends on the posterior distribution in equation
 (\ref{eq:posterior-quality}). Without additional restrictions on $F$
 and equilibrium beliefs, $Q(n^{*},v)$ and $Q_n(n^{*},v)$ are not ordered
-across legal forms. The legal-form ranking is therefore not determined
+across legal forms. The entrepreneur may therefore prefer the nonprofit
 when giving remains, establishing part (B).
 
 \subsection{Scale is Not Observable Ex Ante }\label{oa:scale-unobservable}

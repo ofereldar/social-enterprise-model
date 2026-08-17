@@ -888,7 +888,7 @@ The first is that donations to
 nonprofits are not tax-deductible. \oaref{oa:tax-deductions} relaxes
 this assumption. Tax deductibility increases nonprofit
 donations and can incentivize entrepreneurs to choose the nonprofit
-form. Without tax exemptions, nonprofits may struggle to raise funds
+form. Without tax deductibility, nonprofits may struggle to raise funds
 even if they provide higher-quality philanthropy. By contrast, for-profit
 firms with large charitable arms frequently attract substantial
 capital, via consumer premiums or investors accepting lower
@@ -1439,8 +1439,8 @@ $U^{D}$ & The utility of the donor\tabularnewline
 $U^{E}$ & The utility of the entrepreneur\tabularnewline
 $v$ & The portion of the firm's earnings the entrepreneur can appropriate, where $0<v\leq1$\tabularnewline
 $w$ & The number of workers the firm employs\tabularnewline
-$\kappa$ & A parameter that denotes the increase in firm's profits due to income tax exemption\tabularnewline
-$\lambda$ & A parameter that denotes the increase in $D(n)$ due to tax deduction on donations\tabularnewline
+$\kappa$ & The multiplier capturing the income-tax advantage in the monetary component of the entrepreneur's utility\tabularnewline
+$\lambda$ & The multiplier on $D(n)$ capturing the funding advantage from tax deductibility\tabularnewline
  & \tabularnewline
 \multicolumn{2}{@{}l@{}}{{\large\textbf{2. Subscripts}}}\tabularnewline
  & \tabularnewline
@@ -2151,60 +2151,52 @@ remains, as stated in \propref{prop:donor-quality}(B).
 
 \subsection{Income Tax Exemption}\label{oa:income-tax}
 
-Nonprofits are entitled to income tax exemptions if their income is
-related to a charitable purpose. To account for the tax exemption,
-I replace $v$ in the monetary part of the entrepreneur's utility with
-$v\kappa$, where $\kappa>1$. I maintain $v\times\kappa<1$ on the basis
-that, if a nonprofit\textquoteright s
-income were to exceed that of a comparable for-profit, it would likely
-trigger the imposition of the Unrelated Business Income Tax (UBIT)
-or, worse, lead to the nonprofit being viewed as pursuing a commercial,
-non-exempt purpose, potentially resulting in the loss of
-its tax-exempt status.
+Qualifying nonprofits are generally exempt from federal income tax on
+income related to their exempt purposes, although unrelated business income
+may remain taxable. I represent this tax advantage in reduced form by replacing
+$v$ in the monetary component of the entrepreneur's utility with
+$\alpha=v\kappa$, where $\kappa>1$. I maintain $\alpha<1$, so the exemption
+narrows but does not eliminate the restriction on the entrepreneur's ability
+to appropriate the firm's monetary payoff.
 
-Relative to the baseline, the giving choice and the mixed-regime threshold
-are governed by
+Relative to the baseline, the targeting threshold becomes
 \[
-S(v\kappa)\equiv\frac{\gamma}{v\kappa}Var(a)-\frac{v\kappa}{4\gamma},
+S(\alpha)\equiv\frac{\gamma}{\alpha}Var(a)-\frac{\alpha}{4\gamma},
 \]
-which is lower than $S(v)=\frac{\gamma}{v}Var(a)-\frac{v}{4\gamma}$.
-Income tax exemption therefore makes the nonprofit less willing to
-measure in the giving and mixed regimes: $m_{np}^{*}$ falls, while
-$n_{np}^{*}$ and $g_{np}^{*}$ rise. In those regions, the exemption
-increases scale but lowers expected quality.
+which is lower than $S(v)$. Maintaining the positive-disbursal condition
+$\bar a-\mathbb{E}(a)>\alpha/(2\gamma)$, an increase in $\kappa$ therefore
+reduces measured transacting in the mixed regime: $m^{*}$ falls, while
+$n^{*}$ and $g^{*}$ rise. Under pure giving, $m^{*}=0$ remains unchanged,
+while $n^{*}=g^{*}$ rises. Because the entrepreneur places greater weight
+on monetary payoff, the optimal untailored disbursal also becomes less
+accurate. Expected quality therefore falls in both regimes.
 
 In the pure-transacting region, by contrast, the entrepreneur still
 chooses scale from
 \[
 D'(m^{*})=C'(m^{*})+\left(\bar{a}-\mathbb{E}(a)\right),
 \]
-which does not depend on $v\kappa$. Income tax exemption therefore
-matters only if lowering $S(v\kappa)$ moves the nonprofit out of the
-pure-transacting region and back into mixed giving and transacting.
-\begin{rem}
-For a sufficiently low $Var(a)$ and $\gamma$, income tax exemption
-increases the scale of philanthropy but reduces its quality.
-\end{rem}
-While income tax exemption naturally makes the nonprofit form more
-attractive for the entrepreneur, it does not on its own change the
-entrepreneur's choice of legal form because equation $\left(\ref{eq:6}\right)$
-is satisfied once $v$ is replaced by $v\kappa<1$. However, the analysis sheds light on the potential effect
-of extending income tax exemption to for-profits that engage in social
-missions. Within this model, this means setting $v=1$, such that
-$v\times\kappa=\kappa>1$. When the funding limit is reached without
-a tax exemption, a sufficiently large $\kappa$ may
-shift a for-profit that engages exclusively in transacting to engaging
-also in giving. If the for-profit is already in the mixed regime,
-the exemption lowers expected quality further. Accordingly, extending
-income tax exemptions to for-profits that purport to engage in social
-missions would not improve philanthropic quality in this model.
+which does not depend on $\alpha$. Income tax exemption therefore leaves
+scale and quality unchanged unless the reduction in $S(\alpha)$ moves
+the entrepreneur from pure transacting into the mixed regime.
 
-\subsection{Tax deductions}\label{oa:tax-deductions}
+Although income tax exemption makes the nonprofit more attractive, it
+does not reverse the legal-form choice as long as $\alpha<1$: the proof
+of \propref{prop:legal-form-choice} applies with $\alpha$ in place of
+$v$. The extension also indicates what happens if an equivalent exemption
+is offered to for-profits. For a for-profit, $v=1$ and $\alpha=\kappa>1$.
+If the firm uses pure transacting at $\kappa=1$, a sufficiently large
+$\kappa$ can lower $S(\alpha)$ enough to induce giving. If the firm is
+already in the mixed regime, a higher $\kappa$ increases giving and lowers
+expected quality. The exemption therefore leaves quality unchanged while
+pure transacting continues and lowers quality once giving begins.
 
-Donors to nonprofit firms receive tax deductions. I incorporate the
-deduction into the analysis by multiplying $D(n)$ by a scalar $\lambda>1$
-in equation $\left(\ref{eq:-1}\right)$. This affects the nonprofit
-entrepreneur differently from income tax exemption.
+\subsection{Tax Deductions}\label{oa:tax-deductions}
+
+Contributions to qualifying nonprofits may be tax deductible. I represent
+the resulting funding advantage in reduced form by multiplying $D(n)$
+by a scalar $\lambda>1$ in equation $\left(\ref{eq:-1}\right)$. This
+affects the nonprofit entrepreneur differently from income tax exemption.
 
 The targeting threshold
 \[
@@ -2221,16 +2213,17 @@ Hence a higher $\lambda$ raises the scale of pure transacting as long
 as the resulting allocation still satisfies the targeting bound
 $C'(m^{*})<S(v)$.
 
-Let $\bar{\lambda}$ denote the value at which the pure-transacting
-solution just reaches the mixed-regime boundary:
+Suppose the nonprofit lies strictly within the pure-transacting region
+when $\lambda=1$. Let $m_{T}^{*}$ solve $C'(m_{T}^{*})=S(v)$, and define
+$\bar{\lambda}$ by
 \[
-\bar{\lambda}D'(m_{T}^{*})=S(v)+\left(\bar{a}-\mathbb{E}(a)\right),
+\bar{\lambda}D'(m_{T}^{*})=S(v)+\left(\bar{a}-\mathbb{E}(a)\right).
 \]
-where $m_{T}^{*}$ solves $C'(m_{T}^{*})=S(v)$. For $\lambda<\bar{\lambda}$,
-the tax deduction increases the number of beneficiaries the nonprofit
-transacts with while preserving maximal quality. For $\lambda\geq\bar{\lambda}$,
-the entrepreneur begins to expand through giving, so expected quality
-falls.
+For $1\leq\lambda\leq\bar{\lambda}$, a higher deduction increases measured
+transacting while $g^{*}=0$, so quality remains maximal. At
+$\lambda=\bar{\lambda}$, the entrepreneur reaches the targeting limit.
+For $\lambda>\bar{\lambda}$, measured transacting remains at $m_{T}^{*}$,
+and additional scale is achieved through giving, so expected quality falls.
 
 If, without the tax deduction, the nonprofit already engages in some
 giving, then $m^{*}$ is unchanged because it is pinned down by $C'(m^{*})=S(v)$.
@@ -2241,24 +2234,16 @@ Scale instead satisfies
 so $n^{*}$ rises with $\lambda$ and the additional scale comes entirely
 through higher $g^{*}$. The deduction therefore lowers expected quality
 in the mixed and pure-giving regions.
-\begin{rem}
-A modest tax deduction can increase nonprofit scale without reducing
-quality when it expands pure transacting. Once $\lambda$ is large enough
-to push the entrepreneur into giving, however, the deduction increases
-scale by raising $g$ and therefore lowers expected quality. In the
-mixed and pure-giving regions, the deduction leaves $m$ unchanged and
-expands scale entirely through giving.
-\end{rem}
-The tax deduction can cause the entrepreneur to choose the nonprofit
-form because equation $\left(\ref{eq:6}\right)$ does not necessarily
-hold. Taken together with the preceding remark, the tax deduction enjoyed by nonprofits
-may result in lower-quality philanthropy produced by the entrepreneur to the extent
-that it is sufficiently large to (a) cause the entrepreneur to form
-a nonprofit rather than a for-profit, and (b) induce the nonprofit
-entrepreneur to engage in more giving than a for-profit entrepreneur
-would. Thus, tax deductions may reduce the quality of philanthropy
-when entrepreneurs' regard for quality ($\gamma$) is low (see \exampleref{ex:oa-tax-deduction}
-in \oaref{oa:examples}).
+
+Because $\lambda$ raises only the nonprofit's funding, the for-profit
+can no longer reproduce the nonprofit's allocation under the same funding
+schedule. The argument establishing \propref{prop:legal-form-choice}
+therefore no longer applies, and a sufficiently large deduction may induce
+the entrepreneur to choose the nonprofit. If the deduction also causes
+the nonprofit to engage in more giving than the for-profit would, the
+chosen organization may provide lower expected quality. This possibility
+is especially relevant when $\gamma$ is low, as \exampleref{ex:oa-tax-deduction}
+in \oaref{oa:examples} illustrates.
 
 Finally, extending tax deductions to for-profits is unlikely to improve
 philanthropic quality. When both legal forms receive the same deduction,
@@ -2326,9 +2311,11 @@ Choices}
 \end{example}
 $\,$
 \begin{example}\label{ex:oa-tax-deduction}
-This example illustrates the impact of different levels of tax deductions
-($\lambda$) on the entrepreneur's choices and the scale and quality
-of philanthropy. In Figure OA3(a), I assume low altruism ($\gamma=0.1$).
+Maintaining the parameters in \exampleref{ex:oa-tradeoff} and setting
+$v=0.9$ for the nonprofit, this example illustrates the impact of different
+levels of tax deductions ($\lambda$) on the entrepreneur's choices and
+the scale and quality of philanthropy. In Figure OA3(a), I assume low
+altruism ($\gamma=0.1$).
 Without tax deductions ($\lambda=1$), the entrepreneur chooses the
 for-profit form. Increasing $\lambda$ raises $n_{np}$ but lowers
 $\mathbb{E}\left[q_{np}\right]$, as the entrepreneur raises $g_{np}$.

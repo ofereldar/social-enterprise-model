@@ -1975,16 +1975,17 @@ transact, choose the same scale, and attain maximal quality.
 \subsection{No Penalty for Waste}\label{oa:no-penalty}
 
 The quality function in the entrepreneur's utility may be considered
-too demanding because it penalizes the entrepreneur not only for providing
-too little assistance, but also for wasting money by providing too much.
-One may instead assume that the entrepreneur cares only about beneficiaries
-receiving too little assistance. To capture this possibility, replace
-the quadratic loss by
+too demanding because it penalizes the entrepreneur not only for giving
+too few subsidies, but also for wasting money by giving too much to
+the beneficiaries. While there is increasing concern about the wastefulness
+of donative funding, it could possibly be argued that altruistic entrepreneurs
+worry only about the risk that the beneficiaries receive too little
+help. To capture this possibility, replace the quadratic loss by
 \[
-q=-\int_{0}^{m}\left(\bar{a}-a(i)-d^{m}(i)\right)_{+}^{2}di-\int_{0}^{g}\left(\bar{a}-a(i)-d^{g}(i)\right)_{+}^{2}di,
+q=-\mathbb{E}\int_{0}^{m}\left(\bar{a}-a(i)-d^{m}(i)\right)_{+}^{2}di-\mathbb{E}\int_{0}^{g}\left(\bar{a}-a(i)-d^{g}(i)\right)_{+}^{2}di,
 \]
-where $(z)_{+}\equiv\max\{z,0\}$. Measured transacting is unchanged.
-If the entrepreneur observes $a(i)$, choosing $d^{m}(i)<\bar{a}-a(i)$
+where $(z)_{+}\equiv\max\{z,0\}$. Measured transacting is unchanged:
+if the entrepreneur observes $a(i)$, then choosing $d^{m}(i)<\bar{a}-a(i)$
 reduces both revenue and quality, while choosing $d^{m}(i)>\bar{a}-a(i)$
 only raises costs. Hence $d^{m*}(i)=\bar{a}-a(i)$ still holds.
 
@@ -1999,32 +2000,20 @@ This objective is concave, with first-order condition
 \]
 for an interior solution, and boundary solution $d^{g*}=0$ if $2\gamma\mathbb{E}[\bar{a}-a]\leq v$.
 Relative to the baseline model, giving becomes more attractive because
-overprovision is no longer penalized. The targeting loss from giving
-is now governed by the upper tail of unmet need,
-$\mathbb{E}\left[((\bar{a}-a)-d^{g*})_{+}^{2}\right]$.
+overprovision is no longer penalized. The informational loss from giving
+is now governed by the upper tail of unmet need, $\mathbb{E}\left[((\bar{a}-a)-d^{g*})_{+}^{2}\right]$,
+rather than by $Var(a)$ alone.
 
-The qualitative mechanism can be stated without solving explicitly
-for the giving disbursal. Let $N=\bar a-a$ denote beneficiary need and
-define
-\[
-G(v,\gamma)\equiv\min_{d\geq0}\left\{d+\frac{\gamma}{v}
-\mathbb{E}\left[(N-d)_{+}^{2}\right]\right\}.
-\]
-This is the optimized cost of assisting one beneficiary through giving,
-expressed in monetary-payoff units. A measured transaction instead entails
-the expected disbursal $\mathbb{E}[N]$. Thus, measured transacting is
-preferred to giving at the margin when
-\[
-C'(m)<G(v,\gamma)-\mathbb{E}[N].
-\]
-This is the counterpart to the condition $C'(m)<S(v)$ in the main model.
-After replacing $S(v)$ with $G(v,\gamma)-\mathbb{E}[N]$, the reduced
-allocation problem has the same structure as in the main text. Moreover,
-a mean-preserving spread in beneficiary need weakly raises $G(v,\gamma)$,
-as does an increase in $\gamma/v$. Greater heterogeneity, greater concern
-for quality, and the nonprofit form therefore continue to shift assistance
-toward measured transactions. The exact threshold now depends on the
-full distribution of beneficiary need rather than on $Var(a)$ alone.
+The qualitative mechanism therefore survives, but the clean closed-form
+comparative statics do not reduce to replacing $Var(a)$ with $Var(a\mid \mathbb{E}(a)>a)$.
+Greater upper-tail dispersion in needs and a higher $\gamma$ increase
+the expected cost of unmet need and therefore tend to raise the value
+of measurement, but the precise thresholds in \propref{prop:comparative-statics}
+and \propref{prop:legal-form-effects} must be rederived from the truncated-loss
+expression above.
+I therefore treat the symmetric-loss specification in the main text
+as the benchmark and this asymmetric-loss case as a robustness discussion
+rather than a closed-form extension.
 
 \subsection{Donors Who Care About Expected Quality}\label{oa:donors-quality}
 

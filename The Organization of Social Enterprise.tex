@@ -1189,41 +1189,32 @@ subsidize untailored giving.
 \section{Conclusion}\label{sec:conclusion}
 
 This paper studies an information problem inside philanthropy. Organizations
-often do not initially know what individual beneficiaries need. Giving can
-reach more people but relies on averages. Transactions with beneficiaries
-create opportunities to learn and tailor assistance, but measurement is
-costly. The central tradeoff is therefore between scale and targeting quality.
+often do not initially know individual beneficiaries' needs. Giving can reach
+more people but relies on averages; transactions create opportunities for
+costly measurement and tailored assistance. The central tradeoff is between
+scale and targeting quality.
 
 Greater heterogeneity in beneficiaries' abilities and needs shifts assistance
 from giving toward measured transactions and reduces total scale. When
-heterogeneity is sufficiently high, the entrepreneur abandons giving and
-serves every beneficiary through a measured transaction. Quality is then
-maximal, but scale remains limited because the entrepreneur refuses to expand
-through untailored assistance. Measurement also aligns revenue and mission,
-so the nonprofit constraint no longer improves the allocation. Under the
-baseline assumptions, the entrepreneur chooses the for-profit absent a
-nonprofit tax advantage, even when donors care about expected quality. This
-helps explain why
-for-profit social enterprises arise in development settings where tailoring
-matters most and why they may remain relatively small.
+heterogeneity is sufficiently high, every beneficiary is served through a
+measured transaction. Quality is then maximal, but scale remains limited because
+the entrepreneur does not expand through untailored assistance. Measurement also
+aligns revenue and mission, so the nonprofit constraint no longer improves the
+allocation. Absent a nonprofit tax advantage, the entrepreneur chooses the
+for-profit, even when donors care about expected quality. This helps explain why
+for-profit social enterprises arise where tailoring matters most and may remain
+relatively small.
 
 When donors cannot infer quality from planned scale, transaction certification
-can relax the scaling problem without requiring direct impact assessment.
-Rather than certify quality itself, it verifies and makes contractible the
-beneficiary-facing activity that generates information. Donors or public
-programs can then support expansion through measured transactions while
-preserving tailored assistance, so long as measurement remains worthwhile to
-the entrepreneur.
+makes the information-generating activity contractible. Donors or public programs
+can then support measured transactions while preserving tailored assistance,
+provided measurement remains worthwhile.
 
-More broadly, the model helps explain both the proliferation of for-profit
-social enterprises with development missions and the use of certifications
-that verify beneficiary transactions \citep{eldar2017,eldar2020}. Transactions
-with disadvantaged workers, farmers, borrowers, or consumers can reveal
-information about their needs. This mechanism also highlights a limitation of
-broad social-impact measurement and ESG approaches
-\citep{ebrahimRangan2014,bergKolbelRigobon2022}. When impact is hard to verify,
-a beneficiary-facing activity may offer a narrower, more practical basis for
-support.
+More broadly, beneficiary transactions can reveal needs, helping explain the
+proliferation of for-profit social enterprises and transaction-based certifications
+in development settings \citep{eldar2017,eldar2020}. When impact is hard to verify,
+this mechanism also highlights limits of broad social-impact measurement and ESG
+approaches \citep{ebrahimRangan2014,bergKolbelRigobon2022}.
 
 \clearpage{}
 \begin{singlespace}
@@ -1870,27 +1861,23 @@ remains, establishing part (B).
 
 \subsection{Proof of \propref{prop:certification}}
 
-Fix a certified target $m^{c}\in(0,\bar m)$ and temporarily let
-$h\leq m^{c}$ denote
-the number of certified beneficiaries whose abilities the entrepreneur
-measures. Measurement then costs $C(h)$. If a beneficiary is measured,
-\lemref{lem:tailoring} implies that the entrepreneur sets
-$d^{m}(i)=\bar a-a(i)$. The beneficiary produces revenue $r\bar a$,
-and the expected disbursal is $\mathbb{E}[\bar a-a]$. The expected net
-monetary contribution before measurement cost is therefore
+Fix a certified target $m^{c}\in(0,\bar m)$ and let $h\leq m^{c}$ denote
+the number of certified beneficiaries whose abilities the entrepreneur measures,
+at cost $C(h)$. By \lemref{lem:tailoring}, a measured beneficiary receives
+$d^{m}(i)=\bar a-a(i)$, produces revenue $r\bar a$, and has expected disbursal
+$\mathbb{E}[\bar a-a]$. Her expected net monetary contribution before
+measurement cost is therefore
 \[
 r\bar a-\mathbb{E}[\bar a-a].
 \]
 
-To obtain a lower bound, consider the limiting edge case in which $\gamma$
-approaches zero and the incentive to measure is purely monetary. If the
-entrepreneur transacts with a beneficiary without measuring ability, she
-chooses $d$ to maximize
+For a lower bound, let $\gamma$ approach zero, so the incentive to measure is
+purely monetary. Without measurement, the entrepreneur chooses $d$ to maximize
 \[
 r\mathbb{E}[\min\{a+d,\bar a\}]-d.
 \]
-The difference between the measured and best unmeasured monetary contributions
-is $\Delta_{0}$ in equation (\ref{eq:measurement-value}). Equivalently,
+The difference between the measured and best unmeasured contributions is
+$\Delta_{0}$ in equation (\ref{eq:measurement-value}). Equivalently,
 \[
 \Delta_{0}=\min_{d\geq0}\left\{d+r\mathbb{E}
 [(\bar a-a-d)_{+}]\right\}-\mathbb{E}[\bar a-a].
@@ -1899,31 +1886,25 @@ For every $a$ and $d$,
 \[
 d+r(\bar a-a-d)_{+}\geq\bar a-a.
 \]
-If $d\geq\bar a-a$, this follows because $d\geq\bar a-a$. If
-$d<\bar a-a$, the left side equals
-$\bar a-a+(r-1)(\bar a-a-d)>\bar a-a$. When $Var(a)>0$, no common
-$d$ equals $\bar a-a$ almost surely, so the inequality is strict in
-expectation at the optimizing $d$. Hence $\Delta_{0}>0$.
+Equality requires $d=\bar a-a$. When $Var(a)>0$, no common $d$ satisfies
+this equality almost surely, so the inequality is strict in expectation at
+the optimizing $d$. Hence $\Delta_{0}>0$.
 
-For $\gamma>0$, measurement also eliminates the targeting loss associated
-with an unmeasured disbursal. The utility gain from measuring a certified
-beneficiary is therefore at least $v\Delta_{0}$, while the marginal
-utility cost at measurement scale $h$ is $vC'(h)$. Convexity of $C$
+For $\gamma>0$, measurement also eliminates the targeting loss from an
+unmeasured disbursal. Its utility gain is therefore at least $v\Delta_{0}$,
+while its marginal utility cost at scale $h$ is $vC'(h)$. Convexity of $C$
 and $h\leq m^{c}$ imply
 \[
 C'(h)\leq C'(m^{c})<\Delta_{0}.
 \]
-It is therefore strictly optimal to measure every certified beneficiary,
-so $h=m^{c}$. Each receives $d^{m}(i)=\bar a-a(i)$ and contributes zero
-to the targeting loss.
+It is therefore strictly optimal to set $h=m^{c}$. Each certified beneficiary
+receives $d^{m}(i)=\bar a-a(i)$ and contributes zero targeting loss.
 
-The fixed subsidy does not change when the entrepreneur adds giving.
-For any unmeasured giving disbursal $d$, equation
-(\ref{eq:giving-certification-loss}) implies a strictly positive expected
-targeting loss when $Var(a)>0$. Because $\gamma>0$, additional giving
-strictly lowers expected utility through this quality loss and any positive
-disbursal cost. The entrepreneur therefore sets $g=0$. Her expected
-net monetary payoff relative to employing only standard workers is
+The fixed subsidy does not increase with giving. By equation
+(\ref{eq:giving-certification-loss}), any unmeasured giving disbursal has
+strictly positive expected targeting loss when $Var(a)>0$. Because $\gamma>0$,
+the entrepreneur sets $g=0$. Her expected net monetary payoff relative to
+employing only standard workers is
 \[
 T(m^{c})-C(m^{c})-m^{c}(\bar a-\mathbb{E}[a]),
 \]
@@ -1931,13 +1912,10 @@ which is nonnegative under the subsidy condition in
 \propref{prop:certification}. Thus the entrepreneur is willing to complete
 the certified transactions and achieves $\mathbb{E}[q]=0$.
 
-By contrast, certifying $g$ alone leaves individual abilities unobserved.
-For any common disbursal, equation (\ref{eq:giving-certification-loss})
-implies an expected targeting loss of at least $Var(a)>0$. Guaranteeing
-targeting quality would require the
-certifier to observe both individual needs and disbursals. Certification
-of $g$ alone therefore cannot guarantee maximal quality or reveal its
-actual level.
+Finally, equation (\ref{eq:giving-certification-loss}) gives every common
+giving disbursal an expected targeting loss of at least $Var(a)>0$.
+Certifying $g$ alone therefore cannot guarantee maximal quality or reveal
+its actual level.
 
 \clearpage{}
 
@@ -1949,7 +1927,7 @@ actual level.
 
 $\;$
 \begin{center}
-{\Large\textbf{Online Appendix to the ``The Organization of Social
+{\Large\textbf{Online Appendix to ``The Organization of Social
 Enterprise''}}{\Large\par}
 \par\end{center}
 

@@ -1063,7 +1063,7 @@ beneficiary transactions will occur. Certification addresses both problems
 by making a narrower activity contractible.
 
 The certifier verifies completed transactions with a fixed number $m^{c}$
-of identified beneficiaries. A certified entrepreneur receives a fixed
+of identified beneficiaries. The entrepreneur receives a fixed
 subsidy $T(m^{c})$ conditional on completing those transactions. The
 certified payment replaces the scale-based donation schedule $D(n)$.
 The certifier does not observe individual ability, disbursals, or philanthropic
@@ -1134,7 +1134,7 @@ such that the marginal measurement cost is below the monetary value of
 measurement at every certified scale in $(0,\bar m)$
 ($C'(m^{c})<\Delta_{0}$ for every $m^{c}\in(0,\bar m)$). For any such
 $m^{c}$, when the entrepreneur receives
-a fixed subsidy $T(m^{c})>C(m^{c})+m^{c}(\bar a-\mathbb{E}[a])$
+a fixed subsidy $T(m^{c})\geq C(m^{c})+m^{c}(\bar a-\mathbb{E}[a])$
 conditional on completing transactions with $m^{c}$ identified beneficiaries,
 she measures every certified beneficiary, sets
 $d^{m}(i)=\bar a-a(i)$, and chooses $g=0$. Certification
@@ -1165,11 +1165,11 @@ to underserved communities and unlocks subsidized capital
 In both cases, certification primarily verifies a limited mission-related activity
 rather than impact itself.
 
-The fixed subsidy in \propref{prop:certification} more than covers the measurement
+The fixed subsidy in \propref{prop:certification} covers the measurement
 and expected disbursal costs of the certified transactions. If the donor's
-benefit from certified scale is $F(m)$ and the subsidy is
-$T(m)=C(m)+m(\bar a-\mathbb{E}[a])+\varepsilon$, where $\varepsilon>0$
-is a fixed participation premium, the donor-preferred interior scale satisfies
+benefit from certified scale is $F(m)$ and the minimum implementing subsidy
+is $T(m)=C(m)+m(\bar a-\mathbb{E}[a])$, the donor-preferred interior
+scale satisfies
 \begin{equation}
 F'(m^{c})=C'(m^{c})+\bar a-\mathbb{E}[a],
 \label{eq:certified-donor-scale}
@@ -1924,8 +1924,8 @@ net monetary payoff relative to employing only standard workers is
 \[
 T(m^{c})-C(m^{c})-m^{c}(\bar a-\mathbb{E}[a]),
 \]
-which is positive under the subsidy condition in
-\propref{prop:certification}. Thus the entrepreneur prefers to complete
+which is nonnegative under the subsidy condition in
+\propref{prop:certification}. Thus the entrepreneur is willing to complete
 the certified transactions and achieves $\mathbb{E}[q]=0$.
 
 By contrast, certifying $g$ alone leaves individual abilities unobserved.
